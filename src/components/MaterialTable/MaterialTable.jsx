@@ -1,5 +1,5 @@
 function MaterialTable({
-  requirements,
+  materialStatus,
   materials,
   inventory,
   onInventoryChange,
@@ -19,13 +19,13 @@ function MaterialTable({
       </thead>
 
       <tbody>
-        {requirements.map(({ materialId, quantity }) => {
+        {materialStatus.map(({ materialId, required, missing }) => {
           const material = getMaterialById(materialId);
 
           return (
             <tr key={materialId}>
               <td>{material.name}</td>
-              <td>{quantity}</td>
+              <td>{required}</td>
               <td>
                 <input
                   type="number"
@@ -37,6 +37,7 @@ function MaterialTable({
                   }
                 />
               </td>
+              <td>{missing}</td>
             </tr>
           );
         })}

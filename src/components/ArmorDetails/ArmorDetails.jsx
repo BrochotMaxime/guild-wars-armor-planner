@@ -4,6 +4,7 @@ import MaterialTable from "../MaterialTable/MaterialTable";
 function ArmorDetails({
   armor,
   materials,
+  materialStatus,
   isCheckingMaterials,
   inventory,
   onCheckMaterials,
@@ -43,7 +44,7 @@ function ArmorDetails({
 
       {isCheckingMaterials && (
         <MaterialTable
-          requirements={armor.cost.materials}
+          materialStatus={materialStatus}
           materials={materials}
           inventory={inventory}
           onInventoryChange={onInventoryChange}
