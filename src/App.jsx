@@ -4,10 +4,13 @@ import ArmorDetails from "./components/ArmorDetails/ArmorDetails";
 import ArmorList from "./components/ArmorList/ArmorList";
 import CampaignSelector from "./components/CampaignSelector/CampaignSelector";
 import ProfessionSelector from "./components/ProfessionSelector/ProfessionSelector";
+
 import armors from "./data/armors";
 import campaigns from "./data/campaigns";
 import materials from "./data/materials";
 import professions from "./data/professions";
+
+import calculateMissingMaterials from "./utils/calculateMissingMaterials";
 
 function App() {
   const [selectedProfession, setSelectedProfession] = useState(null);
@@ -52,6 +55,10 @@ function App() {
       armor.campaignId === selectedCampaign?.id,
   );
 
+  const materialStatus = selectedArmor
+    ? calculateMissingMaterials(selectedArmor.cost.materials, inventory)
+    : [];
+
   return (
     <main>
       <h1>Guild Wars Armor Planner</h1>
@@ -78,6 +85,7 @@ function App() {
         <ArmorDetails
           armor={selectedArmor}
           materials={materials}
+          materialStatus={materialStatus}
           isCheckingMaterials={isCheckingMaterials}
           inventory={inventory}
           onCheckMaterials={() => setIsCheckingMaterials(true)}
