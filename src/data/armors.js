@@ -9,6 +9,19 @@ const armors = [
       male: null,
       female: null,
     },
+    cost: {
+      gold: 75000,
+      materials: [
+        {
+          materialId: "iron-ingot",
+          quantity: 400,
+        },
+        {
+          materialId: "steel-ingot",
+          quantity: 40,
+        },
+      ],
+    },
   },
   {
     id: "warrior-factions-sample",
@@ -20,6 +33,19 @@ const armors = [
       male: null,
       female: null,
     },
+    cost: {
+      gold: 75000,
+      materials: [
+        {
+          materialId: "iron-ingot",
+          quantity: 400,
+        },
+        {
+          materialId: "steel-ingot",
+          quantity: 40,
+        },
+      ],
+    },
   },
   {
     id: "ranger-factions-sample",
@@ -30,6 +56,19 @@ const armors = [
     images: {
       male: null,
       female: null,
+    },
+    cost: {
+      gold: 75000,
+      materials: [
+        {
+          materialId: "iron-ingot",
+          quantity: 400,
+        },
+        {
+          materialId: "steel-ingot",
+          quantity: 40,
+        },
+      ],
     },
   },
 ];
