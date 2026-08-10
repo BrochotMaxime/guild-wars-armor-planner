@@ -1,4 +1,6 @@
-function ArmorDetails({ armor }) {
+import ArmorRequirements from "../ArmorRequirements/ArmorRequirements";
+
+function ArmorDetails({ armor, materials }) {
   return (
     <section>
       <h2>{armor.name}</h2>
@@ -24,6 +26,8 @@ function ArmorDetails({ armor }) {
       </div>
 
       <p>Location: {armor.location}</p>
+
+      <ArmorRequirements armor={armor} materials={materials} />
     </section>
   );
 }

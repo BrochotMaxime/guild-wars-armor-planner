@@ -6,6 +6,7 @@ import CampaignSelector from "./components/CampaignSelector/CampaignSelector";
 import ProfessionSelector from "./components/ProfessionSelector/ProfessionSelector";
 import armors from "./data/armors";
 import campaigns from "./data/campaigns";
+import materials from "./data/materials";
 import professions from "./data/professions";
 
 function App() {
@@ -52,7 +53,9 @@ function App() {
         <ArmorList armors={filteredArmors} onSelectArmor={setSelectedArmor} />
       )}
 
-      {selectedArmor && <ArmorDetails armor={selectedArmor} />}
+      {selectedArmor && (
+        <ArmorDetails armor={selectedArmor} materials={materials} />
+      )}
     </main>
   );
 }
