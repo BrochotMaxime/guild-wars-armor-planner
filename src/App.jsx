@@ -13,16 +13,37 @@ function App() {
   const [selectedProfession, setSelectedProfession] = useState(null);
   const [selectedCampaign, setSelectedCampaign] = useState(null);
   const [selectedArmor, setSelectedArmor] = useState(null);
+  const [inventory, setInventory] = useState({});
+  const [isCheckingMaterials, setIsCheckingMaterials] = useState(false);
 
   function handleProfessionSelect(profession) {
     setSelectedProfession(profession);
     setSelectedCampaign(null);
     setSelectedArmor(null);
+    setInventory({});
+    setIsCheckingMaterials(false);
   }
 
   function handleCampaignSelect(campaign) {
     setSelectedCampaign(campaign);
     setSelectedArmor(null);
+    setInventory({});
+    setIsCheckingMaterials(false);
+  }
+
+  function handleArmorSelect(armor) {
+    setSelectedArmor(armor);
+    setInventory({});
+    setIsCheckingMaterials(false);
+  }
+
+  function handleInventoryChange(materialId, value) {
+    const quantity = value === "" ? 0 : Math.max(0, Math.floor(Number(value)));
+
+    setInventory((currentInventory) => ({
+      ...currentInventory,
+      [materialId]: quantity,
+    }));
   }
 
   const filteredArmors = armors.filter(
@@ -50,11 +71,18 @@ function App() {
       )}
 
       {selectedCampaign && !selectedArmor && (
-        <ArmorList armors={filteredArmors} onSelectArmor={setSelectedArmor} />
+        <ArmorList armors={filteredArmors} onSelectArmor={handleArmorSelect} />
       )}
 
       {selectedArmor && (
-        <ArmorDetails armor={selectedArmor} materials={materials} />
+        <ArmorDetails
+          armor={selectedArmor}
+          materials={materials}
+          isCheckingMaterials={isCheckingMaterials}
+          inventory={inventory}
+          onCheckMaterials={() => setIsCheckingMaterials(true)}
+          onInventoryChange={handleInventoryChange}
+        />
       )}
     </main>
   );

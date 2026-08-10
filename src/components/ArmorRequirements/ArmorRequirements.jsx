@@ -1,4 +1,4 @@
-function ArmorRequirements({ armor, materials }) {
+function ArmorRequirements({ armor, materials, onCheckMaterials }) {
   function getMaterialById(materialId) {
     return materials.find((material) => material.id === materialId);
   }
@@ -43,7 +43,9 @@ function ArmorRequirements({ armor, materials }) {
         })}
       </ul>
 
-      <button type="button">Check my materials</button>
+      <button type="button" onClick={onCheckMaterials}>
+        Check my materials
+      </button>
     </section>
   );
 }
