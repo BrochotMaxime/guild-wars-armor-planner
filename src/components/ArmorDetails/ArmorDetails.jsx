@@ -1,6 +1,14 @@
 import ArmorRequirements from "../ArmorRequirements/ArmorRequirements";
+import MaterialTable from "../MaterialTable/MaterialTable";
 
-function ArmorDetails({ armor, materials }) {
+function ArmorDetails({
+  armor,
+  materials,
+  isCheckingMaterials,
+  inventory,
+  onCheckMaterials,
+  onInventoryChange,
+}) {
   return (
     <section>
       <h2>{armor.name}</h2>
@@ -27,7 +35,20 @@ function ArmorDetails({ armor, materials }) {
 
       <p>Location: {armor.location}</p>
 
-      <ArmorRequirements armor={armor} materials={materials} />
+      <ArmorRequirements
+        armor={armor}
+        materials={materials}
+        onCheckMaterials={onCheckMaterials}
+      />
+
+      {isCheckingMaterials && (
+        <MaterialTable
+          requirements={armor.cost.materials}
+          materials={materials}
+          inventory={inventory}
+          onInventoryChange={onInventoryChange}
+        />
+      )}
     </section>
   );
 }
