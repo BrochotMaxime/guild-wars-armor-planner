@@ -7,6 +7,13 @@ const materials = [
     acquisitionMethodIds: [],
   },
   {
+    id: "glittering-dust",
+    name: "Pile of Glittering Dust",
+    type: "common",
+    wikiUrl: "",
+    acquisitionMethodIds: [],
+  },
+  {
     id: "steel-ingot",
     name: "Steel Ingot",
     type: "rare",

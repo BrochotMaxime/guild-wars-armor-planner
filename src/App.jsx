@@ -7,9 +7,11 @@ import ProfessionSelector from "./components/ProfessionSelector/ProfessionSelect
 
 import armors from "./data/armors";
 import campaigns from "./data/campaigns";
+import craftingRecipes from "./data/craftingRecipes";
 import materials from "./data/materials";
 import professions from "./data/professions";
 
+import calculateCraftingRequirements from "./utils/calculateCraftingRequirements";
 import calculateMissingMaterials from "./utils/calculateMissingMaterials";
 
 function App() {
@@ -59,6 +61,12 @@ function App() {
     ? calculateMissingMaterials(selectedArmor.cost.materials, inventory)
     : [];
 
+  const craftingRequirements = calculateCraftingRequirements(
+    materialStatus,
+    materials,
+    craftingRecipes,
+  );
+
   return (
     <main>
       <h1>Guild Wars Armor Planner</h1>
@@ -88,6 +96,7 @@ function App() {
           materialStatus={materialStatus}
           isCheckingMaterials={isCheckingMaterials}
           inventory={inventory}
+          craftingRequirements={craftingRequirements}
           onCheckMaterials={() => setIsCheckingMaterials(true)}
           onInventoryChange={handleInventoryChange}
         />

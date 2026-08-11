@@ -1,5 +1,6 @@
 import ArmorRequirements from "../ArmorRequirements/ArmorRequirements";
 import MaterialTable from "../MaterialTable/MaterialTable";
+import CraftingRequirements from "../CraftingRequirements/CraftingRequirements.jsx";
 
 function ArmorDetails({
   armor,
@@ -9,6 +10,7 @@ function ArmorDetails({
   inventory,
   onCheckMaterials,
   onInventoryChange,
+  craftingRequirements,
 }) {
   return (
     <section>
@@ -43,12 +45,22 @@ function ArmorDetails({
       />
 
       {isCheckingMaterials && (
-        <MaterialTable
-          materialStatus={materialStatus}
-          materials={materials}
-          inventory={inventory}
-          onInventoryChange={onInventoryChange}
-        />
+        <>
+          <MaterialTable
+            materialStatus={materialStatus}
+            materials={materials}
+            inventory={inventory}
+            onInventoryChange={onInventoryChange}
+          />
+
+          <CraftingRequirements
+            craftingRequirements={craftingRequirements}
+            materials={materials}
+            materialStatus={materialStatus}
+            inventory={inventory}
+            onInventoryChange={onInventoryChange}
+          />
+        </>
       )}
     </section>
   );
