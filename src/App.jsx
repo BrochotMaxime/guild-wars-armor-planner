@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import ArmorDetails from "./components/ArmorDetails/ArmorDetails";
 import ArmorList from "./components/ArmorList/ArmorList";
+import Breadcrumb from "./components/Breadcrumb/Breadcrumb";
 import CampaignSelector from "./components/CampaignSelector/CampaignSelector";
 import ProfessionSelector from "./components/ProfessionSelector/ProfessionSelector";
 
@@ -53,6 +54,19 @@ function App() {
     }));
   }
 
+  function handleProfessionBreadcrumbClick() {
+    setSelectedCampaign(null);
+    setSelectedArmor(null);
+    setInventory({});
+    setIsCheckingMaterials(false);
+  }
+
+  function handleCampaignBreadcrumbClick() {
+    setSelectedArmor(null);
+    setInventory({});
+    setIsCheckingMaterials(false);
+  }
+
   const filteredArmors = armors.filter(
     (armor) =>
       armor.professionId === selectedProfession?.id &&
@@ -94,6 +108,14 @@ function App() {
   return (
     <main>
       <h1>Guild Wars Armor Planner</h1>
+
+      <Breadcrumb
+        selectedProfession={selectedProfession}
+        selectedCampaign={selectedCampaign}
+        selectedArmor={selectedArmor}
+        onProfessionClick={handleProfessionBreadcrumbClick}
+        onCampaignClick={handleCampaignBreadcrumbClick}
+      />
 
       <ProfessionSelector
         professions={professions}
