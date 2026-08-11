@@ -4,21 +4,21 @@ const materials = [
     name: "Iron Ingot",
     type: "common",
     wikiUrl: "",
-    acquisitionMethodIds: [],
+    acquisitionMethodIds: ["salvage", "material-trader"],
   },
   {
     id: "glittering-dust",
     name: "Pile of Glittering Dust",
     type: "common",
     wikiUrl: "",
-    acquisitionMethodIds: [],
+    acquisitionMethodIds: ["salvage", "material-trader"],
   },
   {
     id: "steel-ingot",
     name: "Steel Ingot",
     type: "rare",
     wikiUrl: "",
-    acquisitionMethodIds: [],
+    acquisitionMethodIds: ["salvage", "material-trader", "artisan"],
   },
 ];
 

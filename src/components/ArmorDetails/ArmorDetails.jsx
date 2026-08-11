@@ -2,17 +2,20 @@ import ArmorRequirements from "../ArmorRequirements/ArmorRequirements";
 import MaterialTable from "../MaterialTable/MaterialTable";
 import CraftingRequirements from "../CraftingRequirements/CraftingRequirements.jsx";
 import ActualMaterialNeeds from "../ActualMaterialNeeds/ActualMaterialNeeds.jsx";
+import AcquisitionList from "../AcquisitionList/AcquisitionList.jsx";
 
 function ArmorDetails({
   armor,
   materials,
   materialStatus,
+  craftingRequirements,
+  actualMaterialNeeds,
+  acquisitionNeeds,
+  acquisitionMethods,
   isCheckingMaterials,
   inventory,
   onCheckMaterials,
   onInventoryChange,
-  craftingRequirements,
-  actualMaterialNeeds,
 }) {
   return (
     <section>
@@ -66,6 +69,12 @@ function ArmorDetails({
           <ActualMaterialNeeds
             actualMaterialNeeds={actualMaterialNeeds}
             materials={materials}
+          />
+
+          <AcquisitionList
+            acquisitionNeeds={acquisitionNeeds}
+            materials={materials}
+            acquisitionMethods={acquisitionMethods}
           />
         </>
       )}
