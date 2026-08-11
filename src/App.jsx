@@ -11,6 +11,7 @@ import craftingRecipes from "./data/craftingRecipes";
 import materials from "./data/materials";
 import professions from "./data/professions";
 
+import aggregateMaterials from "./utils/aggregateMaterials";
 import calculateCraftingRequirements from "./utils/calculateCraftingRequirements";
 import calculateMissingMaterials from "./utils/calculateMissingMaterials";
 
@@ -67,6 +68,15 @@ function App() {
     craftingRecipes,
   );
 
+  const actualMaterialNeeds = selectedArmor
+    ? aggregateMaterials(
+        materialStatus,
+        craftingRequirements,
+        inventory,
+        materials,
+      )
+    : [];
+
   return (
     <main>
       <h1>Guild Wars Armor Planner</h1>
@@ -97,6 +107,7 @@ function App() {
           isCheckingMaterials={isCheckingMaterials}
           inventory={inventory}
           craftingRequirements={craftingRequirements}
+          actualMaterialNeeds={actualMaterialNeeds}
           onCheckMaterials={() => setIsCheckingMaterials(true)}
           onInventoryChange={handleInventoryChange}
         />
