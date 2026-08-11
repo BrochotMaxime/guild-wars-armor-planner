@@ -5,6 +5,7 @@ import ArmorList from "./components/ArmorList/ArmorList";
 import CampaignSelector from "./components/CampaignSelector/CampaignSelector";
 import ProfessionSelector from "./components/ProfessionSelector/ProfessionSelector";
 
+import acquisitionMethods from "./data/acquisitionMethods";
 import armors from "./data/armors";
 import campaigns from "./data/campaigns";
 import craftingRecipes from "./data/craftingRecipes";
@@ -77,6 +78,19 @@ function App() {
       )
     : [];
 
+  const missingRareMaterials = materialStatus.filter(
+    ({ materialId, missing }) => {
+      const material = materials.find(({ id }) => id === materialId);
+
+      return material?.type === "rare" && missing > 0;
+    },
+  );
+
+  const acquisitionNeeds = [
+    ...actualMaterialNeeds.filter(({ missing }) => missing > 0),
+    ...missingRareMaterials,
+  ];
+
   return (
     <main>
       <h1>Guild Wars Armor Planner</h1>
@@ -104,10 +118,12 @@ function App() {
           armor={selectedArmor}
           materials={materials}
           materialStatus={materialStatus}
-          isCheckingMaterials={isCheckingMaterials}
-          inventory={inventory}
           craftingRequirements={craftingRequirements}
           actualMaterialNeeds={actualMaterialNeeds}
+          acquisitionNeeds={acquisitionNeeds}
+          acquisitionMethods={acquisitionMethods}
+          isCheckingMaterials={isCheckingMaterials}
+          inventory={inventory}
           onCheckMaterials={() => setIsCheckingMaterials(true)}
           onInventoryChange={handleInventoryChange}
         />
