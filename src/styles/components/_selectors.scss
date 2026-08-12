@@ -1,0 +1,48 @@
+@use "../abstracts/variables" as *;
+
+section > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-top: $spacing-sm;
+}
+
+section > div > button {
+  width: auto;
+  min-width: 8rem;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  section > div > button {
+    flex: 1 1 calc(50% - $spacing-sm);
+    min-width: 0;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  section > div {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+button {
+  padding: 0.75rem 1rem;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-sm;
+  color: $color-text;
+  background-color: $color-surface;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    border-color: $color-primary;
+  }
+
+  &.selected {
+    color: #ffffff;
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+}

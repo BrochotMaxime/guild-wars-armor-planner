@@ -2,6 +2,7 @@ function Breadcrumb({
   selectedProfession,
   selectedCampaign,
   selectedArmor,
+  onHomeClick,
   onProfessionClick,
   onCampaignClick,
 }) {
@@ -11,6 +12,12 @@ function Breadcrumb({
 
   return (
     <nav aria-label="Breadcrumb">
+      <button type="button" onClick={onHomeClick}>
+        Home
+      </button>
+
+      <span> &gt; </span>
+
       <button type="button" onClick={onProfessionClick}>
         {selectedProfession.name}
       </button>

@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as *;
+
+article {
+  display: grid;
+  gap: $spacing-sm;
+  padding-block: $spacing-sm;
+
+  & + article {
+    border-top: 1px solid $color-border;
+  }
+
+  h4 {
+    margin-bottom: $spacing-xs;
+  }
+
+  ul {
+    display: grid;
+    gap: $spacing-xs;
+    margin-bottom: $spacing-sm;
+  }
+
+  a {
+    color: $color-primary;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: $spacing-xs;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    color: $color-warning;
+  }
+}

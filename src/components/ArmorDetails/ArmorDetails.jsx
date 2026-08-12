@@ -21,7 +21,7 @@ function ArmorDetails({
     <section>
       <h2>{armor.name}</h2>
 
-      <div>
+      <div className="armor-previews">
         <div>
           <h3>Male</h3>
           {armor.images.male ? (

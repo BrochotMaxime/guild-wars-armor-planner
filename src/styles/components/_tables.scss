@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as *;
+
+table {
+  width: 100%;
+  margin-top: $spacing-sm;
+  border-collapse: collapse;
+  background-color: $color-surface;
+}
+
+th,
+td {
+  padding: 1rem;
+  border: 1px solid $color-border;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+}
+
+tbody tr + tr {
+  border-top: 1px solid $color-border;
+}
+
+input[type="number"] {
+  width: 100%;
+  max-width: 7rem;
+  padding: 0.5rem;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-sm;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

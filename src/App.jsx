@@ -54,6 +54,14 @@ function App() {
     }));
   }
 
+  function handleHomeBreadcrumbClick() {
+    setSelectedProfession(null);
+    setSelectedCampaign(null);
+    setSelectedArmor(null);
+    setInventory({});
+    setIsCheckingMaterials(false);
+  }
+
   function handleProfessionBreadcrumbClick() {
     setSelectedCampaign(null);
     setSelectedArmor(null);
@@ -113,17 +121,20 @@ function App() {
         selectedProfession={selectedProfession}
         selectedCampaign={selectedCampaign}
         selectedArmor={selectedArmor}
+        onHomeClick={handleHomeBreadcrumbClick}
         onProfessionClick={handleProfessionBreadcrumbClick}
         onCampaignClick={handleCampaignBreadcrumbClick}
       />
 
-      <ProfessionSelector
-        professions={professions}
-        selectedProfession={selectedProfession}
-        onSelectProfession={handleProfessionSelect}
-      />
+      {!selectedProfession && (
+        <ProfessionSelector
+          professions={professions}
+          selectedProfession={selectedProfession}
+          onSelectProfession={handleProfessionSelect}
+        />
+      )}
 
-      {selectedProfession && (
+      {selectedProfession && !selectedCampaign && (
         <CampaignSelector
           campaigns={campaigns}
           selectedCampaign={selectedCampaign}

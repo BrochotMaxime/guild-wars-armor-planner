@@ -27,7 +27,7 @@ function CraftingRequirements({
         const material = getMaterialById(requirement.materialId);
 
         return (
-          <div key={requirement.materialId}>
+          <div className="crafting-requirement" key={requirement.materialId}>
             <h4>
               {material.name}: {requirement.missing} missing
             </h4>
