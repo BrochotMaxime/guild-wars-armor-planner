@@ -2,12 +2,17 @@ function calculateCraftingRequirements(
   materialStatus,
   materials,
   craftingRecipes,
+  craftingSelections,
 ) {
   return materialStatus
     .filter(({ materialId, missing }) => {
       const material = materials.find(({ id }) => id === materialId);
 
-      return material?.type === "rare" && missing > 0;
+      return (
+        material?.type === "rare" &&
+        missing > 0 &&
+        craftingSelections[materialId]
+      );
     })
     .map(({ materialId, missing }) => {
       const recipe = craftingRecipes.find(

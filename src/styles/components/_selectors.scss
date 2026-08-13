@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as *;
+
+.selector-section {
+  gap: $spacing-sm;
+}
+
+.selector-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: $spacing-sm;
+  margin-top: $spacing-sm;
+
+  @media (min-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.selector-grid--campaigns {
+  @media (min-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+button {
+  padding: 0.75rem 1rem;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-sm;
+  color: $color-text;
+  background-color: $color-surface;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    border-color: $color-primary;
+  }
+
+  &.selected {
+    color: #ffffff;
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+}

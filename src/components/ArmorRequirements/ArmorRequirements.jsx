@@ -1,4 +1,4 @@
-function ArmorRequirements({ armor, materials, onCheckMaterials }) {
+function ArmorRequirements({ armor, materials, onMaterialClick, onPlanArmor }) {
   function getMaterialById(materialId) {
     return materials.find((material) => material.id === materialId);
   }
@@ -11,40 +11,44 @@ function ArmorRequirements({ armor, materials, onCheckMaterials }) {
     ({ materialId }) => getMaterialById(materialId)?.type === "rare",
   );
 
+  function renderMaterial({ materialId, quantity }) {
+    const material = getMaterialById(materialId);
+
+    return (
+      <button
+        key={materialId}
+        type="button"
+        className="material-chip"
+        onClick={() => onMaterialClick(material)}
+      >
+        <span>{material.name}</span>
+        <strong>× {quantity}</strong>
+      </button>
+    );
+  }
+
   return (
-    <section>
+    <section className="armor-requirements">
       <h3>Requirements</h3>
 
-      <p>Gold: {armor.cost.gold}</p>
+      <p className="armor-requirements__gold">
+        Gold: <strong>{armor.cost.gold}</strong>
+      </p>
 
-      <h4>Common materials</h4>
-      <ul>
-        {commonMaterials.map(({ materialId, quantity }) => {
-          const material = getMaterialById(materialId);
+      <div className="armor-requirements__group">
+        <h4>Common materials</h4>
+        <div className="material-list">
+          {commonMaterials.map(renderMaterial)}
+        </div>
+      </div>
 
-          return (
-            <li key={materialId}>
-              {material.name}: {quantity}
-            </li>
-          );
-        })}
-      </ul>
+      <div className="armor-requirements__group">
+        <h4>Rare materials</h4>
+        <div className="material-list">{rareMaterials.map(renderMaterial)}</div>
+      </div>
 
-      <h4>Rare materials</h4>
-      <ul>
-        {rareMaterials.map(({ materialId, quantity }) => {
-          const material = getMaterialById(materialId);
-
-          return (
-            <li key={materialId}>
-              {material.name}: {quantity}
-            </li>
-          );
-        })}
-      </ul>
-
-      <button type="button" onClick={onCheckMaterials}>
-        Check my materials
+      <button type="button" className="plan-armor-button" onClick={onPlanArmor}>
+        Plan this armor
       </button>
     </section>
   );

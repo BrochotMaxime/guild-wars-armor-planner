@@ -1,9 +1,9 @@
 function CampaignSelector({ campaigns, selectedCampaign, onSelectCampaign }) {
   return (
-    <section>
+    <section className="selector-section">
       <h2>Choose a campaign</h2>
 
-      <div>
+      <div className="selector-grid selector-grid--campaigns">
         {campaigns.map((campaign) => {
           const isSelected = selectedCampaign?.id === campaign.id;
 

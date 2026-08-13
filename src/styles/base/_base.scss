@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+
+body {
+  min-width: 20rem;
+  min-height: 100vh;
+  font-family: $font-family-base;
+  color: $color-text;
+  background-color: $color-background;
+}
+
+main {
+  display: grid;
+  gap: $spacing-lg;
+  width: min(100% - 2rem, 75rem);
+  margin: 0 auto;
+  padding-block: $spacing-lg;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: $spacing-lg;
+}

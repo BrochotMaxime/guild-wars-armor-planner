@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as *;
+
+nav[aria-label="Breadcrumb"] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $spacing-xs;
+  margin-bottom: $spacing-lg;
+  padding-bottom: $spacing-sm;
+  border-bottom: 1px solid $color-border;
+
+  button {
+    padding: 0;
+    border: 0;
+    color: $color-primary;
+    background: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    color: $color-text-muted;
+  }
+}
