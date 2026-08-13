@@ -1,20 +1,22 @@
 import ArmorRequirements from "../ArmorRequirements/ArmorRequirements";
-import MaterialTable from "../MaterialTable/MaterialTable";
-import CraftingRequirements from "../CraftingRequirements/CraftingRequirements.jsx";
-import ActualMaterialNeeds from "../ActualMaterialNeeds/ActualMaterialNeeds.jsx";
-import AcquisitionList from "../AcquisitionList/AcquisitionList.jsx";
+import MaterialDetails from "../MaterialDetails/MaterialDetails";
+import ArmorPlanner from "../ArmorPlanner/ArmorPlanner";
 
 function ArmorDetails({
   armor,
   materials,
   materialStatus,
+  selectedMaterial,
   craftingRequirements,
+  craftingRecipes,
+  craftingSelections,
   actualMaterialNeeds,
-  acquisitionNeeds,
   acquisitionMethods,
   isCheckingMaterials,
   inventory,
-  onCheckMaterials,
+  onMaterialClick,
+  onPlanArmor,
+  onCraftingToggle,
   onInventoryChange,
 }) {
   return (
@@ -46,37 +48,30 @@ function ArmorDetails({
       <ArmorRequirements
         armor={armor}
         materials={materials}
-        onCheckMaterials={onCheckMaterials}
+        onMaterialClick={onMaterialClick}
+        onPlanArmor={onPlanArmor}
       />
 
+      {selectedMaterial && (
+        <MaterialDetails
+          material={selectedMaterial}
+          acquisitionMethods={acquisitionMethods}
+          onClose={() => onMaterialClick(null)}
+        />
+      )}
+
       {isCheckingMaterials && (
-        <>
-          <MaterialTable
-            materialStatus={materialStatus}
-            materials={materials}
-            inventory={inventory}
-            onInventoryChange={onInventoryChange}
-          />
-
-          <CraftingRequirements
-            craftingRequirements={craftingRequirements}
-            materials={materials}
-            materialStatus={materialStatus}
-            inventory={inventory}
-            onInventoryChange={onInventoryChange}
-          />
-
-          <ActualMaterialNeeds
-            actualMaterialNeeds={actualMaterialNeeds}
-            materials={materials}
-          />
-
-          <AcquisitionList
-            acquisitionNeeds={acquisitionNeeds}
-            materials={materials}
-            acquisitionMethods={acquisitionMethods}
-          />
-        </>
+        <ArmorPlanner
+          materialStatus={materialStatus}
+          actualMaterialNeeds={actualMaterialNeeds}
+          materials={materials}
+          craftingRecipes={craftingRecipes}
+          craftingSelections={craftingSelections}
+          craftingRequirements={craftingRequirements}
+          inventory={inventory}
+          onInventoryChange={onInventoryChange}
+          onCraftingToggle={onCraftingToggle}
+        />
       )}
     </section>
   );

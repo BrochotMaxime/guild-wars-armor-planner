@@ -21,6 +21,8 @@ function App() {
   const [selectedProfession, setSelectedProfession] = useState(null);
   const [selectedCampaign, setSelectedCampaign] = useState(null);
   const [selectedArmor, setSelectedArmor] = useState(null);
+  const [selectedMaterial, setSelectedMaterial] = useState(null);
+  const [craftingSelections, setCraftingSelections] = useState({});
   const [inventory, setInventory] = useState({});
   const [isCheckingMaterials, setIsCheckingMaterials] = useState(false);
 
@@ -28,6 +30,8 @@ function App() {
     setSelectedProfession(profession);
     setSelectedCampaign(null);
     setSelectedArmor(null);
+    setSelectedMaterial(null);
+    setCraftingSelections({});
     setInventory({});
     setIsCheckingMaterials(false);
   }
@@ -35,14 +39,25 @@ function App() {
   function handleCampaignSelect(campaign) {
     setSelectedCampaign(campaign);
     setSelectedArmor(null);
+    setSelectedMaterial(null);
+    setCraftingSelections({});
     setInventory({});
     setIsCheckingMaterials(false);
   }
 
   function handleArmorSelect(armor) {
     setSelectedArmor(armor);
+    setSelectedMaterial(null);
+    setCraftingSelections({});
     setInventory({});
     setIsCheckingMaterials(false);
+  }
+
+  function handleCraftingToggle(materialId) {
+    setCraftingSelections((currentSelections) => ({
+      ...currentSelections,
+      [materialId]: !currentSelections[materialId],
+    }));
   }
 
   function handleInventoryChange(materialId, value) {
@@ -58,6 +73,8 @@ function App() {
     setSelectedProfession(null);
     setSelectedCampaign(null);
     setSelectedArmor(null);
+    setSelectedMaterial(null);
+    setCraftingSelections({});
     setInventory({});
     setIsCheckingMaterials(false);
   }
@@ -65,12 +82,16 @@ function App() {
   function handleProfessionBreadcrumbClick() {
     setSelectedCampaign(null);
     setSelectedArmor(null);
+    setSelectedMaterial(null);
+    setCraftingSelections({});
     setInventory({});
     setIsCheckingMaterials(false);
   }
 
   function handleCampaignBreadcrumbClick() {
     setSelectedArmor(null);
+    setSelectedMaterial(null);
+    setCraftingSelections({});
     setInventory({});
     setIsCheckingMaterials(false);
   }
@@ -89,6 +110,7 @@ function App() {
     materialStatus,
     materials,
     craftingRecipes,
+    craftingSelections,
   );
 
   const actualMaterialNeeds = selectedArmor
@@ -99,19 +121,6 @@ function App() {
         materials,
       )
     : [];
-
-  const missingRareMaterials = materialStatus.filter(
-    ({ materialId, missing }) => {
-      const material = materials.find(({ id }) => id === materialId);
-
-      return material?.type === "rare" && missing > 0;
-    },
-  );
-
-  const acquisitionNeeds = [
-    ...actualMaterialNeeds.filter(({ missing }) => missing > 0),
-    ...missingRareMaterials,
-  ];
 
   return (
     <main>
@@ -151,13 +160,17 @@ function App() {
           armor={selectedArmor}
           materials={materials}
           materialStatus={materialStatus}
+          selectedMaterial={selectedMaterial}
+          onMaterialClick={setSelectedMaterial}
           craftingRequirements={craftingRequirements}
+          craftingRecipes={craftingRecipes}
+          craftingSelections={craftingSelections}
           actualMaterialNeeds={actualMaterialNeeds}
-          acquisitionNeeds={acquisitionNeeds}
           acquisitionMethods={acquisitionMethods}
           isCheckingMaterials={isCheckingMaterials}
           inventory={inventory}
-          onCheckMaterials={() => setIsCheckingMaterials(true)}
+          onPlanArmor={() => setIsCheckingMaterials(true)}
+          onCraftingToggle={handleCraftingToggle}
           onInventoryChange={handleInventoryChange}
         />
       )}

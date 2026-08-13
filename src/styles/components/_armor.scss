@@ -45,27 +45,82 @@ img {
   border-radius: $border-radius-sm;
 }
 
-.crafting-requirement {
+.material-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-xs;
+}
+
+.material-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  width: auto;
+  padding: 0.5rem 0.75rem;
+}
+
+.material-details {
+  gap: $spacing-sm;
+  padding: $spacing-md;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-sm;
+  background-color: $color-background;
+}
+
+.material-details__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: $spacing-sm;
+}
+
+.material-details ul {
   display: grid;
-  gap: $spacing-md;
+  gap: $spacing-xs;
+}
 
-  ul {
-    display: grid;
-    gap: $spacing-sm;
-  }
+.material-details a {
+  width: fit-content;
+  color: $color-primary;
+  font-weight: 600;
+  text-decoration: none;
 
-  li {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: $spacing-sm;
+  &:hover {
+    text-decoration: underline;
   }
+}
 
-  label {
-    display: flex;
-    align-items: center;
-    gap: $spacing-xs;
-  }
+.material-details span {
+  color: $color-warning;
+}
+
+.armor-planner {
+  gap: $spacing-sm;
+}
+
+.armor-planner__table-wrapper {
+  overflow-x: auto;
+}
+
+.armor-planner label {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  white-space: nowrap;
+}
+
+.armor-requirements {
+  gap: $spacing-sm;
+}
+
+.armor-requirements__group {
+  display: grid;
+  gap: $spacing-xs;
+}
+
+.plan-armor-button {
+  width: fit-content;
+  margin-top: $spacing-xs;
 }
 
 @media (min-width: $breakpoint-tablet) {

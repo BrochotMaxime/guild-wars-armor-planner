@@ -4,10 +4,10 @@ function ProfessionSelector({
   onSelectProfession,
 }) {
   return (
-    <section>
+    <section className="selector-section">
       <h2>Choose a profession</h2>
 
-      <div>
+      <div className="selector-grid">
         {professions.map((profession) => {
           const isSelected = selectedProfession?.id === profession.id;
 
