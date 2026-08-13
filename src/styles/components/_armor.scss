@@ -96,17 +96,111 @@ img {
 
 .armor-planner {
   gap: $spacing-sm;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.armor-planner__desktop-table {
+  display: none;
+}
+
+.armor-planner__mobile-list {
+  display: grid;
+  gap: $spacing-sm;
+}
+
+.armor-planner__mobile-item {
+  display: grid;
+  gap: $spacing-sm;
+  padding-block: $spacing-sm;
+  border-bottom: 1px solid $color-border;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    gap: $spacing-sm;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-sm;
+  }
+}
+
+.armor-planner__mobile-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-sm;
+  padding-top: $spacing-xs;
+  font-weight: 600;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .armor-planner__mobile-list {
+    display: none;
+  }
+
+  .armor-planner__desktop-table {
+    display: block;
+  }
+}
+
+.armor-planner table {
+  min-width: 38rem;
 }
 
 .armor-planner__table-wrapper {
   overflow-x: auto;
 }
 
-.armor-planner label {
-  display: flex;
-  align-items: center;
+.armor-planner th:nth-child(1),
+.armor-planner td:nth-child(1) {
+  width: 32%;
+}
+
+.armor-planner th:nth-child(2),
+.armor-planner td:nth-child(2) {
+  width: 28%;
+}
+
+.armor-planner th:nth-child(3),
+.armor-planner td:nth-child(3) {
+  width: 20%;
+}
+
+.armor-planner th:nth-child(4),
+.armor-planner td:nth-child(4) {
+  width: 20%;
+}
+
+.armor-planner__material {
+  display: grid;
   gap: $spacing-xs;
-  white-space: nowrap;
+}
+
+.armor-planner__craft-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $spacing-xs;
+  width: fit-content;
+}
+
+.armor-planner__crafting-cost {
+  margin-top: $spacing-xs;
+}
+
+.armor-planner__crafted-status {
+  color: $color-text-muted;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .armor-requirements {
