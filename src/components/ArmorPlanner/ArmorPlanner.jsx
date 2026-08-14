@@ -52,16 +52,217 @@ function ArmorPlanner({
     return armorQuantity;
   }
 
-  const rareMaterials = materialStatus.filter(({ materialId }) => {
-    const material = getMaterialById(materialId);
+  const allPlannerMaterials = [
+    ...actualMaterialNeeds,
+    ...materialStatus.filter(
+      ({ materialId }) =>
+        !actualMaterialNeeds.some(
+          (material) => material.materialId === materialId,
+        ),
+    ),
+  ];
 
-    return material?.type === "rare";
-  });
+  const commonPlannerMaterials = allPlannerMaterials.filter(
+    ({ materialId }) => getMaterialById(materialId)?.type === "common",
+  );
+
+  const rarePlannerMaterials = allPlannerMaterials.filter(
+    ({ materialId }) => getMaterialById(materialId)?.type === "rare",
+  );
+
+  const directRareMaterialIds = new Set(
+    materialStatus
+      .filter(({ materialId }) => getMaterialById(materialId)?.type === "rare")
+      .map(({ materialId }) => materialId),
+  );
+
+  function getRareParentId(materialId) {
+    const parentRequirement = craftingRequirements.find((requirement) =>
+      requirement.ingredients.some(
+        (ingredient) => ingredient.materialId === materialId,
+      ),
+    );
+
+    return parentRequirement?.materialId ?? null;
+  }
+
+  function buildRareMaterialOrder() {
+    const orderedMaterials = [];
+    const visited = new Set();
+
+    function addMaterial(materialId, depth = 0) {
+      if (visited.has(materialId)) {
+        return;
+      }
+
+      const plannerMaterial = rarePlannerMaterials.find(
+        (material) => material.materialId === materialId,
+      );
+
+      if (!plannerMaterial) {
+        return;
+      }
+
+      visited.add(materialId);
+
+      orderedMaterials.push({
+        ...plannerMaterial,
+        depth,
+      });
+
+      rarePlannerMaterials
+        .filter(
+          ({ materialId: childMaterialId }) =>
+            getRareParentId(childMaterialId) === materialId,
+        )
+        .forEach(({ materialId: childMaterialId }) => {
+          addMaterial(childMaterialId, depth + 1);
+        });
+    }
+
+    directRareMaterialIds.forEach((materialId) => {
+      addMaterial(materialId);
+    });
+
+    rarePlannerMaterials.forEach(({ materialId }) => {
+      addMaterial(materialId);
+    });
+
+    return orderedMaterials;
+  }
+
+  const orderedRareMaterials = buildRareMaterialOrder();
 
   const additionalCraftingGold = craftingRequirements.reduce(
     (total, requirement) => total + requirement.gold,
     0,
   );
+
+  function renderDesktopRow({ materialId, required, missing, depth = 0 }) {
+    const material = getMaterialById(materialId);
+
+    if (!material) {
+      return null;
+    }
+
+    const canCraft = material.type === "rare" && hasCraftingRecipe(materialId);
+
+    const isCrafting = Boolean(craftingSelections[materialId]);
+
+    return (
+      <tr key={materialId}>
+        <td>
+          <div
+            className="armor-planner__material"
+            style={{ "--material-depth": depth }}
+          >
+            <span>{material.name}</span>
+
+            {canCraft && missing > 0 && (
+              <label className="armor-planner__craft-option">
+                <input
+                  type="checkbox"
+                  checked={isCrafting}
+                  onChange={() => onCraftingToggle(materialId)}
+                />
+                Craft missing
+              </label>
+            )}
+          </div>
+        </td>
+
+        <td>{formatNeed(materialId, required)}</td>
+
+        <td>
+          <input
+            type="number"
+            min="0"
+            step="1"
+            value={inventory[materialId] ?? ""}
+            aria-label={`Owned ${material.name}`}
+            onChange={(event) =>
+              onInventoryChange(materialId, event.target.value)
+            }
+          />
+        </td>
+
+        <td>
+          {isCrafting && missing > 0 ? (
+            <span className="armor-planner__crafted-status">Via craft</span>
+          ) : (
+            missing
+          )}
+        </td>
+      </tr>
+    );
+  }
+
+  function renderMobileItem({ materialId, required, missing, depth = 0 }) {
+    const material = getMaterialById(materialId);
+
+    if (!material) {
+      return null;
+    }
+
+    const canCraft = material.type === "rare" && hasCraftingRecipe(materialId);
+
+    const isCrafting = Boolean(craftingSelections[materialId]);
+
+    const className = [
+      "armor-planner__mobile-item",
+      material.type === "rare"
+        ? "armor-planner__mobile-item--rare"
+        : "armor-planner__mobile-item--common",
+    ].join(" ");
+
+    return (
+      <article
+        className={className}
+        key={materialId}
+        style={{ "--material-depth": depth }}
+      >
+        <div className="armor-planner__mobile-header">
+          <strong>{material.name}</strong>
+          <span>{formatNeed(materialId, required)}</span>
+        </div>
+
+        <label className="armor-planner__owned-field">
+          <span>Owned</span>
+
+          <input
+            type="number"
+            min="0"
+            step="1"
+            value={inventory[materialId] ?? ""}
+            onChange={(event) =>
+              onInventoryChange(materialId, event.target.value)
+            }
+          />
+        </label>
+
+        <div className="armor-planner__mobile-result">
+          <span>→ Missing</span>
+
+          {isCrafting && missing > 0 ? (
+            <span className="armor-planner__crafted-status">Via craft</span>
+          ) : (
+            <strong>{missing}</strong>
+          )}
+        </div>
+
+        {canCraft && missing > 0 && (
+          <label className="armor-planner__craft-option">
+            <input
+              type="checkbox"
+              checked={isCrafting}
+              onChange={() => onCraftingToggle(materialId)}
+            />
+            Craft missing
+          </label>
+        )}
+      </article>
+    );
+  }
 
   return (
     <section className="armor-planner">
@@ -79,169 +280,57 @@ function ArmorPlanner({
               </tr>
             </thead>
 
-            <tbody>
-              {actualMaterialNeeds.map(({ materialId, required, missing }) => {
-                const material = getMaterialById(materialId);
+            {commonPlannerMaterials.length > 0 && (
+              <tbody className="armor-planner__group">
+                <tr className="armor-planner__group-title">
+                  <th colSpan="4">Common materials</th>
+                </tr>
 
-                return (
-                  <tr key={materialId}>
-                    <td>{material.name}</td>
+                {commonPlannerMaterials.map((material) =>
+                  renderDesktopRow(material),
+                )}
+              </tbody>
+            )}
 
-                    <td>{formatNeed(materialId, required)}</td>
+            {orderedRareMaterials.length > 0 && (
+              <tbody className="armor-planner__group">
+                <tr className="armor-planner__group-title">
+                  <th colSpan="4">Rare materials</th>
+                </tr>
 
-                    <td>
-                      <input
-                        type="number"
-                        min="0"
-                        step="1"
-                        value={inventory[materialId] ?? ""}
-                        onChange={(event) =>
-                          onInventoryChange(materialId, event.target.value)
-                        }
-                      />
-                    </td>
-
-                    <td>
-                      {craftingSelections[materialId] ? (
-                        <span className="armor-planner__crafted-status">
-                          Via craft
-                        </span>
-                      ) : (
-                        missing
-                      )}
-                    </td>
-                  </tr>
-                );
-              })}
-
-              {rareMaterials.map(({ materialId, required, missing }) => {
-                const material = getMaterialById(materialId);
-                const canCraft = hasCraftingRecipe(materialId);
-
-                return (
-                  <tr key={materialId}>
-                    <td>
-                      <div className="armor-planner__material">
-                        <span>{material.name}</span>
-
-                        {canCraft && (
-                          <label className="armor-planner__craft-option">
-                            <input
-                              type="checkbox"
-                              checked={Boolean(craftingSelections[materialId])}
-                              onChange={() => onCraftingToggle(materialId)}
-                            />
-                            Craft missing
-                          </label>
-                        )}
-                      </div>
-                    </td>
-
-                    <td>{required}</td>
-
-                    <td>
-                      <input
-                        type="number"
-                        min="0"
-                        step="1"
-                        value={inventory[materialId] ?? ""}
-                        onChange={(event) =>
-                          onInventoryChange(materialId, event.target.value)
-                        }
-                      />
-                    </td>
-
-                    <td>{missing}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
+                {orderedRareMaterials.map((material) =>
+                  renderDesktopRow(material),
+                )}
+              </tbody>
+            )}
           </table>
         </div>
       </div>
 
       <div className="armor-planner__mobile-list">
-        {actualMaterialNeeds.map(({ materialId, required, missing }) => {
-          const material = getMaterialById(materialId);
+        {commonPlannerMaterials.length > 0 && (
+          <div className="armor-planner__mobile-group">
+            <h4>Common materials</h4>
 
-          return (
-            <article className="armor-planner__mobile-item" key={materialId}>
-              <div>
-                <strong>{material.name}</strong>
-                <span>{formatNeed(materialId, required)}</span>
-              </div>
-
-              <label>
-                Owned
-                <input
-                  type="number"
-                  min="0"
-                  step="1"
-                  value={inventory[materialId] ?? ""}
-                  onChange={(event) =>
-                    onInventoryChange(materialId, event.target.value)
-                  }
-                />
-              </label>
-
-              <div className="armor-planner__mobile-result">
-                <span>→ Missing</span>
-                <strong>{missing}</strong>
-              </div>
-            </article>
-          );
-        })}
-
-        {rareMaterials.map(({ materialId, required, missing }) => {
-          const material = getMaterialById(materialId);
-          const canCraft = hasCraftingRecipe(materialId);
-          const isCrafting = Boolean(craftingSelections[materialId]);
-
-          return (
-            <article className="armor-planner__mobile-item" key={materialId}>
-              <div>
-                <strong>{material.name}</strong>
-                <span>{required}</span>
-              </div>
-
-              <label>
-                Owned
-                <input
-                  type="number"
-                  min="0"
-                  step="1"
-                  value={inventory[materialId] ?? ""}
-                  onChange={(event) =>
-                    onInventoryChange(materialId, event.target.value)
-                  }
-                />
-              </label>
-
-              <div className="armor-planner__mobile-result">
-                <span>→ Missing</span>
-
-                {isCrafting ? (
-                  <span className="armor-planner__crafted-status">
-                    Via craft
-                  </span>
-                ) : (
-                  <strong>{missing}</strong>
-                )}
-              </div>
-
-              {canCraft && (
-                <label className="armor-planner__craft-option">
-                  <input
-                    type="checkbox"
-                    checked={isCrafting}
-                    onChange={() => onCraftingToggle(materialId)}
-                  />
-                  Craft missing
-                </label>
+            <div className="armor-planner__mobile-group-content">
+              {commonPlannerMaterials.map((material) =>
+                renderMobileItem(material),
               )}
-            </article>
-          );
-        })}
+            </div>
+          </div>
+        )}
+
+        {orderedRareMaterials.length > 0 && (
+          <div className="armor-planner__mobile-group">
+            <h4>Rare materials</h4>
+
+            <div className="armor-planner__mobile-group-content">
+              {orderedRareMaterials.map((material) =>
+                renderMobileItem(material),
+              )}
+            </div>
+          </div>
+        )}
       </div>
 
       {additionalCraftingGold > 0 && (

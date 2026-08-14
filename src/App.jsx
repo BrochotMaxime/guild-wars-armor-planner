@@ -17,6 +17,9 @@ import aggregateMaterials from "./utils/aggregateMaterials";
 import calculateCraftingRequirements from "./utils/calculateCraftingRequirements";
 import calculateMissingMaterials from "./utils/calculateMissingMaterials";
 
+const allArmors = Object.values(armors).flat();
+const allMaterials = Object.values(materials).flat();
+
 function App() {
   const [selectedProfession, setSelectedProfession] = useState(null);
   const [selectedCampaign, setSelectedCampaign] = useState(null);
@@ -96,7 +99,7 @@ function App() {
     setIsCheckingMaterials(false);
   }
 
-  const filteredArmors = armors.filter(
+  const filteredArmors = allArmors.filter(
     (armor) =>
       armor.professionId === selectedProfession?.id &&
       armor.campaignId === selectedCampaign?.id,
@@ -108,9 +111,10 @@ function App() {
 
   const craftingRequirements = calculateCraftingRequirements(
     materialStatus,
-    materials,
+    allMaterials,
     craftingRecipes,
     craftingSelections,
+    inventory,
   );
 
   const actualMaterialNeeds = selectedArmor
@@ -118,7 +122,7 @@ function App() {
         materialStatus,
         craftingRequirements,
         inventory,
-        materials,
+        allMaterials,
       )
     : [];
 
@@ -158,7 +162,7 @@ function App() {
       {selectedArmor && (
         <ArmorDetails
           armor={selectedArmor}
-          materials={materials}
+          materials={allMaterials}
           materialStatus={materialStatus}
           selectedMaterial={selectedMaterial}
           onMaterialClick={setSelectedMaterial}
