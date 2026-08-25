@@ -124,7 +124,7 @@ const materials = {
       acquisitionMethodIds: ["salvage", "material-trader", "artisan"],
     },
     {
-      id: "deldrimor-stell-ingot",
+      id: "deldrimor-steel-ingot",
       name: "Deldrimor Steel Ingot",
       type: "rare",
       icon: "/images/materials/rare/Deldrimor_Steel_Ingot.png",

@@ -7,7 +7,7 @@ import CampaignSelector from "./components/CampaignSelector/CampaignSelector";
 import ProfessionSelector from "./components/ProfessionSelector/ProfessionSelector";
 
 import acquisitionMethods from "./data/acquisitionMethods";
-import armors from "./data/armors";
+import armors from "./data/armors/armors";
 import campaigns from "./data/campaigns";
 import craftingRecipes from "./data/craftingRecipes";
 import materials from "./data/materials";
