@@ -3,40 +3,83 @@ function calculateCraftingRequirements(
   materials,
   craftingRecipes,
   craftingSelections,
+  inventory,
 ) {
-  return materialStatus
-    .filter(({ materialId, missing }) => {
-      const material = materials.find(({ id }) => id === materialId);
+  const requiredTotals = new Map();
+  const processedOperations = new Map();
+  const craftingRequirements = new Map();
+  const queue = [];
 
-      return (
-        material?.type === "rare" &&
-        missing > 0 &&
-        craftingSelections[materialId]
-      );
-    })
-    .map(({ materialId, missing }) => {
-      const recipe = craftingRecipes.find(
-        ({ outputMaterialId }) => outputMaterialId === materialId,
+  materialStatus.forEach(({ materialId, required }) => {
+    requiredTotals.set(materialId, required);
+    queue.push(materialId);
+  });
+
+  while (queue.length > 0) {
+    const materialId = queue.shift();
+
+    if (!craftingSelections[materialId]) {
+      continue;
+    }
+
+    const material = materials.find(({ id }) => id === materialId);
+
+    if (material?.type !== "rare") {
+      continue;
+    }
+
+    const recipe = craftingRecipes.find(
+      ({ outputMaterialId }) => outputMaterialId === materialId,
+    );
+
+    if (!recipe) {
+      continue;
+    }
+
+    const required = requiredTotals.get(materialId) ?? 0;
+    const owned = inventory[materialId] ?? 0;
+    const missing = Math.max(required - owned, 0);
+
+    const craftingOperations = Math.ceil(missing / recipe.outputQuantity);
+
+    const previousOperations = processedOperations.get(materialId) ?? 0;
+
+    const additionalOperations = craftingOperations - previousOperations;
+
+    if (additionalOperations <= 0) {
+      continue;
+    }
+
+    processedOperations.set(materialId, craftingOperations);
+
+    recipe.ingredients.forEach((ingredient) => {
+      const additionalQuantity = ingredient.quantity * additionalOperations;
+
+      const currentRequired = requiredTotals.get(ingredient.materialId) ?? 0;
+
+      requiredTotals.set(
+        ingredient.materialId,
+        currentRequired + additionalQuantity,
       );
 
-      if (!recipe) {
-        return null;
+      if (craftingSelections[ingredient.materialId]) {
+        queue.push(ingredient.materialId);
       }
+    });
 
-      const craftingOperations = Math.ceil(missing / recipe.outputQuantity);
+    craftingRequirements.set(materialId, {
+      materialId,
+      missing,
+      craftingOperations,
+      ingredients: recipe.ingredients.map((ingredient) => ({
+        materialId: ingredient.materialId,
+        quantity: ingredient.quantity * craftingOperations,
+      })),
+      gold: recipe.gold * craftingOperations,
+    });
+  }
 
-      return {
-        materialId,
-        missing,
-        craftingOperations,
-        ingredients: recipe.ingredients.map((ingredient) => ({
-          materialId: ingredient.materialId,
-          quantity: ingredient.quantity * craftingOperations,
-        })),
-        gold: recipe.gold * craftingOperations,
-      };
-    })
-    .filter(Boolean);
+  return Array.from(craftingRequirements.values());
 }
 
 export default calculateCraftingRequirements;

@@ -7,7 +7,7 @@ import CampaignSelector from "./components/CampaignSelector/CampaignSelector";
 import ProfessionSelector from "./components/ProfessionSelector/ProfessionSelector";
 
 import acquisitionMethods from "./data/acquisitionMethods";
-import armors from "./data/armors";
+import armors from "./data/armors/armors";
 import campaigns from "./data/campaigns";
 import craftingRecipes from "./data/craftingRecipes";
 import materials from "./data/materials";
@@ -16,6 +16,9 @@ import professions from "./data/professions";
 import aggregateMaterials from "./utils/aggregateMaterials";
 import calculateCraftingRequirements from "./utils/calculateCraftingRequirements";
 import calculateMissingMaterials from "./utils/calculateMissingMaterials";
+
+const allArmors = Object.values(armors).flat();
+const allMaterials = Object.values(materials).flat();
 
 function App() {
   const [selectedProfession, setSelectedProfession] = useState(null);
@@ -96,7 +99,7 @@ function App() {
     setIsCheckingMaterials(false);
   }
 
-  const filteredArmors = armors.filter(
+  const filteredArmors = allArmors.filter(
     (armor) =>
       armor.professionId === selectedProfession?.id &&
       armor.campaignId === selectedCampaign?.id,
@@ -108,9 +111,10 @@ function App() {
 
   const craftingRequirements = calculateCraftingRequirements(
     materialStatus,
-    materials,
+    allMaterials,
     craftingRecipes,
     craftingSelections,
+    inventory,
   );
 
   const actualMaterialNeeds = selectedArmor
@@ -118,7 +122,7 @@ function App() {
         materialStatus,
         craftingRequirements,
         inventory,
-        materials,
+        allMaterials,
       )
     : [];
 
@@ -158,7 +162,7 @@ function App() {
       {selectedArmor && (
         <ArmorDetails
           armor={selectedArmor}
-          materials={materials}
+          materials={allMaterials}
           materialStatus={materialStatus}
           selectedMaterial={selectedMaterial}
           onMaterialClick={setSelectedMaterial}
