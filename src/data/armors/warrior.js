@@ -4,7 +4,11 @@ const warriorArmors = [
     name: "Ascalon Armor",
     professionId: "warrior",
     campaignId: "prophecies",
-    location: "Kaineng Center (Factions)",
+    craftingLocation: {
+      name: "Kaineng Center",
+      campaignId: "factions",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/prophecies/Warrior_Ascalon_armor_m.webp",
@@ -29,7 +33,11 @@ const warriorArmors = [
     name: "Krytan Armor",
     professionId: "warrior",
     campaignId: "prophecies",
-    location: "Bukdek Byway (Factions)",
+    craftingLocation: {
+      name: "Bukdek Byway",
+      campaignId: "factions",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/prophecies/Warrior_Krytan_armor_m.webp",
@@ -54,7 +62,11 @@ const warriorArmors = [
     name: "Tyrian Armor",
     professionId: "warrior",
     campaignId: "prophecies",
-    location: "Droknar's Forge",
+    craftingLocation: {
+      name: "Droknar's Forge",
+      campaignId: "prophecies",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/prophecies/Warrior_Tyrian_armor_m.webp",
@@ -79,7 +91,11 @@ const warriorArmors = [
     name: "Charr Hide Armor",
     professionId: "warrior",
     campaignId: "prophecies",
-    location: "Droknar's Forge",
+    craftingLocation: {
+      name: "Droknar's Forge",
+      campaignId: "prophecies",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/prophecies/Warrior_Charr_Hide_armor_m.webp",
@@ -105,7 +121,11 @@ const warriorArmors = [
     name: "Gladiator Armor",
     professionId: "warrior",
     campaignId: "prophecies",
-    location: "Droknar's Forge",
+    craftingLocation: {
+      name: "Droknar's Forge",
+      campaignId: "prophecies",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/prophecies/Warrior_Gladiator_armor_m.webp",
@@ -131,7 +151,11 @@ const warriorArmors = [
     name: "Wyvern Armor",
     professionId: "warrior",
     campaignId: "prophecies",
-    location: "Droknar's Forge",
+    craftingLocation: {
+      name: "Droknar's Forge",
+      campaignId: "prophecies",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/prophecies/Warrior_Wyvern_armor_m.webp",
@@ -156,7 +180,11 @@ const warriorArmors = [
     name: "Platemail Armor",
     professionId: "warrior",
     campaignId: "prophecies",
-    location: "Droknar's Forge",
+    craftingLocation: {
+      name: "Droknar's Forge",
+      campaignId: "prophecies",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/prophecies/Warrior_Platemail_armor_m.webp",
@@ -182,7 +210,11 @@ const warriorArmors = [
     name: "Templar Armor",
     professionId: "warrior",
     campaignId: "prophecies",
-    location: "Droknar's Forge",
+    craftingLocation: {
+      name: "Droknar's Forge",
+      campaignId: "prophecies",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/prophecies/Warrior_Templar_armor_m.webp",
@@ -211,7 +243,11 @@ const warriorArmors = [
     name: "Elite Charr Hide Armor",
     professionId: "warrior",
     campaignId: "prophecies",
-    location: "Marhan's Grotto",
+    craftingLocation: {
+      name: "Marhan's Grotto",
+      campaignId: "prophecies",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/prophecies/Warrior_Elite_Charr_Hide_armor_m.webp",
@@ -237,7 +273,11 @@ const warriorArmors = [
     name: "Elite Gladiator Armor",
     professionId: "warrior",
     campaignId: "prophecies",
-    location: "Marhan's Grotto",
+    craftingLocation: {
+      name: "Marhan's Grotto",
+      campaignId: "prophecies",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/prophecies/Warrior_Elite_Gladiator_armor_m.webp",
@@ -263,7 +303,11 @@ const warriorArmors = [
     name: "Elite Dragon Armor",
     professionId: "warrior",
     campaignId: "prophecies",
-    location: "The Granite Citadel",
+    craftingLocation: {
+      name: "The Granite Citadel",
+      campaignId: "prophecies",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/prophecies/Warrior_Elite_Dragon_armor_m.webp",
@@ -289,7 +333,11 @@ const warriorArmors = [
     name: "Elite Platemail Armor",
     professionId: "warrior",
     campaignId: "prophecies",
-    location: "The Granite Citadel",
+    craftingLocation: {
+      name: "The Granite Citadel",
+      campaignId: "prophecies",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/prophecies/Warrior_Elite_Platemail_armor_m.webp",
@@ -315,7 +363,11 @@ const warriorArmors = [
     name: "Elite Templar Armor",
     professionId: "warrior",
     campaignId: "prophecies",
-    location: "Marhan's Grotto",
+    craftingLocation: {
+      name: "Marhan's Grotto",
+      campaignId: "prophecies",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/prophecies/Warrior_Elite_Templar_armor_m.webp",
@@ -340,12 +392,17 @@ const warriorArmors = [
       ],
     },
   },
+
   {
     id: "warrior-shing-jea-armor",
     name: "Shing Jea Armor",
     professionId: "warrior",
     campaignId: "factions",
-    location: "Kaineng Center",
+    craftingLocation: {
+      name: "Kaineng Center",
+      campaignId: "factions",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/factions/Warrior_Shing_Jea_armor_m.webp",
@@ -370,7 +427,11 @@ const warriorArmors = [
     name: "Canthan Armor",
     professionId: "warrior",
     campaignId: "factions",
-    location: "Kaineng Center",
+    craftingLocation: {
+      name: "Kaineng Center",
+      campaignId: "factions",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/factions/Warrior_Canthan_armor_m.webp",
@@ -395,7 +456,11 @@ const warriorArmors = [
     name: "Kurzick Armor",
     professionId: "warrior",
     campaignId: "factions",
-    location: "Kaineng Center",
+    craftingLocation: {
+      name: "Kaineng Center",
+      campaignId: "factions",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/factions/Warrior_Kurzick_armor_m.webp",
@@ -424,7 +489,11 @@ const warriorArmors = [
     name: "Luxon Armor",
     professionId: "warrior",
     campaignId: "factions",
-    location: "Kaineng Center",
+    craftingLocation: {
+      name: "Kaineng Center",
+      campaignId: "factions",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/factions/Warrior_Luxon_armor_m.webp",
@@ -453,7 +522,11 @@ const warriorArmors = [
     name: "Elite Canthan Armor",
     professionId: "warrior",
     campaignId: "factions",
-    location: "Divine Path",
+    craftingLocation: {
+      name: "Divine Path",
+      campaignId: "factions",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/factions/Warrior_Elite_Canthan_armor_m.webp",
@@ -479,7 +552,11 @@ const warriorArmors = [
     name: "Elite Kurzick Armor",
     professionId: "warrior",
     campaignId: "factions",
-    location: "Vasburg Armory",
+    craftingLocation: {
+      name: "Vasburg Armory",
+      campaignId: "factions",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/factions/Warrior_Elite_Kurzick_armor_m.webp",
@@ -509,7 +586,11 @@ const warriorArmors = [
     name: "Elite Luxon Armor",
     professionId: "warrior",
     campaignId: "factions",
-    location: "Leviathan Pits",
+    craftingLocation: {
+      name: "Leviathan Pits",
+      campaignId: "factions",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/factions/Warrior_Elite_Luxon_armor_m.webp",
@@ -534,12 +615,23 @@ const warriorArmors = [
       ],
     },
   },
+
   {
     id: "warrior-istani-armor",
     name: "Istani Armor",
     professionId: "warrior",
     campaignId: "nightfall",
-    location: ["Consulate Docks", "Commande Post"],
+    craftingLocation: [
+      {
+        name: "Consulate Docks",
+        campaignId: "nightfall",
+      },
+      {
+        name: "Command Post",
+        campaignId: "nightfall",
+      },
+    ],
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/nightfall/Warrior_Istani_armor_m.webp",
@@ -564,7 +656,17 @@ const warriorArmors = [
     name: "Sunspear Armor",
     professionId: "warrior",
     campaignId: "nightfall",
-    location: ["Consulate Docks", "Commande Post"],
+    craftingLocation: [
+      {
+        name: "Consulate Docks",
+        campaignId: "nightfall",
+      },
+      {
+        name: "Command Post",
+        campaignId: "nightfall",
+      },
+    ],
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
       male: "/images/armors/warrior/nightfall/Warrior_Sunspear_armor_m.webp",
@@ -589,7 +691,11 @@ const warriorArmors = [
     name: "Elite Sunspear Armor",
     professionId: "warrior",
     campaignId: "nightfall",
-    location: "Command Post",
+    craftingLocation: {
+      name: "Command Post",
+      campaignId: "nightfall",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/nightfall/Warrior_Elite_Sunspear_armor_m.webp",
@@ -615,7 +721,11 @@ const warriorArmors = [
     name: "Vabbian Armor",
     professionId: "warrior",
     campaignId: "nightfall",
-    location: "The Kodash Bazaar",
+    craftingLocation: {
+      name: "The Kodash Bazaar",
+      campaignId: "nightfall",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/nightfall/Warrior_Vabbian_armor_m.webp",
@@ -648,7 +758,11 @@ const warriorArmors = [
     name: "Ancient Armor",
     professionId: "warrior",
     campaignId: "nightfall",
-    location: "Bone Palace",
+    craftingLocation: {
+      name: "Bone Palace",
+      campaignId: "nightfall",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/nightfall/Warrior_Ancient_armor_m.webp",
@@ -673,7 +787,11 @@ const warriorArmors = [
     name: "Primeval Armor",
     professionId: "warrior",
     campaignId: "nightfall",
-    location: "Throne of Secrets",
+    craftingLocation: {
+      name: "Throne of Secrets",
+      campaignId: "nightfall",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/nightfall/Warrior_Primeval_armor_m.webp",
@@ -693,12 +811,17 @@ const warriorArmors = [
       ],
     },
   },
+
   {
     id: "warrior-norn-armor",
     name: "Norn Armor",
     professionId: "warrior",
     campaignId: "eye-of-the-north",
-    location: "Gunnar's Hold",
+    craftingLocation: {
+      name: "Gunnar's Hold",
+      campaignId: "eye-of-the-north",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/eotn/Warrior_Norn_armor_m.webp",
@@ -727,7 +850,11 @@ const warriorArmors = [
     name: "Monument Armor",
     professionId: "warrior",
     campaignId: "eye-of-the-north",
-    location: "Eye of the North",
+    craftingLocation: {
+      name: "Eye of the North",
+      campaignId: "eye-of-the-north",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/eotn/Warrior_Monument_armor_m.webp",
@@ -752,7 +879,11 @@ const warriorArmors = [
     name: "Asuran Armor",
     professionId: "warrior",
     campaignId: "eye-of-the-north",
-    location: "Rata Sum",
+    craftingLocation: {
+      name: "Rata Sum",
+      campaignId: "eye-of-the-north",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/eotn/Warrior_Asuran_armor_m.webp",
@@ -777,7 +908,11 @@ const warriorArmors = [
     name: "Silver Eagle Armor",
     professionId: "warrior",
     campaignId: "eye-of-the-north",
-    location: "Central Transfer Chamber",
+    craftingLocation: {
+      name: "Central Transfer Chamber",
+      campaignId: "eye-of-the-north",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/eotn/Warrior_Silver_Eagle_armor_m.webp",
@@ -802,7 +937,11 @@ const warriorArmors = [
     name: "Deldrimor Armor",
     professionId: "warrior",
     campaignId: "eye-of-the-north",
-    location: "Central Transfer Chamber",
+    craftingLocation: {
+      name: "Central Transfer Chamber",
+      campaignId: "eye-of-the-north",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/eotn/Warrior_Deldrimor_armor_m.webp",
@@ -822,12 +961,17 @@ const warriorArmors = [
       ],
     },
   },
+
   {
     id: "warrior-obsidian-armor",
     name: "Obsidian Armor",
     professionId: "warrior",
     campaignId: "core",
-    location: "Fissure of Woe",
+    craftingLocation: {
+      name: "Fissure of Woe",
+      campaignId: "core",
+    },
+    pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
       male: "/images/armors/warrior/core/Warrior_Obsidian_armor_m.webp",
