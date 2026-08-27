@@ -899,7 +899,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Deldrimor_armor",
+    wikiLink: "https://wiki.guildwars.com/wiki/Deldrimor_armor",
   },
 
   {
