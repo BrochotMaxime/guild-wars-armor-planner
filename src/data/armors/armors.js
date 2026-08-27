@@ -3,6 +3,7 @@ import rangerArmors from "./ranger";
 import monkArmors from "./monk";
 import necromancerArmors from "./necromancer";
 import mesmerArmors from "./mesmer";
+import elementalistArmors from "./elementalist";
 
 const armors = [
   ...warriorArmors,
@@ -10,6 +11,7 @@ const armors = [
   ...monkArmors,
   ...necromancerArmors,
   ...mesmerArmors,
+  ...elementalistArmors,
 ];
 
 export default armors;
