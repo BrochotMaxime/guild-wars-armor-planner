@@ -212,7 +212,7 @@ const materials = {
       acquisitionMethodIds: ["salvage", "material-trader"],
     },
     {
-      id: "obisidian-shard",
+      id: "obsidian-shard",
       name: "Obsidian Shard",
       type: "rare",
       icon: "/images/materials/rare/Obsidian_Shard.png",
