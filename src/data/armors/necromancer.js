@@ -28,7 +28,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Ascalon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Ascalon_armor",
   },
   {
     id: "necromancer-krytan-armor",
@@ -59,7 +59,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Krytan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Krytan_armor",
   },
   {
     id: "necromancer-tyrian-armor",
@@ -100,7 +100,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Tyrian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Tyrian_armor",
   },
   {
     id: "necromancer-cabal-armor",
@@ -131,7 +131,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Cabal_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Cabal_armor",
   },
   {
     id: "necromancer-fanatic-armor",
@@ -162,7 +162,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Fanatic_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Fanatic_armor",
   },
   {
     id: "necromancer-necrotic-armor",
@@ -193,7 +193,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Necrotic_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Necrotic_armor",
   },
   {
     id: "necromancer-scar-pattern-armor",
@@ -224,7 +224,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Scar_Pattern_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Scar_Pattern_armor",
   },
   {
     id: "necromancer-profane-armor",
@@ -255,7 +255,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Profane_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Profane_armor",
   },
   {
     id: "necromancer-elite-cabal-armor",
@@ -286,7 +286,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Cabal_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Cabal_armor",
   },
   {
     id: "necromancer-elite-cultist-armor",
@@ -317,7 +317,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Cultist_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Cultist_armor",
   },
   {
     id: "necromancer-elite-necrotic-armor",
@@ -348,8 +348,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink:
-      "https://wiki.guildwars.com/wiki/Necromancer_Elite_Necrotic_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Necrotic_armor",
   },
   {
     id: "necromancer-elite-scar-pattern-armor",
@@ -380,7 +379,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink:
+    wikiUrl:
       "https://wiki.guildwars.com/wiki/Necromancer_Elite_Scar_Pattern_armor",
   },
   {
@@ -412,7 +411,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Profane_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Profane_armor",
   },
 
   {
@@ -452,7 +451,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Shing_Jea_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Shing_Jea_armor",
   },
   {
     id: "necromancer-canthan-armor",
@@ -499,7 +498,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Canthan_armor",
   },
   {
     id: "necromancer-kurzick-armor",
@@ -542,7 +541,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Kurzick_armor",
   },
   {
     id: "necromancer-luxon-armor",
@@ -585,7 +584,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Luxon_armor",
   },
   {
     id: "necromancer-elite-canthan-armor",
@@ -632,7 +631,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Canthan_armor",
   },
   {
     id: "necromancer-elite-kurzick-armor",
@@ -675,7 +674,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Kurzick_armor",
   },
   {
     id: "necromancer-elite-luxon-armor",
@@ -718,7 +717,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Luxon_armor",
   },
 
   {
@@ -764,7 +763,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Istani_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Istani_armor",
   },
   {
     id: "necromancer-sunspear-armor",
@@ -809,7 +808,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Sunspear_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Sunspear_armor",
   },
   {
     id: "necromancer-elite-sunspear-armor",
@@ -848,8 +847,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink:
-      "https://wiki.guildwars.com/wiki/Necromancer_Elite_Sunspear_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Elite_Sunspear_armor",
   },
   {
     id: "necromancer-vabbian-armor",
@@ -896,7 +894,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Vabbian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Vabbian_armor",
   },
   {
     id: "necromancer-ancient-armor",
@@ -939,7 +937,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Ancient_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Ancient_armor",
   },
   {
     id: "necromancer-primeval-armor",
@@ -978,7 +976,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Primeval_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Primeval_armor",
   },
 
   {
@@ -1021,7 +1019,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Norn_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Norn_armor",
   },
   {
     id: "necromancer-asuran-armor",
@@ -1063,7 +1061,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Asuran_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Asuran_armor",
   },
   {
     id: "necromancer-monument-armor",
@@ -1102,7 +1100,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Monument_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Monument_armor",
   },
   {
     id: "necromancer-deldrimor-armor",
@@ -1141,7 +1139,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Deldrimor_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Deldrimor_armor",
   },
 
   {
@@ -1181,7 +1179,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Obsidian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Necromancer_Obsidian_armor",
   },
 ];
 

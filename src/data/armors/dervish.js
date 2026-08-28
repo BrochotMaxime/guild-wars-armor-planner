@@ -33,7 +33,7 @@ const dervishArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Dervish_Istani_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Dervish_Istani_armor",
   },
   {
     id: "dervish-sunspear-armor",
@@ -69,7 +69,7 @@ const dervishArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Dervish_Sunspear_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Dervish_Sunspear_armor",
   },
   {
     id: "dervish-elonian-armor",
@@ -109,7 +109,7 @@ const dervishArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Dervish_Elonian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Dervish_Elonian_armor",
   },
   {
     id: "dervish-elite-sunspear-armor",
@@ -140,7 +140,7 @@ const dervishArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Dervish_Elite_Sunspear_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Dervish_Elite_Sunspear_armor",
   },
   {
     id: "dervish-vabbian-armor",
@@ -178,7 +178,7 @@ const dervishArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Dervish_Vabbian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Dervish_Vabbian_armor",
   },
   {
     id: "dervish-ancient-armor",
@@ -208,7 +208,7 @@ const dervishArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Dervish_Ancient_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Dervish_Ancient_armor",
   },
   {
     id: "dervish-primeval-armor",
@@ -238,7 +238,7 @@ const dervishArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Dervish_Primeval_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Dervish_Primeval_armor",
   },
 
   {
@@ -269,7 +269,7 @@ const dervishArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Dervish_Norn_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Dervish_Norn_armor",
   },
   {
     id: "dervish-asuran-armor",
@@ -299,7 +299,7 @@ const dervishArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Dervish_Asuran_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Dervish_Asuran_armor",
   },
   {
     id: "dervish-monument-armor",
@@ -329,7 +329,7 @@ const dervishArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Dervish_Monument_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Dervish_Monument_armor",
   },
   {
     id: "dervish-deldrimor-armor",
@@ -367,7 +367,7 @@ const dervishArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Dervish_Deldrimor_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Dervish_Deldrimor_armor",
   },
 
   {
@@ -406,7 +406,7 @@ const dervishArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Dervish_Obsidian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Dervish_Obsidian_armor",
   },
 ];
 

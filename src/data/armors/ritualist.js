@@ -28,7 +28,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Shing_Jea_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Shing_Jea_armor",
   },
   {
     id: "ritualist-canthan-armor",
@@ -65,7 +65,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Canthan_armor",
   },
   {
     id: "ritualist-seitung-armor",
@@ -96,7 +96,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Seitung_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Seitung_armor",
   },
   {
     id: "ritualist-exotic-armor",
@@ -126,7 +126,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Exotic_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Exotic_armor",
   },
   {
     id: "ritualist-imperial-armor",
@@ -157,7 +157,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Imperial_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Imperial_armor",
   },
   {
     id: "ritualist-kurzick-armor",
@@ -192,7 +192,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Kurzick_armor",
   },
   {
     id: "ritualist-luxon-armor",
@@ -226,7 +226,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Luxon_armor",
   },
   {
     id: "ritualist-elite-canthan-armor",
@@ -257,7 +257,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Elite_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Elite_Canthan_armor",
   },
   {
     id: "ritualist-elite-exotic-armor",
@@ -288,7 +288,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Elite_Exotic_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Elite_Exotic_armor",
   },
   {
     id: "ritualist-elite-imperial-armor",
@@ -319,7 +319,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Elite_Imperial_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Elite_Imperial_armor",
   },
   {
     id: "ritualist-elite-kurzick-armor",
@@ -354,7 +354,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Elite_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Elite_Kurzick_armor",
   },
   {
     id: "ritualist-elite-luxon-armor",
@@ -389,7 +389,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Elite_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Elite_Luxon_armor",
   },
 
   {
@@ -429,7 +429,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Vabbian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Vabbian_armor",
   },
   {
     id: "ritualist-ancient-armor",
@@ -460,7 +460,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Ancient_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Ancient_armor",
   },
 
   {
@@ -491,7 +491,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Norn_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Norn_armor",
   },
   {
     id: "ritualist-asuran-armor",
@@ -521,7 +521,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Asuran_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Asuran_armor",
   },
   {
     id: "ritualist-monument-armor",
@@ -551,7 +551,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Monument_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Monument_armor",
   },
   {
     id: "ritualist-deldrimor-armor",
@@ -597,7 +597,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Deldrimor_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Deldrimor_armor",
   },
 
   {
@@ -636,7 +636,7 @@ const ritualistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ritualist_Obsidian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ritualist_Obsidian_armor",
   },
 ];
 

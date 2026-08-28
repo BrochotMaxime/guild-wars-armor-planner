@@ -27,7 +27,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Ascalon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Ascalon_armor",
   },
   {
     id: "ranger-krytan-armor",
@@ -57,7 +57,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Krytan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Krytan_armor",
   },
   {
     id: "ranger-tyrian-armor",
@@ -97,7 +97,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Tyrian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Tyrian_armor",
   },
   {
     id: "ranger-fur-lined-armor",
@@ -127,7 +127,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Fur-Lined_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Fur-Lined_armor",
   },
   {
     id: "ranger-drakescale-armor",
@@ -157,7 +157,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Drakescale_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Drakescale_armor",
   },
   {
     id: "ranger-druid-armor",
@@ -187,7 +187,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Druid_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Druid_armor",
   },
   {
     id: "ranger-studded-leather-armor",
@@ -218,7 +218,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Studded_Leather_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Studded_Leather_armor",
   },
   {
     id: "ranger-ascalon-armor",
@@ -249,7 +249,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Elite_Fur-Lined_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Elite_Fur-Lined_armor",
   },
   {
     id: "ranger-elite-drakescale-armor",
@@ -280,7 +280,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Elite_Drakescale_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Elite_Drakescale_armor",
   },
   {
     id: "ranger-ascalon-armor",
@@ -311,7 +311,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Elite_Druid_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Elite_Druid_armor",
   },
   {
     id: "ranger-elite-studded-leather-armor",
@@ -342,7 +342,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink:
+    wikiUrl:
       "https://wiki.guildwars.com/wiki/Ranger_Elite_Studded_Leather_armor",
   },
 
@@ -374,7 +374,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Shing_Jea_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Shing_Jea_armor",
   },
   {
     id: "ranger-canthan-armor",
@@ -404,7 +404,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Canthan_armor",
   },
   {
     id: "ranger-kurzick-armor",
@@ -438,7 +438,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Kurzick_armor",
   },
   {
     id: "ranger-luxon-armor",
@@ -472,7 +472,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Luxon_armor",
   },
   {
     id: "ranger-elite-canthan-armor",
@@ -503,7 +503,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Elite_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Elite_Canthan_armor",
   },
   {
     id: "ranger-elite-kurzick-armor",
@@ -538,7 +538,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Elite_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Elite_Kurzick_armor",
   },
   {
     id: "ranger-elite-luxon-armor",
@@ -572,7 +572,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Elite_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Elite_Luxon_armor",
   },
 
   {
@@ -609,7 +609,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Istani_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Istani_armor",
   },
   {
     id: "ranger-sunspear-armor",
@@ -645,7 +645,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Sunspear_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Sunspear_armor",
   },
   {
     id: "ranger-elite-sunspear-armor",
@@ -676,7 +676,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Elite_Sunspear_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Elite_Sunspear_armor",
   },
   {
     id: "ranger-vabbian-armor",
@@ -714,7 +714,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Vabbian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Vabbian_armor",
   },
   {
     id: "ranger-ancient-armor",
@@ -744,7 +744,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Ancient_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Ancient_armor",
   },
   {
     id: "ranger-primeval-armor",
@@ -774,7 +774,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Primeval_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Primeval_armor",
   },
 
   {
@@ -805,7 +805,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Norn_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Norn_armor",
   },
   {
     id: "ranger-monument-armor",
@@ -835,7 +835,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Monument_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Monument_armor",
   },
   {
     id: "ranger-asuran-armor",
@@ -865,7 +865,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Asuran_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Asuran_armor",
   },
   {
     id: "ranger-deldrimor-armor",
@@ -899,7 +899,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Deldrimor_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Deldrimor_armor",
   },
 
   {
@@ -938,7 +938,7 @@ const rangerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Ranger_Obsidian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Ranger_Obsidian_armor",
   },
 ];
 

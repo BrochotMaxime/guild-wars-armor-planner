@@ -28,7 +28,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Ascalon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Ascalon_armor",
   },
   {
     id: "elementalist-krytan-armor",
@@ -59,7 +59,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Krytan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Krytan_armor",
   },
   {
     id: "elementalist-tyrian-armor",
@@ -100,7 +100,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Tyrian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Tyrian_armor",
   },
   {
     id: "elementalist-flameforged-armor",
@@ -131,7 +131,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Flameforged_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Flameforged_armor",
   },
   {
     id: "elementalist-iceforged-armor",
@@ -162,7 +162,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Iceforged_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Iceforged_armor",
   },
   {
     id: "elementalist-stoneforged-armor",
@@ -193,7 +193,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Stoneforged_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Stoneforged_armor",
   },
   {
     id: "elementalist-stormforged-armor",
@@ -224,7 +224,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Stormforged_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Stormforged_armor",
   },
   {
     id: "elementalist-elite-flameforged-armor",
@@ -255,7 +255,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink:
+    wikiUrl:
       "https://wiki.guildwars.com/wiki/Elementalist_Elite_Flameforged_armor",
   },
   {
@@ -287,7 +287,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink:
+    wikiUrl:
       "https://wiki.guildwars.com/wiki/Elementalist_Elite_Iceforged_armor",
   },
   {
@@ -319,7 +319,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink:
+    wikiUrl:
       "https://wiki.guildwars.com/wiki/Elementalist_Elite_Stoneforged_armor",
   },
   {
@@ -351,7 +351,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink:
+    wikiUrl:
       "https://wiki.guildwars.com/wiki/Elementalist_Elite_Stormforged_armor",
   },
 
@@ -384,7 +384,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Shing_Jea_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Shing_Jea_armor",
   },
   {
     id: "elementalist-canthan-armor",
@@ -415,7 +415,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Canthan_armor",
   },
   {
     id: "elementalist-kurzick-armor",
@@ -450,7 +450,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Kurzick_armor",
   },
   {
     id: "elementalist-luxon-armor",
@@ -485,7 +485,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Luxon_armor",
   },
   {
     id: "elementalist-elite-canthan-armor",
@@ -516,8 +516,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink:
-      "https://wiki.guildwars.com/wiki/Elementalist_Elite_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Elite_Canthan_armor",
   },
   {
     id: "elementalist-elite-kurzick-armor",
@@ -552,8 +551,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink:
-      "https://wiki.guildwars.com/wiki/Elementalist_Elite_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Elite_Kurzick_armor",
   },
   {
     id: "elementalist-elite-luxon-armor",
@@ -588,7 +586,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Elite_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Elite_Luxon_armor",
   },
 
   {
@@ -626,7 +624,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Istani_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Istani_armor",
   },
   {
     id: "elementalist-sunspear-armor",
@@ -663,7 +661,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Sunspear_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Sunspear_armor",
   },
   {
     id: "elementalist-elite-sunspear-armor",
@@ -694,7 +692,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink:
+    wikiUrl:
       "https://wiki.guildwars.com/wiki/Elementalist_Elite_Sunspear_armor",
   },
   {
@@ -738,7 +736,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Vabbian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Vabbian_armor",
   },
   {
     id: "elementalist-ancient-armor",
@@ -769,7 +767,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Ancient_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Ancient_armor",
   },
   {
     id: "elementalist-primeval-armor",
@@ -800,7 +798,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Primeval_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Primeval_armor",
   },
 
   {
@@ -831,7 +829,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Norn_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Norn_armor",
   },
   {
     id: "elementalist-asuran-armor",
@@ -862,7 +860,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Asuran_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Asuran_armor",
   },
   {
     id: "elementalist-monument-armor",
@@ -893,7 +891,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Monument_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Monument_armor",
   },
   {
     id: "elementalist-deldrimor-armor",
@@ -924,7 +922,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Deldrimor_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Deldrimor_armor",
   },
 
   {
@@ -964,7 +962,7 @@ const elementalistArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Elementalist_Obsidian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Elementalist_Obsidian_armor",
   },
 ];
 
