@@ -893,7 +893,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Deldrimor_armor",
+    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Deldrimor_armor",
   },
 
   {

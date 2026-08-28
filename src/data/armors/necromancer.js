@@ -1141,7 +1141,7 @@ const necromancerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Deldrimor_armor",
+    wikiLink: "https://wiki.guildwars.com/wiki/Necromancer_Deldrimor_armor",
   },
 
   {
