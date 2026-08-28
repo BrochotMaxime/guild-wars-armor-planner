@@ -6,6 +6,7 @@ import mesmerArmors from "./mesmer";
 import elementalistArmors from "./elementalist";
 import assassinArmors from "./assassin";
 import ritualistArmors from "./ritualist";
+import paragonArmors from "./paragon";
 
 const armors = [
   ...warriorArmors,
@@ -16,6 +17,7 @@ const armors = [
   ...elementalistArmors,
   ...assassinArmors,
   ...ritualistArmors,
+  ...paragonArmors,
 ];
 
 export default armors;
