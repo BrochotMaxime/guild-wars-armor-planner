@@ -7,6 +7,7 @@ import elementalistArmors from "./elementalist";
 import assassinArmors from "./assassin";
 import ritualistArmors from "./ritualist";
 import paragonArmors from "./paragon";
+import dervishArmors from "./dervish";
 
 const armors = [
   ...warriorArmors,
@@ -18,6 +19,7 @@ const armors = [
   ...assassinArmors,
   ...ritualistArmors,
   ...paragonArmors,
+  ...dervishArmors,
 ];
 
 export default armors;
