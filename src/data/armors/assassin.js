@@ -28,7 +28,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Shing_Jea_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Shing_Jea_armor",
   },
   {
     id: "assassin-seitung-armor",
@@ -58,7 +58,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Seitung_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Seitung_armor",
   },
   {
     id: "assassin-canthan-armor",
@@ -94,7 +94,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Canthan_armor",
   },
   {
     id: "assassin-exotic-armor",
@@ -124,7 +124,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Exotic_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Exotic_armor",
   },
   {
     id: "assassin-imperial-armor",
@@ -154,7 +154,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Imperial_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Imperial_armor",
   },
   {
     id: "assassin-kurzick-armor",
@@ -188,7 +188,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Kurzick_armor",
   },
   {
     id: "assassin-luxon-armor",
@@ -222,7 +222,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Luxon_armor",
   },
   {
     id: "assassin-elite-canthan-armor",
@@ -253,7 +253,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Elite_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Elite_Canthan_armor",
   },
   {
     id: "assassin-elite-exotic-armor",
@@ -284,7 +284,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Elite_Exotic_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Elite_Exotic_armor",
   },
   {
     id: "assassin-elite-imperial-armor",
@@ -315,7 +315,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Elite_Imperial_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Elite_Imperial_armor",
   },
   {
     id: "assassin-elite-kurzick-armor",
@@ -350,7 +350,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Elite_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Elite_Kurzick_armor",
   },
   {
     id: "assassin-elite-luxon-armor",
@@ -385,7 +385,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Elite_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Elite_Luxon_armor",
   },
 
   {
@@ -424,7 +424,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Vabbian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Vabbian_armor",
   },
   {
     id: "assassin-ancient-armor",
@@ -454,7 +454,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Ancient_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Ancient_armor",
   },
 
   {
@@ -485,7 +485,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Norn_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Norn_armor",
   },
   {
     id: "assassin-asuran-armor",
@@ -515,7 +515,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Asuran_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Asuran_armor",
   },
   {
     id: "assassin-monument-armor",
@@ -545,7 +545,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Monument_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Monument_armor",
   },
   {
     id: "assassin-deldrimor-armor",
@@ -583,7 +583,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Deldrimor_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Deldrimor_armor",
   },
 
   {
@@ -622,7 +622,7 @@ const assassinArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Assassin_Obsidian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Assassin_Obsidian_armor",
   },
 ];
 

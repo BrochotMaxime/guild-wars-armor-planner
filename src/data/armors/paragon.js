@@ -33,7 +33,7 @@ const paragonArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Paragon_Istani_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Paragon_Istani_armor",
   },
   {
     id: "paragon-sunspear-armor",
@@ -69,7 +69,7 @@ const paragonArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Paragon_Sunspear_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Paragon_Sunspear_armor",
   },
   {
     id: "paragon-elonian-armor",
@@ -121,7 +121,7 @@ const paragonArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Paragon_Elonian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Paragon_Elonian_armor",
   },
   {
     id: "paragon-elite-sunspear-armor",
@@ -152,7 +152,7 @@ const paragonArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Paragon_Elite_Sunspear_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Paragon_Elite_Sunspear_armor",
   },
   {
     id: "paragon-vabbian-armor",
@@ -194,7 +194,7 @@ const paragonArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Paragon_Vabbian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Paragon_Vabbian_armor",
   },
   {
     id: "paragon-ancient-armor",
@@ -224,7 +224,7 @@ const paragonArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Paragon_Ancient_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Paragon_Ancient_armor",
   },
   {
     id: "paragon-primeval-armor",
@@ -254,7 +254,7 @@ const paragonArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Paragon_Primeval_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Paragon_Primeval_armor",
   },
 
   {
@@ -285,7 +285,7 @@ const paragonArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Paragon_Norn_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Paragon_Norn_armor",
   },
   {
     id: "paragon-asuran-armor",
@@ -315,7 +315,7 @@ const paragonArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Paragon_Asuran_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Paragon_Asuran_armor",
   },
   {
     id: "paragon-monument-armor",
@@ -345,7 +345,7 @@ const paragonArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Paragon_Monument_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Paragon_Monument_armor",
   },
   {
     id: "paragon-deldrimor-armor",
@@ -375,7 +375,7 @@ const paragonArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Paragon_Deldrimor_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Paragon_Deldrimor_armor",
   },
 
   {
@@ -422,7 +422,7 @@ const paragonArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Paragon_Obsidian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Paragon_Obsidian_armor",
   },
 ];
 

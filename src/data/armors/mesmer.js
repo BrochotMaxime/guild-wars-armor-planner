@@ -27,7 +27,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Ascalon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Ascalon_armor",
   },
   {
     id: "mesmer-krytan-armor",
@@ -57,7 +57,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Krytan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Krytan_armor",
   },
   {
     id: "mesmer-tyrian-armor",
@@ -97,7 +97,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Tyrian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Tyrian_armor",
   },
   {
     id: "mesmer-rogue-armor",
@@ -127,7 +127,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Rogue_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Rogue_armor",
   },
   {
     id: "mesmer-courtly-armor",
@@ -157,7 +157,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Courtly_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Courtly_armor",
   },
   {
     id: "mesmer-performer-armor",
@@ -187,7 +187,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Performer_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Performer_armor",
   },
   {
     id: "mesmer-enchanter-armor",
@@ -217,7 +217,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Enchanter_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Enchanter_armor",
   },
   {
     id: "mesmer-elite-rogue-armor",
@@ -248,7 +248,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Rogue_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Rogue_armor",
   },
   {
     id: "mesmer-elite-noble-armor",
@@ -279,7 +279,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Noble_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Noble_armor",
   },
   {
     id: "mesmer-elite-elegant-armor",
@@ -310,7 +310,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Elegant_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Elegant_armor",
   },
   {
     id: "mesmer-elite-enchanter-armor",
@@ -341,7 +341,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Enchanter_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Enchanter_armor",
   },
 
   {
@@ -372,7 +372,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Shing_Jea_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Shing_Jea_armor",
   },
   {
     id: "mesmer-canthan-armor",
@@ -402,7 +402,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Canthan_armor",
   },
   {
     id: "mesmer-kurzick-armor",
@@ -436,7 +436,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Kurzick_armor",
   },
   {
     id: "mesmer-luxon-armor",
@@ -470,7 +470,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Luxon_armor",
   },
   {
     id: "mesmer-elite-canthan-armor",
@@ -501,7 +501,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Canthan_armor",
   },
   {
     id: "mesmer-elite-kurzick-armor",
@@ -536,7 +536,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Kurzick_armor",
   },
   {
     id: "mesmer-elite-luxon-armor",
@@ -570,7 +570,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Luxon_armor",
   },
 
   {
@@ -607,7 +607,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Istani_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Istani_armor",
   },
   {
     id: "mesmer-sunspear-armor",
@@ -643,7 +643,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Sunspear_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Sunspear_armor",
   },
   {
     id: "mesmer-elite-sunspear-armor",
@@ -674,7 +674,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Sunspear_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Elite_Sunspear_armor",
   },
   {
     id: "mesmer-vabbian-armor",
@@ -712,7 +712,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Vabbian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Vabbian_armor",
   },
   {
     id: "mesmer-ancient-armor",
@@ -742,7 +742,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Ancient_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Ancient_armor",
   },
   {
     id: "mesmer-primeval-armor",
@@ -772,7 +772,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Primeval_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Primeval_armor",
   },
 
   {
@@ -803,7 +803,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Norn_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Norn_armor",
   },
   {
     id: "mesmer-asuran-armor",
@@ -833,7 +833,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Asuran_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Asuran_armor",
   },
   {
     id: "mesmer-monument-armor",
@@ -863,7 +863,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Monument_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Monument_armor",
   },
   {
     id: "mesmer-deldrimor-armor",
@@ -893,7 +893,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Deldrimor_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Deldrimor_armor",
   },
 
   {
@@ -932,7 +932,7 @@ const mesmerArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Mesmer_Obsidian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Mesmer_Obsidian_armor",
   },
 ];
 

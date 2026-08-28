@@ -27,7 +27,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Ascalon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Ascalon_armor",
   },
   {
     id: "monk-krytan-armor",
@@ -57,7 +57,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Krytan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Krytan_armor",
   },
   {
     id: "monk-tyrian-armor",
@@ -97,7 +97,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Tyrian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Tyrian_armor",
   },
   {
     id: "monk-woven-armor",
@@ -127,7 +127,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Woven_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Woven_armor",
   },
   {
     id: "monk-censor-armor",
@@ -157,7 +157,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Censor_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Censor_armor",
   },
   {
     id: "monk-sacred-armor",
@@ -187,7 +187,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Sacred_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Sacred_armor",
   },
   {
     id: "monk-dragon-armor",
@@ -217,7 +217,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Dragon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Dragon_armor",
   },
   {
     id: "monk-star-armor",
@@ -247,7 +247,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Star_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Star_armor",
   },
   {
     id: "monk-elite-woven-armor",
@@ -277,7 +277,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Elite_Woven_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Elite_Woven_armor",
   },
   {
     id: "monk-elite-judge-armor",
@@ -307,7 +307,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Elite_Judge_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Elite_Judge_armor",
   },
   {
     id: "monk-elite-saintly-armor",
@@ -337,7 +337,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Elite_Saintly_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Elite_Saintly_armor",
   },
   {
     id: "monk-flowing-armor",
@@ -367,7 +367,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Flowing_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Flowing_armor",
   },
   {
     id: "monk-Labyrinthine-armor",
@@ -397,7 +397,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Labyrinthine_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Labyrinthine_armor",
   },
 
   {
@@ -436,7 +436,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Shing_Jea_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Shing_Jea_armor",
   },
   {
     id: "monk-canthan-armor",
@@ -474,7 +474,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Canthan_armor",
   },
   {
     id: "monk-kurzick-armor",
@@ -516,7 +516,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Kurzick_armor",
   },
   {
     id: "monk-luxon-armor",
@@ -554,7 +554,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Luxon_armor",
   },
   {
     id: "monk-elite-canthan-armor",
@@ -592,7 +592,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Elite_Canthan_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Elite_Canthan_armor",
   },
   {
     id: "monk-elite-kurzick-armor",
@@ -634,7 +634,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Elite_Kurzick_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Elite_Kurzick_armor",
   },
   {
     id: "monk-elite-luxon-armor",
@@ -672,7 +672,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Elite_Luxon_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Elite_Luxon_armor",
   },
 
   {
@@ -717,7 +717,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Istani_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Istani_armor",
   },
   {
     id: "monk-sunspear-armor",
@@ -761,7 +761,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Sunspear_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Sunspear_armor",
   },
   {
     id: "monk-elite-sunspear-armor",
@@ -799,7 +799,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Elite_Sunspear_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Elite_Sunspear_armor",
   },
   {
     id: "monk-vabbian-armor",
@@ -845,7 +845,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Vabbian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Vabbian_armor",
   },
   {
     id: "monk-ancient-armor",
@@ -883,7 +883,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Ancient_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Ancient_armor",
   },
   {
     id: "monk-primeval-armor",
@@ -925,7 +925,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Primeval_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Primeval_armor",
   },
 
   {
@@ -964,7 +964,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Norn_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Norn_armor",
   },
   {
     id: "monk-asuran-armor",
@@ -1002,7 +1002,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Asuran_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Asuran_armor",
   },
   {
     id: "monk-monument-armor",
@@ -1040,7 +1040,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Monument_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Monument_armor",
   },
   {
     id: "monk-deldrimor-armor",
@@ -1070,7 +1070,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Deldrimor_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Deldrimor_armor",
   },
 
   {
@@ -1109,7 +1109,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Obsidian_armor",
+    wikiUrl: "https://wiki.guildwars.com/wiki/Monk_Obsidian_armor",
   },
 ];
 
