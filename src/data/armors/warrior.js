@@ -27,6 +27,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Ascalon_armor",
   },
   {
     id: "warrior-krytan-armor",
@@ -56,6 +57,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Krytan_armor",
   },
   {
     id: "warrior-tyrian-armor",
@@ -85,6 +87,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Tyrian_armor",
   },
   {
     id: "warrior-charr-hide-armor",
@@ -115,6 +118,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Charr_Hide_armor",
   },
   {
     id: "warrior-gladiator-armor",
@@ -145,6 +149,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Gladiator_armor",
   },
   {
     id: "warrior-wyvern-armor",
@@ -174,6 +179,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Wyvern_armor",
   },
   {
     id: "warrior-platemail-armor",
@@ -204,6 +210,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Platemail_armor",
   },
   {
     id: "warrior-templar-armor",
@@ -237,6 +244,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Templar_armor",
   },
   {
     id: "warrior-elite-charr-hide-armor",
@@ -267,6 +275,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Charr_Hide_armor",
   },
   {
     id: "warrior-elite-gladiator-armor",
@@ -297,6 +306,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Elite_Gladiator_armor",
   },
   {
     id: "warrior-elite-dragon-armor",
@@ -327,6 +337,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Elite_Dragon_armor",
   },
   {
     id: "warrior-elite-platemail-armor",
@@ -357,6 +368,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Elite_Platemail_armor",
   },
   {
     id: "warrior-elite-templar-armor",
@@ -391,6 +403,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Elite_Templar_armor",
   },
 
   {
@@ -421,6 +434,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Shing_Jea_armor",
   },
   {
     id: "warrior-canthan-armor",
@@ -450,6 +464,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Canthan_armor",
   },
   {
     id: "warrior-kurzick-armor",
@@ -483,6 +498,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Kurzick_armor",
   },
   {
     id: "warrior-luxon-armor",
@@ -516,6 +532,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Luxon_armor",
   },
   {
     id: "warrior-elite-canthan-armor",
@@ -546,6 +563,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Elite_Canthan_armor",
   },
   {
     id: "warrior-elite-kurzick-armor",
@@ -580,6 +598,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Elite_Kurzick_armor",
   },
   {
     id: "warrior-elite-luxon-armor",
@@ -614,6 +633,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Elite_Luxon_armor",
   },
 
   {
@@ -650,6 +670,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Istani_armor",
   },
   {
     id: "warrior-sunspear-armor",
@@ -685,6 +706,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Sunspear_armor",
   },
   {
     id: "warrior-elite-sunspear-armor",
@@ -715,6 +737,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Elite_Sunspear_armor",
   },
   {
     id: "warrior-vabbian-armor",
@@ -752,6 +775,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Vabbian_armor",
   },
   {
     id: "warrior-ancient-armor",
@@ -781,6 +805,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Ancient_armor",
   },
   {
     id: "warrior-primeval-armor",
@@ -810,6 +835,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Primeval_armor",
   },
 
   {
@@ -844,6 +870,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Norn_armor",
   },
   {
     id: "warrior-monument-armor",
@@ -873,6 +900,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Monument_armor",
   },
   {
     id: "warrior-asuran-armor",
@@ -902,6 +930,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Asuran_armor",
   },
   {
     id: "warrior-silver-eagle-armor",
@@ -931,6 +960,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Silver_Eagle_armor",
   },
   {
     id: "warrior-deldrimor-armor",
@@ -960,6 +990,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Deldrimor_armor",
   },
 
   {
@@ -998,6 +1029,7 @@ const warriorArmors = [
         },
       ],
     },
+    wikiLink: "https://wiki.guildwars.com/wiki/Warrior_Obsidian_armor",
   },
 ];
 

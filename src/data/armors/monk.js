@@ -1070,7 +1070,7 @@ const monkArmors = [
         },
       ],
     },
-    wikiLink: "https://wiki.guildwars.com/wiki/Deldrimor_armor",
+    wikiLink: "https://wiki.guildwars.com/wiki/Monk_Deldrimor_armor",
   },
 
   {
