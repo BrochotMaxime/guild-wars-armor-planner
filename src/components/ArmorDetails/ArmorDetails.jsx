@@ -43,7 +43,11 @@ function ArmorDetails({
         </div>
       </div>
 
-      <p>Location: {armor.location}</p>
+      <p>
+        Location: {armor.craftingLocation.name}
+        {armor.craftingLocation.campaignId !== armor.campaignId &&
+          ` (${armor.craftingLocation.campaignId})`}
+      </p>
 
       <ArmorRequirements
         armor={armor}
