@@ -4,10 +4,12 @@ const elementalistArmors = [
     name: "Ascalon Armor",
     professionId: "elementalist",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -35,10 +37,12 @@ const elementalistArmors = [
     name: "Krytan Armor",
     professionId: "elementalist",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Bukdek Byway",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Bukdek Byway",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -66,7 +70,7 @@ const elementalistArmors = [
     name: "Tyrian Armor",
     professionId: "elementalist",
     campaignId: "prophecies",
-    craftingLocation: [
+    craftingLocations: [
       {
         name: "Droknar's Forge 	",
         campaignId: "prophecies",
@@ -107,10 +111,12 @@ const elementalistArmors = [
     name: "Flameforged Armor",
     professionId: "elementalist",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -138,10 +144,12 @@ const elementalistArmors = [
     name: "Iceforged Armor",
     professionId: "elementalist",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -169,10 +177,12 @@ const elementalistArmors = [
     name: "Stoneforged Armor",
     professionId: "elementalist",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -200,10 +210,12 @@ const elementalistArmors = [
     name: "Stormforged Armor",
     professionId: "elementalist",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -231,10 +243,12 @@ const elementalistArmors = [
     name: "Elite Flameforged Armor",
     professionId: "elementalist",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Granite Citadel",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Granite Citadel",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -263,10 +277,12 @@ const elementalistArmors = [
     name: "Elite Iceforged Armor",
     professionId: "elementalist",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Granite Citadel",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Granite Citadel",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -295,10 +311,12 @@ const elementalistArmors = [
     name: "Elite Stoneforged Armor",
     professionId: "elementalist",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Marhan's Grotto",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Marhan's Grotto",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -327,10 +345,12 @@ const elementalistArmors = [
     name: "Elite Stormforged Armor",
     professionId: "elementalist",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Marhan's Grotto",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Marhan's Grotto",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -360,10 +380,12 @@ const elementalistArmors = [
     name: "Shing Jea Armor",
     professionId: "elementalist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -391,10 +413,12 @@ const elementalistArmors = [
     name: "Canthan Armor",
     professionId: "elementalist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -422,10 +446,12 @@ const elementalistArmors = [
     name: "Kurzick Armor",
     professionId: "elementalist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "House zu Heltzer",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "House zu Heltzer",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -457,10 +483,12 @@ const elementalistArmors = [
     name: "Luxon Armor",
     professionId: "elementalist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Cavalon",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Cavalon",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -492,10 +520,12 @@ const elementalistArmors = [
     name: "Elite Canthan Armor",
     professionId: "elementalist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Divine Path",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Divine Path",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -523,10 +553,12 @@ const elementalistArmors = [
     name: "Elite Kurzick Armor",
     professionId: "elementalist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Vasburg Armory",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Vasburg Armory",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -558,10 +590,12 @@ const elementalistArmors = [
     name: "Elite Luxon Armor",
     professionId: "elementalist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Leviathan Pits",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Leviathan Pits",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -594,7 +628,7 @@ const elementalistArmors = [
     name: "Istani Armor",
     professionId: "elementalist",
     campaignId: "nightfall",
-    craftingLocation: [
+    craftingLocations: [
       {
         name: "Consulate Docks",
         campaignId: "nightfall",
@@ -631,7 +665,7 @@ const elementalistArmors = [
     name: "Sunspear Armor",
     professionId: "elementalist",
     campaignId: "nightfall",
-    craftingLocation: [
+    craftingLocations: [
       {
         name: "Consulate Docks",
         campaignId: "nightfall",
@@ -668,10 +702,12 @@ const elementalistArmors = [
     name: "Elite Sunspear Armor",
     professionId: "elementalist",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "Command Post",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "Command Post",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -700,10 +736,12 @@ const elementalistArmors = [
     name: "Vabbian Armor",
     professionId: "elementalist",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "The Kodash Bazaar",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "The Kodash Bazaar",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -743,10 +781,12 @@ const elementalistArmors = [
     name: "Ancient Armor",
     professionId: "elementalist",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "Bone Palace",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "Bone Palace",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -774,10 +814,12 @@ const elementalistArmors = [
     name: "Primeval Armor",
     professionId: "elementalist",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "Throne of Secrets",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "Throne of Secrets",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -806,10 +848,12 @@ const elementalistArmors = [
     name: "Norn Armor",
     professionId: "elementalist",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Gunnar's Hold",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Gunnar's Hold",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -836,10 +880,12 @@ const elementalistArmors = [
     name: "Asuran Armor",
     professionId: "elementalist",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Rata Sum",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Rata Sum",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -867,10 +913,12 @@ const elementalistArmors = [
     name: "Monument Armor",
     professionId: "elementalist",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Eye of the North",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Eye of the North",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -898,10 +946,12 @@ const elementalistArmors = [
     name: "Deldrimor Armor",
     professionId: "elementalist",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Central Transfer Chamber",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Central Transfer Chamber",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -930,10 +980,12 @@ const elementalistArmors = [
     name: "Obsidian Armor",
     professionId: "elementalist",
     campaignId: "core",
-    craftingLocation: {
-      name: "Fissure of Woe",
-      campaignId: "core",
-    },
+    craftingLocations: [
+      {
+        name: "Fissure of Woe",
+        campaignId: "core",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {

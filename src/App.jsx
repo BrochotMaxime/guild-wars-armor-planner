@@ -142,7 +142,6 @@ function App() {
       {!selectedProfession && (
         <ProfessionSelector
           professions={professions}
-          selectedProfession={selectedProfession}
           onSelectProfession={handleProfessionSelect}
         />
       )}
@@ -150,7 +149,6 @@ function App() {
       {selectedProfession && !selectedCampaign && (
         <CampaignSelector
           campaigns={campaigns}
-          selectedCampaign={selectedCampaign}
           onSelectCampaign={handleCampaignSelect}
         />
       )}

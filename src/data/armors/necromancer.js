@@ -4,10 +4,12 @@ const necromancerArmors = [
     name: "Ascalon Armor",
     professionId: "necromancer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -35,10 +37,12 @@ const necromancerArmors = [
     name: "Krytan Armor",
     professionId: "necromancer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Bukdek Byway",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Bukdek Byway",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -66,7 +70,7 @@ const necromancerArmors = [
     name: "Tyrian Armor",
     professionId: "necromancer",
     campaignId: "prophecies",
-    craftingLocation: [
+    craftingLocations: [
       {
         name: "Droknar's Forge",
         campaignId: "prophecies",
@@ -107,10 +111,12 @@ const necromancerArmors = [
     name: "Cabal Armor",
     professionId: "necromancer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -138,10 +144,12 @@ const necromancerArmors = [
     name: "Fanatic Armor",
     professionId: "necromancer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -169,10 +177,12 @@ const necromancerArmors = [
     name: "Necrotic Armor",
     professionId: "necromancer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -200,10 +210,12 @@ const necromancerArmors = [
     name: "Scar Pattern Armor",
     professionId: "necromancer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -231,10 +243,12 @@ const necromancerArmors = [
     name: "Profane Armor",
     professionId: "necromancer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -262,10 +276,12 @@ const necromancerArmors = [
     name: "Elite Cabal Armor",
     professionId: "necromancer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "The Granite Citadel",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "The Granite Citadel",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -293,10 +309,12 @@ const necromancerArmors = [
     name: "Elite Cultist Armor",
     professionId: "necromancer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "The Granite Citadel",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "The Granite Citadel",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -324,10 +342,12 @@ const necromancerArmors = [
     name: "Elite Necrotic Armor",
     professionId: "necromancer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Marhan's Grotto",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Marhan's Grotto",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -355,10 +375,12 @@ const necromancerArmors = [
     name: "Elite Scar Pattern Armor",
     professionId: "necromancer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Marhan's Grotto",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Marhan's Grotto",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -387,10 +409,12 @@ const necromancerArmors = [
     name: "Elite Profane Armor",
     professionId: "necromancer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Marhan's Grotto",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Marhan's Grotto",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -419,10 +443,12 @@ const necromancerArmors = [
     name: "Shing Jea Armor",
     professionId: "necromancer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -458,10 +484,12 @@ const necromancerArmors = [
     name: "Canthan Armor",
     professionId: "necromancer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -505,10 +533,12 @@ const necromancerArmors = [
     name: "Kurzick Armor",
     professionId: "necromancer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "House zu Heltzer",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "House zu Heltzer",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -548,10 +578,12 @@ const necromancerArmors = [
     name: "Luxon Armor",
     professionId: "necromancer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Cavalon",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Cavalon",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -591,10 +623,12 @@ const necromancerArmors = [
     name: "Elite Canthan Armor",
     professionId: "necromancer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Divine Path",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Divine Path",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -638,10 +672,12 @@ const necromancerArmors = [
     name: "Elite Kurzick Armor",
     professionId: "necromancer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Vasburg Armory",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Vasburg Armory",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -681,10 +717,12 @@ const necromancerArmors = [
     name: "Elite Luxon Armor",
     professionId: "necromancer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Cavalon",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Cavalon",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -725,7 +763,7 @@ const necromancerArmors = [
     name: "Istani Armor",
     professionId: "necromancer",
     campaignId: "nightfall",
-    craftingLocation: [
+    craftingLocations: [
       {
         name: "Consulate Docks",
         campaignId: "nightfall",
@@ -770,7 +808,7 @@ const necromancerArmors = [
     name: "Sunspear Armor",
     professionId: "necromancer",
     campaignId: "nightfall",
-    craftingLocation: [
+    craftingLocations: [
       {
         name: "Consulate Docks",
         campaignId: "nightfall",
@@ -815,10 +853,12 @@ const necromancerArmors = [
     name: "Elite Sunspear Armor",
     professionId: "necromancer",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "Command Post",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "Command Post",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -854,10 +894,12 @@ const necromancerArmors = [
     name: "Vabbian Armor",
     professionId: "necromancer",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "The Kodash Bazaar",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "The Kodash Bazaar",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -901,10 +943,12 @@ const necromancerArmors = [
     name: "Ancient Armor",
     professionId: "necromancer",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "Bone Palace",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "Bone Palace",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -944,10 +988,12 @@ const necromancerArmors = [
     name: "Primeval Armor",
     professionId: "necromancer",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "Throne of Secrets",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "Throne of Secrets",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -984,10 +1030,12 @@ const necromancerArmors = [
     name: "Norn Armor",
     professionId: "necromancer",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Gunnar's Hold",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Gunnar's Hold",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -1026,10 +1074,12 @@ const necromancerArmors = [
     name: "Asuran Armor",
     professionId: "necromancer",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Rata Sum",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Rata Sum",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -1068,10 +1118,12 @@ const necromancerArmors = [
     name: "Monument Armor",
     professionId: "necromancer",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Eye of the North",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Eye of the North",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -1107,10 +1159,12 @@ const necromancerArmors = [
     name: "Norn Armor",
     professionId: "necromancer",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Central Transfer Chamber",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Central Transfer Chamber",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -1147,10 +1201,12 @@ const necromancerArmors = [
     name: "Obsidian Armor",
     professionId: "necromancer",
     campaignId: "core",
-    craftingLocation: {
-      name: "Fissure of Woe",
-      campaignId: "core",
-    },
+    craftingLocations: [
+      {
+        name: "Fissure of Woe",
+        campaignId: "core",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {

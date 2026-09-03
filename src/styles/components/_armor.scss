@@ -25,20 +25,129 @@ section ul {
   gap: $spacing-xs;
 }
 
-.armor-previews {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: $spacing-md;
-  margin-block: $spacing-md;
+.armor-details {
+  gap: $spacing-lg;
+  color: #ffffff;
+  background-color: $color-interface-dark;
+  border-color: $color-interface-border;
+}
 
-  > div {
-    display: grid;
-    gap: $spacing-xs;
+.armor-details__header {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  h2 {
+    margin: 0;
   }
 
   @media (min-width: $breakpoint-tablet) {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
   }
+}
+
+.armor-details__prestige {
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: $color-accent-gold;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.armor-details__location {
+  display: grid;
+  gap: 0.125rem;
+
+  > span {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  > strong {
+    max-width: 26rem;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    justify-items: end;
+    text-align: right;
+  }
+}
+
+.armor-details__overview {
+  display: grid;
+  gap: $spacing-lg;
+
+  @media (min-width: $breakpoint-desktop) {
+    grid-template-columns: minmax(0, 24rem) minmax(20rem, 1fr);
+    align-items: start;
+  }
+}
+
+.armor-previews {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: $spacing-sm;
+  width: 100%;
+  max-width: 24rem;
+  min-width: 0;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-desktop) {
+    margin: 0;
+  }
+}
+
+.armor-preview {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: $color-interface-dark;
+  border: 1px solid $color-interface-border;
+  border-radius: $border-radius-sm;
+}
+
+.armor-preview__image {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 2 / 5;
+  min-width: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    border-radius: 0;
+  }
+
+  p {
+    padding: $spacing-sm;
+    color: $color-text-muted;
+    text-align: center;
+  }
+}
+
+.armor-preview figcaption {
+  padding: $spacing-xs;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 img {
@@ -60,11 +169,13 @@ img {
 }
 
 .material-details {
-  gap: $spacing-sm;
+  gap: $spacing-md;
   padding: $spacing-md;
-  background-color: $color-background;
-  border: 1px solid $color-border;
+  color: #ffffff;
+  background-color: #050606;
+  border: 1px solid $color-interface-border;
   border-radius: $border-radius-sm;
+  box-shadow: none;
 }
 
 .material-details__header {
@@ -72,26 +183,76 @@ img {
   align-items: flex-start;
   justify-content: space-between;
   gap: $spacing-sm;
+
+  h3 {
+    margin: 0;
+  }
 }
 
-.material-details ul {
+.material-details__type {
+  margin-top: 0.25rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.875rem;
+}
+
+.material-details__close {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: $color-interface-border;
+
+  &:hover {
+    color: $color-accent-gold;
+    border-color: $color-accent-gold;
+  }
+
+  &:focus-visible {
+    outline: 0.1875rem solid $color-accent-gold;
+    outline-offset: 0.1875rem;
+  }
+}
+
+.material-details__acquisition {
   display: grid;
   gap: $spacing-xs;
+
+  h4 {
+    margin: 0;
+  }
+
+  ul {
+    gap: $spacing-xs;
+    padding-left: $spacing-md;
+  }
+
+  li {
+    line-height: 1.5;
+  }
 }
 
-.material-details a {
+.material-details__warning {
+  display: block;
+  color: $color-warning;
+  font-size: 0.875rem;
+
+  &::before {
+    content: "⚠ ";
+  }
+}
+
+.material-details__wiki-link {
   width: fit-content;
-  color: $color-primary;
+  color: $color-accent-gold;
   font-weight: 600;
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
-}
 
-.material-details span {
-  color: $color-warning;
+  &:focus-visible {
+    outline: 0.1875rem solid $color-accent-gold;
+    outline-offset: 0.1875rem;
+  }
 }
 
 .armor-list {
@@ -111,12 +272,12 @@ img {
 
 .armor-list__grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: $spacing-sm;
   margin-top: $spacing-sm;
 
   @media (min-width: $breakpoint-tablet) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   @media (min-width: $breakpoint-desktop) {
@@ -212,6 +373,27 @@ img {
 .armor-planner {
   gap: $spacing-md;
   width: 100%;
+  color: #ffffff;
+  background-color: #050606;
+  border-color: $color-interface-border;
+  box-shadow: none;
+
+  > h3 {
+    margin: 0;
+  }
+
+  input[type="number"] {
+    width: 6rem;
+    padding: 0.5rem;
+    color: $color-text;
+    background-color: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-sm;
+  }
+
+  input[type="checkbox"] {
+    accent-color: $color-accent-gold;
+  }
 }
 
 .armor-planner__desktop-table {
@@ -220,12 +402,51 @@ img {
 
 .armor-planner__table-wrapper {
   overflow-x: auto;
+  border: 1px solid $color-interface-border;
+  border-radius: $border-radius-sm;
 }
 
 .armor-planner table {
   width: 100%;
   min-width: 38rem;
+  color: #ffffff;
+  background-color: transparent;
+  border-collapse: collapse;
   table-layout: fixed;
+}
+
+.armor-planner table,
+.armor-planner thead,
+.armor-planner tbody,
+.armor-planner tr,
+.armor-planner th,
+.armor-planner td {
+  border: 0;
+}
+
+.armor-planner th,
+.armor-planner td {
+  padding: 0.75rem;
+  color: #ffffff;
+  text-align: left;
+  border-right: 1px solid $color-interface-border;
+  border-bottom: 1px solid $color-interface-border;
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.armor-planner thead th {
+  color: $color-accent-gold;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: $color-interface-dark;
+}
+
+.armor-planner tbody:last-child tr:last-child td {
+  border-bottom: 0;
 }
 
 .armor-planner th:nth-child(1),
@@ -251,15 +472,16 @@ img {
 .armor-planner__group-title th {
   width: auto;
   padding-block: $spacing-xs;
-  color: $color-text-muted;
-  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
   font-weight: 600;
   text-align: left;
-  background-color: $color-background;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .armor-planner__group + .armor-planner__group {
-  border-top: 2px solid $color-border;
+  border-top: 2px solid $color-interface-border;
 }
 
 .armor-planner__material {
@@ -269,7 +491,8 @@ img {
 }
 
 .armor-planner__material[style*="--material-depth: 1"] {
-  border-left: 2px solid $color-border;
+  padding-left: $spacing-sm;
+  border-left: 2px solid $color-accent-gold;
 }
 
 .armor-planner__craft-option {
@@ -278,16 +501,23 @@ img {
   justify-content: flex-start;
   gap: $spacing-xs;
   width: fit-content;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.875rem;
 }
 
 .armor-planner__crafted-status {
-  color: $color-text-muted;
+  color: $color-accent-gold;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .armor-planner__crafting-cost {
   margin-top: $spacing-xs;
+  color: rgba(255, 255, 255, 0.8);
+
+  strong {
+    color: $color-accent-gold;
+  }
 }
 
 .armor-planner__mobile-list {
@@ -302,10 +532,11 @@ img {
   > h4 {
     margin: 0;
     padding-bottom: $spacing-xs;
-    color: $color-text-muted;
-    font-size: 0.875rem;
+    color: $color-accent-gold;
+    font-size: 0.75rem;
     font-weight: 600;
-    border-bottom: 1px solid $color-border;
+    text-transform: uppercase;
+    border-bottom: 1px solid $color-interface-border;
   }
 }
 
@@ -317,7 +548,7 @@ img {
   display: grid;
   gap: $spacing-sm;
   padding-block: $spacing-sm;
-  border-bottom: 1px solid $color-border;
+  border-bottom: 1px solid $color-interface-border;
 
   &:last-child {
     border-bottom: 0;
@@ -330,13 +561,17 @@ img {
 
 .armor-planner__mobile-item--rare[style*="--material-depth: 1"] {
   padding-left: $spacing-sm;
-  border-left: 2px solid $color-border;
+  border-left: 2px solid $color-accent-gold;
 }
 
 .armor-planner__mobile-header {
   display: flex;
   justify-content: space-between;
   gap: $spacing-sm;
+
+  > span {
+    color: rgba(255, 255, 255, 0.75);
+  }
 }
 
 .armor-planner__owned-field {
@@ -344,6 +579,10 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: $spacing-sm;
+
+  > span {
+    color: rgba(255, 255, 255, 0.75);
+  }
 }
 
 .armor-planner__mobile-result {
@@ -353,10 +592,20 @@ img {
   gap: $spacing-sm;
   padding-top: $spacing-xs;
   font-weight: 600;
+
+  > span {
+    color: rgba(255, 255, 255, 0.75);
+  }
 }
 
 .armor-requirements {
+  align-content: start;
   gap: $spacing-sm;
+  height: fit-content;
+  color: #ffffff;
+  background-color: #050606;
+  border-color: $color-interface-border;
+  box-shadow: none;
 }
 
 .armor-requirements__group {
@@ -380,5 +629,15 @@ img {
 
   .armor-planner__desktop-table {
     display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .armor-card {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
   }
 }

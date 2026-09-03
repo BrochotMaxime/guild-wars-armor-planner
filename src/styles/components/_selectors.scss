@@ -121,13 +121,6 @@ button {
     outline: 0.1875rem solid $color-accent-gold;
     outline-offset: 0.1875rem;
   }
-
-  &.selected {
-    color: #ffffff;
-    background-color: $color-interface-dark;
-    border-color: $color-accent-gold;
-    box-shadow: $shadow-selection;
-  }
 }
 
 .profession-card__character {
@@ -216,13 +209,6 @@ button {
     outline: 0.1875rem solid $color-accent-gold;
     outline-offset: 0.1875rem;
   }
-
-  &.selected {
-    color: #ffffff;
-    background-color: $color-interface-dark;
-    border-color: $color-accent-gold;
-    box-shadow: $shadow-selection;
-  }
 }
 
 .campaign-card__image {
@@ -254,4 +240,23 @@ button {
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profession-card,
+  .campaign-card,
+  .profession-card__character,
+  .campaign-card__image {
+    transition: none;
+  }
+
+  .profession-card:hover,
+  .campaign-card:hover {
+    transform: none;
+  }
+
+  .profession-card:hover .profession-card__character,
+  .campaign-card:hover .campaign-card__image {
+    transform: none;
+  }
 }
