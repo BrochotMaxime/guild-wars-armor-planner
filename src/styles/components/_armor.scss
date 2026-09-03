@@ -94,6 +94,121 @@ img {
   color: $color-warning;
 }
 
+.armor-list {
+  color: #ffffff;
+  background-color: $color-interface-dark;
+  border-color: $color-interface-border;
+
+  > h2 {
+    text-align: center;
+  }
+
+  > p {
+    color: $color-text-muted;
+    text-align: center;
+  }
+}
+
+.armor-list__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-sm;
+  margin-top: $spacing-sm;
+
+  @media (min-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.armor-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  aspect-ratio: 4 / 5;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #ffffff;
+  background-color: $color-interface-dark;
+  border-color: $color-interface-border;
+  box-shadow: none;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    z-index: 1;
+    border-color: $color-accent-gold;
+    transform: translateY(-0.25rem);
+    box-shadow: $shadow-selection;
+  }
+
+  &:focus-visible {
+    z-index: 1;
+    outline: 0.1875rem solid $color-accent-gold;
+    outline-offset: 0.1875rem;
+  }
+}
+
+.armor-card__previews {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background-color: $color-interface-dark;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center bottom;
+    border-radius: 0;
+
+    & + img {
+      border-left: 1px solid $color-interface-border;
+    }
+  }
+}
+
+.armor-card__content {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 0.25rem;
+  height: 3.75rem;
+  padding: $spacing-xs;
+  background-color: #050606;
+  border-top: 1px solid rgba($color-accent-gold, 0.45);
+}
+
+.armor-card__name {
+  overflow: hidden;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+}
+
+.armor-card__prestige {
+  color: $color-accent-gold;
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .armor-planner {
   gap: $spacing-md;
   width: 100%;
