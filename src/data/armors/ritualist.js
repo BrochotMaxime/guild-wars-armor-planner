@@ -4,10 +4,12 @@ const ritualistArmors = [
     name: "Shing Jea Armor",
     professionId: "ritualist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -35,7 +37,7 @@ const ritualistArmors = [
     name: "Canthan Armor",
     professionId: "ritualist",
     campaignId: "factions",
-    craftingLocation: [
+    craftingLocations: [
       {
         name: "Kaineng Center",
         campaignId: "factions",
@@ -72,10 +74,12 @@ const ritualistArmors = [
     name: "Seitung Armor",
     professionId: "ritualist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -103,10 +107,12 @@ const ritualistArmors = [
     name: "Exotic Armor",
     professionId: "ritualist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Wajjun Bazaar",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Wajjun Bazaar",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -133,10 +139,12 @@ const ritualistArmors = [
     name: "Imperial Armor",
     professionId: "ritualist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Bukdek Byway",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Bukdek Byway",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -164,10 +172,12 @@ const ritualistArmors = [
     name: "Kurzick Armor",
     professionId: "ritualist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "House zu Heltzer",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "House zu Heltzer",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -199,10 +209,12 @@ const ritualistArmors = [
     name: "Luxon Armor",
     professionId: "ritualist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Cavalon",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Cavalon",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -233,10 +245,12 @@ const ritualistArmors = [
     name: "Elite Canthan Armor",
     professionId: "ritualist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Divine Path",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Divine Path",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -264,10 +278,12 @@ const ritualistArmors = [
     name: "Elite Exotic Armor",
     professionId: "ritualist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Divine Path",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Divine Path",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -295,10 +311,12 @@ const ritualistArmors = [
     name: "Elite Imperial Armor",
     professionId: "ritualist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Divine Path",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Divine Path",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -326,10 +344,12 @@ const ritualistArmors = [
     name: "Elite Kurzick Armor",
     professionId: "ritualist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Vasburg Armory",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Vasburg Armory",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -361,10 +381,12 @@ const ritualistArmors = [
     name: "Elite Luxon Armor",
     professionId: "ritualist",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Leviathan Pits",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Leviathan Pits",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -397,10 +419,12 @@ const ritualistArmors = [
     name: "Vabbian Armor",
     professionId: "ritualist",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "The Kodash Bazaar",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "The Kodash Bazaar",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -436,10 +460,12 @@ const ritualistArmors = [
     name: "Ancient Armor",
     professionId: "ritualist",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "The Kodash Bazaar",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "The Kodash Bazaar",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -468,10 +494,12 @@ const ritualistArmors = [
     name: "Norn Armor",
     professionId: "ritualist",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Gunnar's Hold",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Gunnar's Hold",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -498,10 +526,12 @@ const ritualistArmors = [
     name: "Asuran Norn Armor",
     professionId: "ritualist",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Rata Sum",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Rata Sum",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -528,10 +558,12 @@ const ritualistArmors = [
     name: "Monument Armor",
     professionId: "ritualist",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Gunnar's Hold",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Gunnar's Hold",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -558,10 +590,12 @@ const ritualistArmors = [
     name: "Deldrimor Armor",
     professionId: "ritualist",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Central Transfer Chamber",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Central Transfer Chamber",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["chest", "legs", "feet"],
     prestige: true,
     images: {
@@ -605,10 +639,12 @@ const ritualistArmors = [
     name: "Obsidian Armor",
     professionId: "ritualist",
     campaignId: "core",
-    craftingLocation: {
-      name: "Central Transfer Chamber",
-      campaignId: "core",
-    },
+    craftingLocations: [
+      {
+        name: "Central Transfer Chamber",
+        campaignId: "core",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {

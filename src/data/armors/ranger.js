@@ -4,10 +4,12 @@ const rangerArmors = [
     name: "Ascalon Armor",
     professionId: "ranger",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -34,10 +36,12 @@ const rangerArmors = [
     name: "Krytan Armor",
     professionId: "ranger",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Bukdek Byway",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Bukdek Byway",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -64,7 +68,7 @@ const rangerArmors = [
     name: "Tyrian Armor",
     professionId: "ranger",
     campaignId: "prophecies",
-    craftingLocation: [
+    craftingLocations: [
       {
         name: "Droknar's Forge",
         campaignId: "prophecies",
@@ -104,10 +108,12 @@ const rangerArmors = [
     name: "Fur-Lined Armor",
     professionId: "ranger",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -134,10 +140,12 @@ const rangerArmors = [
     name: "Drakescale Armor",
     professionId: "ranger",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -164,10 +172,12 @@ const rangerArmors = [
     name: "Druid Armor",
     professionId: "ranger",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -194,10 +204,12 @@ const rangerArmors = [
     name: "Studded Leather Armor",
     professionId: "ranger",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -225,10 +237,12 @@ const rangerArmors = [
     name: "Elite Fur-Lined Armor",
     professionId: "ranger",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "The Granite Citadel",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "The Granite Citadel",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -256,10 +270,12 @@ const rangerArmors = [
     name: "Elite Drakescale Armor",
     professionId: "ranger",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Marhan's Grotto",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Marhan's Grotto",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -287,10 +303,12 @@ const rangerArmors = [
     name: "Elite Druid Armor",
     professionId: "ranger",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Marhan's Grotto",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Marhan's Grotto",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -318,10 +336,12 @@ const rangerArmors = [
     name: "Elite Studded Leather Armor",
     professionId: "ranger",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "The Granite Citadel",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "The Granite Citadel",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -351,10 +371,12 @@ const rangerArmors = [
     name: "Shing Jea Armor",
     professionId: "ranger",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -381,10 +403,12 @@ const rangerArmors = [
     name: "Canthan Armor",
     professionId: "ranger",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -411,10 +435,12 @@ const rangerArmors = [
     name: "Kurzick Armor",
     professionId: "ranger",
     campaignId: "factions",
-    craftingLocation: {
-      name: "House zu Heltzer",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "House zu Heltzer",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -445,10 +471,12 @@ const rangerArmors = [
     name: "Luxon Armor",
     professionId: "ranger",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Cavalon",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Cavalon",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -479,10 +507,12 @@ const rangerArmors = [
     name: "Elite Canthan Armor",
     professionId: "ranger",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Divine Path",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Divine Path",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -510,10 +540,12 @@ const rangerArmors = [
     name: "Elite Kurzick Armor",
     professionId: "ranger",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Vasburg Armory",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Vasburg Armory",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -545,10 +577,12 @@ const rangerArmors = [
     name: "Elite Luxon Armor",
     professionId: "ranger",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Leviathan Pits",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Leviathan Pits",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -580,7 +614,7 @@ const rangerArmors = [
     name: "Istani Armor",
     professionId: "ranger",
     campaignId: "nightfall",
-    craftingLocation: [
+    craftingLocations: [
       {
         name: "Consulate Docks",
         campaignId: "nightfall",
@@ -616,7 +650,7 @@ const rangerArmors = [
     name: "Sunspear Armor",
     professionId: "ranger",
     campaignId: "nightfall",
-    craftingLocation: [
+    craftingLocations: [
       {
         name: "Consulate Docks",
         campaignId: "nightfall",
@@ -652,10 +686,12 @@ const rangerArmors = [
     name: "Elite Sunspear Armor",
     professionId: "ranger",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "Command Post",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "Command Post",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -683,10 +719,12 @@ const rangerArmors = [
     name: "Vabbian Armor",
     professionId: "ranger",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "The Kodash Bazaar",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "The Kodash Bazaar",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -721,10 +759,12 @@ const rangerArmors = [
     name: "Ancient Armor",
     professionId: "ranger",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "Bone Palace",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "Bone Palace",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -751,10 +791,12 @@ const rangerArmors = [
     name: "Primeval Armor",
     professionId: "ranger",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "Throne of Secrets",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "Throne of Secrets",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -782,10 +824,12 @@ const rangerArmors = [
     name: "Norn Armor",
     professionId: "ranger",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Gunnar's Hold",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Gunnar's Hold",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -812,10 +856,12 @@ const rangerArmors = [
     name: "Monument Armor",
     professionId: "ranger",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Eye of the North",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Eye of the North",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -842,10 +888,12 @@ const rangerArmors = [
     name: "Asuran Armor",
     professionId: "ranger",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Rata Sum",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Rata Sum",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -872,10 +920,12 @@ const rangerArmors = [
     name: "Deldrimor Armor",
     professionId: "ranger",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Central Transfer Chamber",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Central Transfer Chamber",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["chest", "legs", "feet"],
     prestige: true,
     images: {
@@ -907,10 +957,12 @@ const rangerArmors = [
     name: "Obsidian Armor",
     professionId: "ranger",
     campaignId: "core",
-    craftingLocation: {
-      name: "Fissure of Woe",
-      campaignId: "core",
-    },
+    craftingLocations: [
+      {
+        name: "Fissure of Woe",
+        campaignId: "core",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {

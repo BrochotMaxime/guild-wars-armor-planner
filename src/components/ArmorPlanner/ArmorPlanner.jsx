@@ -197,140 +197,45 @@ function ArmorPlanner({
     );
   }
 
-  function renderMobileItem({ materialId, required, missing, depth = 0 }) {
-    const material = getMaterialById(materialId);
-
-    if (!material) {
-      return null;
-    }
-
-    const canCraft = material.type === "rare" && hasCraftingRecipe(materialId);
-
-    const isCrafting = Boolean(craftingSelections[materialId]);
-
-    const className = [
-      "armor-planner__mobile-item",
-      material.type === "rare"
-        ? "armor-planner__mobile-item--rare"
-        : "armor-planner__mobile-item--common",
-    ].join(" ");
-
-    return (
-      <article
-        className={className}
-        key={materialId}
-        style={{ "--material-depth": depth }}
-      >
-        <div className="armor-planner__mobile-header">
-          <strong>{material.name}</strong>
-          <span>{formatNeed(materialId, required)}</span>
-        </div>
-
-        <label className="armor-planner__owned-field">
-          <span>Owned</span>
-
-          <input
-            type="number"
-            min="0"
-            step="1"
-            value={inventory[materialId] ?? ""}
-            onChange={(event) =>
-              onInventoryChange(materialId, event.target.value)
-            }
-          />
-        </label>
-
-        <div className="armor-planner__mobile-result">
-          <span>→ Missing</span>
-
-          {isCrafting && missing > 0 ? (
-            <span className="armor-planner__crafted-status">Via craft</span>
-          ) : (
-            <strong>{missing}</strong>
-          )}
-        </div>
-
-        {canCraft && missing > 0 && (
-          <label className="armor-planner__craft-option">
-            <input
-              type="checkbox"
-              checked={isCrafting}
-              onChange={() => onCraftingToggle(materialId)}
-            />
-            Craft missing
-          </label>
-        )}
-      </article>
-    );
-  }
-
   return (
     <section className="armor-planner">
       <h3>Armor planner</h3>
 
-      <div className="armor-planner__desktop-table">
-        <div className="armor-planner__table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Material</th>
-                <th>Need</th>
-                <th>Owned</th>
-                <th>Missing</th>
+      <div className="armor-planner__table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Material</th>
+              <th>Need</th>
+              <th>Owned</th>
+              <th>Missing</th>
+            </tr>
+          </thead>
+
+          {commonPlannerMaterials.length > 0 && (
+            <tbody className="armor-planner__group">
+              <tr className="armor-planner__group-title">
+                <th colSpan="4">Common materials</th>
               </tr>
-            </thead>
 
-            {commonPlannerMaterials.length > 0 && (
-              <tbody className="armor-planner__group">
-                <tr className="armor-planner__group-title">
-                  <th colSpan="4">Common materials</th>
-                </tr>
-
-                {commonPlannerMaterials.map((material) =>
-                  renderDesktopRow(material),
-                )}
-              </tbody>
-            )}
-
-            {orderedRareMaterials.length > 0 && (
-              <tbody className="armor-planner__group">
-                <tr className="armor-planner__group-title">
-                  <th colSpan="4">Rare materials</th>
-                </tr>
-
-                {orderedRareMaterials.map((material) =>
-                  renderDesktopRow(material),
-                )}
-              </tbody>
-            )}
-          </table>
-        </div>
-      </div>
-
-      <div className="armor-planner__mobile-list">
-        {commonPlannerMaterials.length > 0 && (
-          <div className="armor-planner__mobile-group">
-            <h4>Common materials</h4>
-
-            <div className="armor-planner__mobile-group-content">
               {commonPlannerMaterials.map((material) =>
-                renderMobileItem(material),
+                renderDesktopRow(material),
               )}
-            </div>
-          </div>
-        )}
+            </tbody>
+          )}
 
-        {orderedRareMaterials.length > 0 && (
-          <div className="armor-planner__mobile-group">
-            <h4>Rare materials</h4>
+          {orderedRareMaterials.length > 0 && (
+            <tbody className="armor-planner__group">
+              <tr className="armor-planner__group-title">
+                <th colSpan="4">Rare materials</th>
+              </tr>
 
-            <div className="armor-planner__mobile-group-content">
               {orderedRareMaterials.map((material) =>
-                renderMobileItem(material),
+                renderDesktopRow(material),
               )}
-            </div>
-          </div>
-        )}
+            </tbody>
+          )}
+        </table>
       </div>
 
       {additionalCraftingGold > 0 && (

@@ -20,37 +20,66 @@ function ArmorDetails({
   onInventoryChange,
 }) {
   return (
-    <section>
-      <h2>{armor.name}</h2>
-
-      <div className="armor-previews">
+    <section className="armor-details">
+      <header className="armor-details__header">
         <div>
-          <h3>Male</h3>
-          {armor.images.male ? (
-            <img src={armor.images.male} alt={`${armor.name} male armor`} />
-          ) : (
-            <p>Image not available yet.</p>
+          <h2>{armor.name}</h2>
+
+          {armor.prestige && (
+            <span className="armor-details__prestige">Prestige</span>
           )}
         </div>
 
-        <div>
-          <h3>Female</h3>
-          {armor.images.female ? (
-            <img src={armor.images.female} alt={`${armor.name} female armor`} />
-          ) : (
-            <p>Image not available yet.</p>
-          )}
+        <p className="armor-details__location">
+          <span>Location</span>
+
+          <strong>
+            {armor.craftingLocations.length > 0
+              ? armor.craftingLocations
+                  .map((location) => location.name)
+                  .join(" • ")
+              : "Unknown location"}
+          </strong>
+        </p>
+      </header>
+
+      <div className="armor-details__overview">
+        <div className="armor-previews">
+          <figure className="armor-preview">
+            <div className="armor-preview__image">
+              {armor.images.male ? (
+                <img src={armor.images.male} alt={`${armor.name} male armor`} />
+              ) : (
+                <p>Image not available yet.</p>
+              )}
+            </div>
+
+            <figcaption>Male</figcaption>
+          </figure>
+
+          <figure className="armor-preview">
+            <div className="armor-preview__image">
+              {armor.images.female ? (
+                <img
+                  src={armor.images.female}
+                  alt={`${armor.name} female armor`}
+                />
+              ) : (
+                <p>Image not available yet.</p>
+              )}
+            </div>
+
+            <figcaption>Female</figcaption>
+          </figure>
         </div>
+
+        <ArmorRequirements
+          armor={armor}
+          materials={materials}
+          onMaterialClick={onMaterialClick}
+          onPlanArmor={onPlanArmor}
+        />
       </div>
-
-      <p>Location: {armor.location}</p>
-
-      <ArmorRequirements
-        armor={armor}
-        materials={materials}
-        onMaterialClick={onMaterialClick}
-        onPlanArmor={onPlanArmor}
-      />
 
       {selectedMaterial && (
         <MaterialDetails

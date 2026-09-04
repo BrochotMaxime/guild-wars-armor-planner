@@ -4,10 +4,12 @@ const mesmerArmors = [
     name: "Ascalon Armor",
     professionId: "mesmer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -34,10 +36,12 @@ const mesmerArmors = [
     name: "Krytan Armor",
     professionId: "mesmer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Bukdek Byway 	",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Bukdek Byway 	",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -64,7 +68,7 @@ const mesmerArmors = [
     name: "Tyrian Armor",
     professionId: "mesmer",
     campaignId: "prophecies",
-    craftingLocation: [
+    craftingLocations: [
       {
         name: "Droknar's Forge",
         campaignId: "prophecies",
@@ -104,10 +108,12 @@ const mesmerArmors = [
     name: "Rogue Armor",
     professionId: "mesmer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -134,10 +140,12 @@ const mesmerArmors = [
     name: "Courtly Armor",
     professionId: "mesmer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -164,10 +172,12 @@ const mesmerArmors = [
     name: "Performer Armor",
     professionId: "mesmer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -194,10 +204,12 @@ const mesmerArmors = [
     name: "Enchanter Armor",
     professionId: "mesmer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Droknar's Forge",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Droknar's Forge",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -224,10 +236,12 @@ const mesmerArmors = [
     name: "Elite Rogue Armor",
     professionId: "mesmer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Marhan's Grotto",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Marhan's Grotto",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -255,10 +269,12 @@ const mesmerArmors = [
     name: "Elite Noble Armor",
     professionId: "mesmer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "The Granite Citadel",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "The Granite Citadel",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -286,10 +302,12 @@ const mesmerArmors = [
     name: "Elite Elegant Armor",
     professionId: "mesmer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "The Granite Citadel",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "The Granite Citadel",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -317,10 +335,12 @@ const mesmerArmors = [
     name: "Elite Enchanter Armor",
     professionId: "mesmer",
     campaignId: "prophecies",
-    craftingLocation: {
-      name: "Marhan's Grotto",
-      campaignId: "prophecies",
-    },
+    craftingLocations: [
+      {
+        name: "Marhan's Grotto",
+        campaignId: "prophecies",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -349,10 +369,12 @@ const mesmerArmors = [
     name: "Shing Jea Armor",
     professionId: "mesmer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -379,10 +401,12 @@ const mesmerArmors = [
     name: "Canthan Armor",
     professionId: "mesmer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Kaineng Center",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Kaineng Center",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -409,10 +433,12 @@ const mesmerArmors = [
     name: "Kurzick Armor",
     professionId: "mesmer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "House zu Heltzer",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "House zu Heltzer",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -443,10 +469,12 @@ const mesmerArmors = [
     name: "Luxon Armor",
     professionId: "mesmer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Cavalon",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Cavalon",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: false,
     images: {
@@ -477,10 +505,12 @@ const mesmerArmors = [
     name: "Elite Canthan Armor",
     professionId: "mesmer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Divine Path",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Divine Path",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -508,10 +538,12 @@ const mesmerArmors = [
     name: "Elite Kurzick Armor",
     professionId: "mesmer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Vasburg Armory",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Vasburg Armory",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -543,10 +575,12 @@ const mesmerArmors = [
     name: "Elite Luxon Armor",
     professionId: "mesmer",
     campaignId: "factions",
-    craftingLocation: {
-      name: "Leviathan Pits",
-      campaignId: "factions",
-    },
+    craftingLocations: [
+      {
+        name: "Leviathan Pits",
+        campaignId: "factions",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -578,7 +612,7 @@ const mesmerArmors = [
     name: "Istani Armor",
     professionId: "mesmer",
     campaignId: "nightfall",
-    craftingLocation: [
+    craftingLocations: [
       {
         name: "Consulate Docks",
         campaignId: "nightfall",
@@ -614,7 +648,7 @@ const mesmerArmors = [
     name: "Sunspear Armor",
     professionId: "mesmer",
     campaignId: "nightfall",
-    craftingLocation: [
+    craftingLocations: [
       {
         name: "Consulate Docks",
         campaignId: "nightfall",
@@ -650,10 +684,12 @@ const mesmerArmors = [
     name: "Elite Sunspear Armor",
     professionId: "mesmer",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "Command Post",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "Command Post",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -681,10 +717,12 @@ const mesmerArmors = [
     name: "Vabbian Armor",
     professionId: "mesmer",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "The Kodash Bazaar",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "The Kodash Bazaar",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -719,10 +757,12 @@ const mesmerArmors = [
     name: "Ancient Armor",
     professionId: "mesmer",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "Bone Palace",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "Bone Palace",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -749,10 +789,12 @@ const mesmerArmors = [
     name: "Primeval Armor",
     professionId: "mesmer",
     campaignId: "nightfall",
-    craftingLocation: {
-      name: "Throne of Secrets",
-      campaignId: "nightfall",
-    },
+    craftingLocations: [
+      {
+        name: "Throne of Secrets",
+        campaignId: "nightfall",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -780,10 +822,12 @@ const mesmerArmors = [
     name: "Norn Armor",
     professionId: "mesmer",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Gunnar's Hold",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Gunnar's Hold",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -810,10 +854,12 @@ const mesmerArmors = [
     name: "Asuran Armor",
     professionId: "mesmer",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Rata Sum",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Rata Sum",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -840,10 +886,12 @@ const mesmerArmors = [
     name: "Monument Armor",
     professionId: "mesmer",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Eye of the North",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Eye of the North",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["head", "chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
@@ -870,10 +918,12 @@ const mesmerArmors = [
     name: "Deldrimor Armor",
     professionId: "mesmer",
     campaignId: "eye-of-the-north",
-    craftingLocation: {
-      name: "Gunnar's Hold",
-      campaignId: "eye-of-the-north",
-    },
+    craftingLocations: [
+      {
+        name: "Gunnar's Hold",
+        campaignId: "eye-of-the-north",
+      },
+    ],
     pieces: ["chest", "legs", "feet"],
     prestige: true,
     images: {
@@ -901,10 +951,12 @@ const mesmerArmors = [
     name: "Obsidian Armor",
     professionId: "mesmer",
     campaignId: "core",
-    craftingLocation: {
-      name: "Fissure of Woe",
-      campaignId: "core",
-    },
+    craftingLocations: [
+      {
+        name: "Fissure of Woe",
+        campaignId: "core",
+      },
+    ],
     pieces: ["chest", "hands", "legs", "feet"],
     prestige: true,
     images: {
