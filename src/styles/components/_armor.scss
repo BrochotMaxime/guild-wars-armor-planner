@@ -26,6 +26,7 @@ section ul {
 }
 
 .armor-details {
+  padding: $spacing-sm;
   gap: $spacing-lg;
   color: #ffffff;
   background-color: $color-interface-dark;
@@ -371,6 +372,7 @@ img {
 }
 
 .armor-planner {
+  padding: $spacing-sm;
   gap: $spacing-md;
   width: 100%;
   color: #ffffff;
@@ -383,9 +385,11 @@ img {
   }
 
   input[type="number"] {
-    width: 6rem;
-    padding: 0.5rem;
+    width: 100%;
+    min-width: 0;
+    padding: 0.375rem 0.25rem;
     color: $color-text;
+    font-size: 0.75rem;
     background-color: $color-surface;
     border: 1px solid $color-border;
     border-radius: $border-radius-sm;
@@ -396,10 +400,6 @@ img {
   }
 }
 
-.armor-planner__desktop-table {
-  display: none;
-}
-
 .armor-planner__table-wrapper {
   overflow-x: auto;
   border: 1px solid $color-interface-border;
@@ -408,7 +408,7 @@ img {
 
 .armor-planner table {
   width: 100%;
-  min-width: 38rem;
+  min-width: 0;
   color: #ffffff;
   background-color: transparent;
   border-collapse: collapse;
@@ -426,9 +426,12 @@ img {
 
 .armor-planner th,
 .armor-planner td {
-  padding: 0.75rem;
+  padding: 0.5rem 0.375rem;
   color: #ffffff;
+  font-size: 0.8125rem;
+  line-height: 1.3;
   text-align: left;
+  overflow-wrap: anywhere;
   border-right: 1px solid $color-interface-border;
   border-bottom: 1px solid $color-interface-border;
 
@@ -439,8 +442,8 @@ img {
 
 .armor-planner thead th {
   color: $color-accent-gold;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   background-color: $color-interface-dark;
 }
@@ -451,29 +454,29 @@ img {
 
 .armor-planner th:nth-child(1),
 .armor-planner td:nth-child(1) {
-  width: 32%;
+  width: 42%;
 }
 
 .armor-planner th:nth-child(2),
 .armor-planner td:nth-child(2) {
-  width: 28%;
+  width: 15%;
 }
 
 .armor-planner th:nth-child(3),
 .armor-planner td:nth-child(3) {
-  width: 20%;
+  width: 25%;
 }
 
 .armor-planner th:nth-child(4),
 .armor-planner td:nth-child(4) {
-  width: 20%;
+  width: 18%;
 }
 
 .armor-planner__group-title th {
   width: auto;
   padding-block: $spacing-xs;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 600;
   text-align: left;
   text-transform: uppercase;
@@ -496,13 +499,17 @@ img {
 }
 
 .armor-planner__craft-option {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: $spacing-xs;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.25rem;
   width: fit-content;
   color: rgba(255, 255, 255, 0.75);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  line-height: 1.2;
+
+  input {
+    flex: 0 0 auto;
+  }
 }
 
 .armor-planner__crafted-status {
@@ -513,88 +520,12 @@ img {
 
 .armor-planner__crafting-cost {
   margin-top: $spacing-xs;
+  font-size: 0.875rem;
+  line-height: 1.4;
   color: rgba(255, 255, 255, 0.8);
 
   strong {
     color: $color-accent-gold;
-  }
-}
-
-.armor-planner__mobile-list {
-  display: grid;
-  gap: $spacing-md;
-}
-
-.armor-planner__mobile-group {
-  display: grid;
-  gap: $spacing-xs;
-
-  > h4 {
-    margin: 0;
-    padding-bottom: $spacing-xs;
-    color: $color-accent-gold;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-bottom: 1px solid $color-interface-border;
-  }
-}
-
-.armor-planner__mobile-group-content {
-  display: grid;
-}
-
-.armor-planner__mobile-item {
-  display: grid;
-  gap: $spacing-sm;
-  padding-block: $spacing-sm;
-  border-bottom: 1px solid $color-interface-border;
-
-  &:last-child {
-    border-bottom: 0;
-  }
-}
-
-.armor-planner__mobile-item--rare {
-  margin-left: calc(var(--material-depth, 0) * $spacing-md);
-}
-
-.armor-planner__mobile-item--rare[style*="--material-depth: 1"] {
-  padding-left: $spacing-sm;
-  border-left: 2px solid $color-accent-gold;
-}
-
-.armor-planner__mobile-header {
-  display: flex;
-  justify-content: space-between;
-  gap: $spacing-sm;
-
-  > span {
-    color: rgba(255, 255, 255, 0.75);
-  }
-}
-
-.armor-planner__owned-field {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: $spacing-sm;
-
-  > span {
-    color: rgba(255, 255, 255, 0.75);
-  }
-}
-
-.armor-planner__mobile-result {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: $spacing-sm;
-  padding-top: $spacing-xs;
-  font-weight: 600;
-
-  > span {
-    color: rgba(255, 255, 255, 0.75);
   }
 }
 
@@ -623,12 +554,55 @@ img {
     padding: $spacing-lg;
   }
 
-  .armor-planner__mobile-list {
-    display: none;
+  .armor-details,
+  .armor-planner {
+    padding: $spacing-lg;
   }
 
-  .armor-planner__desktop-table {
-    display: block;
+  .armor-planner table {
+    min-width: 38rem;
+  }
+
+  .armor-planner th,
+  .armor-planner td {
+    padding: 0.75rem;
+    font-size: 1rem;
+    overflow-wrap: normal;
+  }
+
+  .armor-planner thead th {
+    font-size: 0.75rem;
+  }
+
+  .armor-planner th:nth-child(1),
+  .armor-planner td:nth-child(1) {
+    width: 32%;
+  }
+
+  .armor-planner th:nth-child(2),
+  .armor-planner td:nth-child(2) {
+    width: 28%;
+  }
+
+  .armor-planner th:nth-child(3),
+  .armor-planner td:nth-child(3) {
+    width: 20%;
+  }
+
+  .armor-planner th:nth-child(4),
+  .armor-planner td:nth-child(4) {
+    width: 20%;
+  }
+
+  .armor-planner input[type="number"] {
+    width: 6rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .armor-planner__craft-option {
+    gap: $spacing-xs;
+    font-size: 0.875rem;
   }
 }
 

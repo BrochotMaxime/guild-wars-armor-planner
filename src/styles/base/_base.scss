@@ -11,9 +11,15 @@ body {
 main {
   display: grid;
   gap: $spacing-lg;
-  width: min(100% - 2rem, 75rem);
+  width: min(100% - 1rem, 75rem);
   margin: 0 auto;
   padding-block: $spacing-lg;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  main {
+    width: min(100% - 2rem, 75rem);
+  }
 }
 
 h1,
