@@ -1,8 +1,9 @@
-function ArmorCard({ armor, onSelectArmor }) {
+function ArmorCard({ armor, isSelected, onSelectArmor }) {
   return (
     <button
       type="button"
-      className="armor-card"
+      className={`armor-card ${isSelected ? "armor-card--selected" : ""}`}
+      aria-pressed={isSelected}
       onClick={() => onSelectArmor(armor)}
     >
       <span className="armor-card__previews" aria-hidden="true">

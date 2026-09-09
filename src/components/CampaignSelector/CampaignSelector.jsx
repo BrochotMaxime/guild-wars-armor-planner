@@ -1,14 +1,21 @@
-function CampaignSelector({ campaigns, onSelectCampaign }) {
+function CampaignSelector({ campaigns, selectedCampaign, onSelectCampaign }) {
   return (
-    <section className="selector-section selector-section--campaigns">
-      <h2>Choose a campaign</h2>
+    <div
+      className={`selector-grid selector-grid--campaigns ${
+        selectedCampaign ? "selector-grid--has-selection" : ""
+      }`}
+    >
+      {campaigns.map((campaign) => {
+        const isSelected = selectedCampaign?.id === campaign.id;
 
-      <div className="selector-grid selector-grid--campaigns">
-        {campaigns.map((campaign) => (
+        return (
           <button
             key={campaign.id}
             type="button"
-            className="campaign-card"
+            className={`campaign-card ${
+              isSelected ? "campaign-card--selected" : ""
+            }`}
+            aria-pressed={isSelected}
             onClick={() => onSelectCampaign(campaign)}
           >
             <img
@@ -23,9 +30,9 @@ function CampaignSelector({ campaigns, onSelectCampaign }) {
               <span className="campaign-card__name">{campaign.name}</span>
             </span>
           </button>
-        ))}
-      </div>
-    </section>
+        );
+      })}
+    </div>
   );
 }
 

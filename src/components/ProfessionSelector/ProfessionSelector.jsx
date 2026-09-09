@@ -1,14 +1,25 @@
-function ProfessionSelector({ professions, onSelectProfession }) {
+function ProfessionSelector({
+  professions,
+  selectedProfession,
+  onSelectProfession,
+}) {
   return (
-    <section className="selector-section selector-section--professions">
-      <h2>Choose a profession</h2>
+    <div
+      className={`selector-grid selector-grid--professions ${
+        selectedProfession ? "selector-grid--has-selection" : ""
+      }`}
+    >
+      {professions.map((profession) => {
+        const isSelected = selectedProfession?.id === profession.id;
 
-      <div className="selector-grid selector-grid--professions">
-        {professions.map((profession) => (
+        return (
           <button
             key={profession.id}
             type="button"
-            className="profession-card"
+            className={`profession-card ${
+              isSelected ? "profession-card--selected" : ""
+            }`}
+            aria-pressed={isSelected}
             onClick={() => onSelectProfession(profession)}
           >
             <img
@@ -29,9 +40,9 @@ function ProfessionSelector({ professions, onSelectProfession }) {
               <span className="profession-card__name">{profession.name}</span>
             </span>
           </button>
-        ))}
-      </div>
-    </section>
+        );
+      })}
+    </div>
   );
 }
 

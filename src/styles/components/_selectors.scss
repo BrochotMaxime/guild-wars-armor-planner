@@ -1,14 +1,9 @@
 @use "../abstracts/variables" as *;
 
-.selector-section {
-  gap: $spacing-sm;
-}
-
 .selector-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: $spacing-sm;
-  margin-top: $spacing-sm;
 
   @media (min-width: $breakpoint-tablet) {
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -44,6 +39,26 @@
   }
 }
 
+.selector-grid--has-selection
+  :is(.profession-card, .campaign-card):not(
+    .profession-card--selected,
+    .campaign-card--selected
+  ) {
+  opacity: 0.45;
+  filter: grayscale(0.7);
+}
+
+.profession-card--selected,
+.campaign-card--selected {
+  border-color: $color-accent-gold;
+  box-shadow: $shadow-selection;
+}
+
+.selector-grid--has-selection :is(.profession-card, .campaign-card):hover {
+  opacity: 1;
+  filter: none;
+}
+
 button {
   padding: 0.75rem 1rem;
   color: $color-text;
@@ -63,17 +78,6 @@ button {
     color: #ffffff;
     background-color: $color-primary;
     border-color: $color-primary;
-  }
-}
-
-.selector-section--professions,
-.selector-section--campaigns {
-  color: #ffffff;
-  background-color: $color-interface-dark;
-  border-color: $color-interface-border;
-
-  > h2 {
-    text-align: center;
   }
 }
 

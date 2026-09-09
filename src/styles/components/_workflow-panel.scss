@@ -1,0 +1,134 @@
+@use "../abstracts/variables" as *;
+
+.workflow {
+  display: grid;
+  gap: $spacing-sm;
+}
+
+.workflow-panel {
+  display: grid;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #ffffff;
+  background-color: rgba($color-interface-dark, 0.96);
+  border-color: $color-interface-border;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.workflow-panel--expanded {
+  border-color: rgba($color-accent-gold, 0.7);
+  box-shadow: $shadow-selection;
+}
+
+.workflow-panel__heading {
+  margin: 0;
+}
+
+.workflow-panel__trigger {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "title chevron"
+    "summary chevron";
+  align-items: center;
+  gap: 0.25rem $spacing-sm;
+  width: 100%;
+  padding: $spacing-sm;
+  color: #ffffff;
+  text-align: left;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+
+  &:hover {
+    color: $color-accent-gold;
+    border-color: transparent;
+  }
+
+  &:focus-visible {
+    outline: 0.1875rem solid $color-accent-gold;
+    outline-offset: -0.1875rem;
+  }
+
+  &:disabled {
+    color: rgba(255, 255, 255, 0.45);
+    cursor: not-allowed;
+  }
+}
+
+.workflow-panel__title {
+  grid-area: title;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.workflow-panel__summary {
+  grid-area: summary;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.workflow-panel__chevron {
+  grid-area: chevron;
+  color: $color-accent-gold;
+  font-size: 0.75rem;
+  transition: transform 0.25s ease;
+}
+
+.workflow-panel--expanded .workflow-panel__chevron {
+  transform: rotate(180deg);
+}
+
+.workflow-panel__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    grid-template-rows 0.3s ease,
+    opacity 0.2s ease,
+    visibility 0s linear 0.3s;
+}
+
+.workflow-panel--expanded .workflow-panel__content {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    grid-template-rows 0.3s ease,
+    opacity 0.25s ease,
+    visibility 0s;
+}
+
+.workflow-panel__content-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.workflow-panel__content-inner > * {
+  padding: $spacing-sm $spacing-md $spacing-md;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .workflow-panel__trigger {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: "title summary chevron";
+    padding: $spacing-md;
+  }
+
+  .workflow-panel__summary {
+    justify-self: end;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workflow-panel,
+  .workflow-panel__content,
+  .workflow-panel__chevron {
+    transition: none;
+  }
+}

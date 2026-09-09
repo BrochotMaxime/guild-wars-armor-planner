@@ -26,6 +26,7 @@ function Breadcrumb({
   onHomeClick,
   onProfessionClick,
   onCampaignClick,
+  onArmorClick,
 }) {
   return (
     <nav className="breadcrumb" aria-label="Breadcrumb">
@@ -47,57 +48,46 @@ function Breadcrumb({
           <li
             className={`breadcrumb__item breadcrumb__item--profession breadcrumb__item--${selectedProfession.id}`}
           >
-            {selectedCampaign ? (
-              <button
-                type="button"
-                className="breadcrumb__control"
-                onClick={onProfessionClick}
-              >
-                <img
-                  className="breadcrumb__profession-icon"
-                  src={selectedProfession.icon}
-                  alt=""
-                />
+            <button
+              type="button"
+              className="breadcrumb__control"
+              aria-current={!selectedCampaign ? "page" : undefined}
+              onClick={onProfessionClick}
+            >
+              <img
+                className="breadcrumb__profession-icon"
+                src={selectedProfession.icon}
+                alt=""
+              />
 
-                <span>{selectedProfession.name}</span>
-              </button>
-            ) : (
-              <span className="breadcrumb__control" aria-current="page">
-                <img
-                  className="breadcrumb__profession-icon"
-                  src={selectedProfession.icon}
-                  alt=""
-                />
-
-                <span>{selectedProfession.name}</span>
-              </span>
-            )}
+              <span>{selectedProfession.name}</span>
+            </button>
           </li>
         )}
 
         {selectedCampaign && (
           <li className="breadcrumb__item">
-            {selectedArmor ? (
-              <button
-                type="button"
-                className="breadcrumb__control"
-                onClick={onCampaignClick}
-              >
-                {selectedCampaign.name}
-              </button>
-            ) : (
-              <span className="breadcrumb__control" aria-current="page">
-                {selectedCampaign.name}
-              </span>
-            )}
+            <button
+              type="button"
+              className="breadcrumb__control"
+              aria-current={!selectedArmor ? "page" : undefined}
+              onClick={onCampaignClick}
+            >
+              {selectedCampaign.name}
+            </button>
           </li>
         )}
 
         {selectedArmor && (
           <li className="breadcrumb__item">
-            <span className="breadcrumb__control" aria-current="page">
+            <button
+              type="button"
+              className="breadcrumb__control"
+              aria-current="page"
+              onClick={onArmorClick}
+            >
               {selectedArmor.name}
-            </span>
+            </button>
           </li>
         )}
       </ol>
