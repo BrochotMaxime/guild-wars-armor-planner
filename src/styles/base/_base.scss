@@ -1,11 +1,26 @@
 @use "../abstracts/variables" as *;
 
+html {
+  background-color: #080a0c;
+}
+
 body {
   min-width: 20rem;
   min-height: 100vh;
   font-family: $font-family-base;
   color: $color-text;
-  background-color: $color-background;
+  background-color: transparent;
+  isolation: isolate;
+
+  &::before {
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    background:
+      linear-gradient(rgba(5, 7, 8, 0.5), rgba(5, 7, 8, 0.7)),
+      url("/images/backgrounds/battle-isles.webp") center / cover no-repeat;
+  }
 }
 
 main {
@@ -13,7 +28,7 @@ main {
   gap: $spacing-lg;
   width: min(100% - 1rem, 75rem);
   margin: 0 auto;
-  padding-block: $spacing-lg;
+  padding-block: $spacing-sm $spacing-lg;
 }
 
 @media (min-width: $breakpoint-tablet) {
@@ -27,8 +42,4 @@ h2,
 h3,
 h4 {
   line-height: 1.2;
-}
-
-h1 {
-  margin-bottom: $spacing-lg;
 }

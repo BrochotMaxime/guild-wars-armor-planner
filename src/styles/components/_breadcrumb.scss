@@ -1,26 +1,130 @@
 @use "../abstracts/variables" as *;
 
-nav[aria-label="Breadcrumb"] {
+$breadcrumb-profession-colors: (
+  "warrior": $color-warrior-border,
+  "ranger": $color-ranger-border,
+  "monk": $color-monk-border,
+  "necromancer": $color-necromancer-border,
+  "mesmer": $color-mesmer-border,
+  "elementalist": $color-elementalist-border,
+  "assassin": $color-assassin-border,
+  "ritualist": $color-ritualist-border,
+  "paragon": $color-paragon-border,
+  "dervish": $color-dervish-border,
+);
+
+.breadcrumb {
+  padding: $spacing-xs;
+  overflow: hidden;
+  color: #ffffff;
+  background-color: rgba(5, 7, 8, 0.82);
+  border: 1px solid $color-interface-border;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+  backdrop-filter: blur(0.25rem);
+}
+
+.breadcrumb__list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: $spacing-xs;
-  margin-bottom: $spacing-lg;
-  padding-bottom: $spacing-sm;
-  border-bottom: 1px solid $color-border;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-  button {
-    padding: 0;
-    border: 0;
-    color: $color-primary;
-    background: none;
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+  min-width: 0;
 
-    &:hover {
-      text-decoration: underline;
-    }
+  & + &::before {
+    margin-inline: 0.25rem;
+    color: rgba(255, 255, 255, 0.4);
+    content: "›";
   }
+}
+
+.breadcrumb__control {
+  --breadcrumb-accent: #{$color-accent-gold};
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-width: 0;
+  padding: 0.5rem 0.625rem;
+  color: rgba(255, 255, 255, 0.78);
+  font: inherit;
+  font-size: 0.8125rem;
+  line-height: 1.2;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: $border-radius-sm;
 
   span {
-    color: $color-text-muted;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &[aria-current="page"] {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: var(--breadcrumb-accent);
+  }
+}
+
+button.breadcrumb__control {
+  cursor: pointer;
+
+  &:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--breadcrumb-accent);
+  }
+
+  &:focus-visible {
+    outline: 0.1875rem solid var(--breadcrumb-accent);
+    outline-offset: 0.125rem;
+  }
+}
+
+.breadcrumb__home {
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.breadcrumb__profession-icon {
+  flex: 0 0 auto;
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+@each $profession, $color in $breadcrumb-profession-colors {
+  .breadcrumb__item--#{$profession} {
+    --profession-color: #{$color};
+
+    .breadcrumb__control {
+      --breadcrumb-accent: var(--profession-color);
+    }
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .breadcrumb {
+    padding: 0.625rem;
+  }
+
+  .breadcrumb__item + .breadcrumb__item::before {
+    margin-inline: $spacing-xs;
+  }
+
+  .breadcrumb__control {
+    padding-inline: 0.75rem;
+    font-size: 0.875rem;
   }
 }

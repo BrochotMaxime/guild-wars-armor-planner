@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import AppHeader from "./components/AppHeader/AppHeader";
 import ArmorDetails from "./components/ArmorDetails/ArmorDetails";
 import ArmorList from "./components/ArmorList/ArmorList";
 import Breadcrumb from "./components/Breadcrumb/Breadcrumb";
@@ -127,56 +128,61 @@ function App() {
     : [];
 
   return (
-    <main>
-      <h1>Guild Wars Armor Planner</h1>
+    <>
+      <AppHeader />
 
-      <Breadcrumb
-        selectedProfession={selectedProfession}
-        selectedCampaign={selectedCampaign}
-        selectedArmor={selectedArmor}
-        onHomeClick={handleHomeBreadcrumbClick}
-        onProfessionClick={handleProfessionBreadcrumbClick}
-        onCampaignClick={handleCampaignBreadcrumbClick}
-      />
-
-      {!selectedProfession && (
-        <ProfessionSelector
-          professions={professions}
-          onSelectProfession={handleProfessionSelect}
+      <main>
+        <Breadcrumb
+          selectedProfession={selectedProfession}
+          selectedCampaign={selectedCampaign}
+          selectedArmor={selectedArmor}
+          onHomeClick={handleHomeBreadcrumbClick}
+          onProfessionClick={handleProfessionBreadcrumbClick}
+          onCampaignClick={handleCampaignBreadcrumbClick}
         />
-      )}
 
-      {selectedProfession && !selectedCampaign && (
-        <CampaignSelector
-          campaigns={campaigns}
-          onSelectCampaign={handleCampaignSelect}
-        />
-      )}
+        {!selectedProfession && (
+          <ProfessionSelector
+            professions={professions}
+            onSelectProfession={handleProfessionSelect}
+          />
+        )}
 
-      {selectedCampaign && !selectedArmor && (
-        <ArmorList armors={filteredArmors} onSelectArmor={handleArmorSelect} />
-      )}
+        {selectedProfession && !selectedCampaign && (
+          <CampaignSelector
+            campaigns={campaigns}
+            onSelectCampaign={handleCampaignSelect}
+          />
+        )}
 
-      {selectedArmor && (
-        <ArmorDetails
-          armor={selectedArmor}
-          materials={allMaterials}
-          materialStatus={materialStatus}
-          selectedMaterial={selectedMaterial}
-          onMaterialClick={setSelectedMaterial}
-          craftingRequirements={craftingRequirements}
-          craftingRecipes={craftingRecipes}
-          craftingSelections={craftingSelections}
-          actualMaterialNeeds={actualMaterialNeeds}
-          acquisitionMethods={acquisitionMethods}
-          isCheckingMaterials={isCheckingMaterials}
-          inventory={inventory}
-          onPlanArmor={() => setIsCheckingMaterials(true)}
-          onCraftingToggle={handleCraftingToggle}
-          onInventoryChange={handleInventoryChange}
-        />
-      )}
-    </main>
+        {selectedCampaign && !selectedArmor && (
+          <ArmorList
+            armors={filteredArmors}
+            onSelectArmor={handleArmorSelect}
+          />
+        )}
+
+        {selectedArmor && (
+          <ArmorDetails
+            armor={selectedArmor}
+            materials={allMaterials}
+            materialStatus={materialStatus}
+            selectedMaterial={selectedMaterial}
+            onMaterialClick={setSelectedMaterial}
+            craftingRequirements={craftingRequirements}
+            craftingRecipes={craftingRecipes}
+            craftingSelections={craftingSelections}
+            actualMaterialNeeds={actualMaterialNeeds}
+            acquisitionMethods={acquisitionMethods}
+            isCheckingMaterials={isCheckingMaterials}
+            inventory={inventory}
+            onPlanArmor={() => setIsCheckingMaterials(true)}
+            onCraftingToggle={handleCraftingToggle}
+            onInventoryChange={handleInventoryChange}
+          />
+        )}
+      </main>
+    </>
   );
 }
 
