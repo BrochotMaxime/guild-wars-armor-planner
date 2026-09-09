@@ -258,12 +258,12 @@ img {
 
 .armor-list {
   color: #ffffff;
-  background-color: $color-interface-dark;
-  border-color: $color-interface-border;
+  // background-color: $color-interface-dark;
+  // border-color: $color-interface-border;
 
-  > h2 {
-    text-align: center;
-  }
+  // > h2 {
+  //   text-align: center;
+  // }
 
   > p {
     color: $color-text-muted;
@@ -275,7 +275,6 @@ img {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: $spacing-sm;
-  margin-top: $spacing-sm;
 
   @media (min-width: $breakpoint-tablet) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -299,6 +298,8 @@ img {
   border-color: $color-interface-border;
   box-shadow: none;
   transition:
+    opacity 0.2s ease,
+    filter 0.2s ease,
     transform 0.2s ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease;
@@ -315,6 +316,21 @@ img {
     outline: 0.1875rem solid $color-accent-gold;
     outline-offset: 0.1875rem;
   }
+}
+
+.armor-card--selected {
+  border-color: $color-accent-gold;
+  box-shadow: $shadow-selection;
+}
+
+.armor-list--has-selection .armor-card:not(.armor-card--selected) {
+  opacity: 0.45;
+  filter: grayscale(0.7);
+}
+
+.armor-list--has-selection .armor-card:hover {
+  opacity: 1;
+  filter: none;
 }
 
 .armor-card__previews {
@@ -609,9 +625,9 @@ img {
 @media (prefers-reduced-motion: reduce) {
   .armor-card {
     transition: none;
+  }
 
-    &:hover {
-      transform: none;
-    }
+  .armor-card:hover {
+    transform: none;
   }
 }

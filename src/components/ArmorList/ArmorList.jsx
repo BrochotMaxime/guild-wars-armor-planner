@@ -1,16 +1,19 @@
 import ArmorCard from "../ArmorCard/ArmorCard";
 
-function ArmorList({ armors, onSelectArmor }) {
+function ArmorList({ armors, selectedArmor, onSelectArmor }) {
   return (
-    <section className="armor-list">
-      <h2>Choose an armor</h2>
-
+    <div
+      className={`armor-list ${
+        selectedArmor ? "armor-list--has-selection" : ""
+      }`}
+    >
       {armors.length > 0 ? (
         <div className="armor-list__grid">
           {armors.map((armor) => (
             <ArmorCard
               key={armor.id}
               armor={armor}
+              isSelected={selectedArmor?.id === armor.id}
               onSelectArmor={onSelectArmor}
             />
           ))}
@@ -18,7 +21,7 @@ function ArmorList({ armors, onSelectArmor }) {
       ) : (
         <p>No armor is available for this selection.</p>
       )}
-    </section>
+    </div>
   );
 }
 
