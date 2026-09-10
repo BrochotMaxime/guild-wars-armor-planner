@@ -20,7 +20,7 @@ function ArmorDetails({
   onInventoryChange,
 }) {
   return (
-    <section className="armor-details">
+    <section id="armor-details" className="armor-details">
       <header className="armor-details__header">
         <div>
           <h2>{armor.name}</h2>

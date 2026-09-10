@@ -52,7 +52,7 @@ function App() {
       setIsCheckingMaterials(false);
     }
 
-    setActiveStep(WORKFLOW_STEPS.campaign);
+    scrollToWorkflowStep(WORKFLOW_STEPS.campaign);
   }
 
   function handleCampaignSelect(campaign) {
@@ -68,7 +68,7 @@ function App() {
       setIsCheckingMaterials(false);
     }
 
-    setActiveStep(WORKFLOW_STEPS.armor);
+    scrollToWorkflowStep(WORKFLOW_STEPS.armor);
   }
 
   function handleArmorSelect(armor) {
@@ -83,11 +83,18 @@ function App() {
       setIsCheckingMaterials(false);
     }
 
-    setActiveStep(null);
+    scrollToElement("armor-details", null);
+  }
+
+  function handlePlanArmor() {
+    setIsCheckingMaterials(true);
+    scrollToElement("armor-planner");
   }
 
   function handleStepToggle(step) {
-    setActiveStep((currentStep) => (currentStep === step ? null : step));
+    const nextActiveStep = activeStep === step ? null : step;
+
+    scrollToWorkflowStep(step, nextActiveStep);
   }
 
   function handleCraftingToggle(materialId) {
@@ -106,6 +113,76 @@ function App() {
     }));
   }
 
+  function scrollToElement(targetId, nextActiveStep = activeStep) {
+    const shouldWaitForTransition = activeStep !== nextActiveStep;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    setActiveStep(nextActiveStep);
+
+    window.requestAnimationFrame(() => {
+      const target = document.getElementById(targetId);
+
+      if (!target) {
+        return;
+      }
+
+      function scrollToTarget() {
+        const breadcrumb = document.querySelector(".breadcrumb");
+        const breadcrumbHeight = breadcrumb?.offsetHeight ?? 0;
+        const spacingBelowBreadcrumb = 16;
+
+        const targetPosition =
+          target.getBoundingClientRect().top +
+          window.scrollY -
+          breadcrumbHeight -
+          spacingBelowBreadcrumb;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: prefersReducedMotion ? "auto" : "smooth",
+        });
+      }
+
+      if (!shouldWaitForTransition || prefersReducedMotion) {
+        scrollToTarget();
+        return;
+      }
+
+      const workflow = target.closest(".workflow");
+
+      if (!workflow) {
+        scrollToTarget();
+        return;
+      }
+
+      let fallbackTimeout;
+
+      function handleTransitionEnd(event) {
+        if (event.propertyName !== "grid-template-rows") {
+          return;
+        }
+
+        workflow.removeEventListener("transitionend", handleTransitionEnd);
+        window.clearTimeout(fallbackTimeout);
+
+        window.requestAnimationFrame(scrollToTarget);
+      }
+
+      workflow.addEventListener("transitionend", handleTransitionEnd);
+
+      fallbackTimeout = window.setTimeout(() => {
+        workflow.removeEventListener("transitionend", handleTransitionEnd);
+        scrollToTarget();
+      }, 400);
+    });
+  }
+
+  function scrollToWorkflowStep(step, nextActiveStep = step) {
+    scrollToElement(`${step}-step`, nextActiveStep);
+  }
+
   function handleHomeBreadcrumbClick() {
     setSelectedProfession(null);
     setSelectedCampaign(null);
@@ -115,18 +192,27 @@ function App() {
     setInventory({});
     setIsCheckingMaterials(false);
     setActiveStep(WORKFLOW_STEPS.profession);
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
   }
 
   function handleProfessionBreadcrumbClick() {
-    setActiveStep(WORKFLOW_STEPS.profession);
+    scrollToWorkflowStep(WORKFLOW_STEPS.profession);
   }
 
   function handleCampaignBreadcrumbClick() {
-    setActiveStep(WORKFLOW_STEPS.campaign);
+    scrollToWorkflowStep(WORKFLOW_STEPS.campaign);
   }
 
   function handleArmorBreadcrumbClick() {
-    setActiveStep(WORKFLOW_STEPS.armor);
+    scrollToWorkflowStep(WORKFLOW_STEPS.armor);
   }
 
   const filteredArmors = allArmors.filter(
@@ -158,19 +244,18 @@ function App() {
 
   return (
     <>
+      <Breadcrumb
+        selectedProfession={selectedProfession}
+        selectedCampaign={selectedCampaign}
+        selectedArmor={selectedArmor}
+        onHomeClick={handleHomeBreadcrumbClick}
+        onProfessionClick={handleProfessionBreadcrumbClick}
+        onCampaignClick={handleCampaignBreadcrumbClick}
+        onArmorClick={handleArmorBreadcrumbClick}
+      />
       <AppHeader />
 
       <main>
-        <Breadcrumb
-          selectedProfession={selectedProfession}
-          selectedCampaign={selectedCampaign}
-          selectedArmor={selectedArmor}
-          onHomeClick={handleHomeBreadcrumbClick}
-          onProfessionClick={handleProfessionBreadcrumbClick}
-          onCampaignClick={handleCampaignBreadcrumbClick}
-          onArmorClick={handleArmorBreadcrumbClick}
-        />
-
         <div className="workflow">
           <WorkflowPanel
             id="profession-step"
@@ -230,7 +315,7 @@ function App() {
               acquisitionMethods={acquisitionMethods}
               isCheckingMaterials={isCheckingMaterials}
               inventory={inventory}
-              onPlanArmor={() => setIsCheckingMaterials(true)}
+              onPlanArmor={handlePlanArmor}
               onCraftingToggle={handleCraftingToggle}
               onInventoryChange={handleInventoryChange}
             />

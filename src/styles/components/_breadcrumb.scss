@@ -14,12 +14,15 @@ $breadcrumb-profession-colors: (
 );
 
 .breadcrumb {
-  padding: $spacing-xs;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  padding-block: $spacing-xs;
   overflow: hidden;
   color: #ffffff;
-  background-color: rgba(5, 7, 8, 0.82);
-  border: 1px solid $color-interface-border;
-  border-radius: $border-radius-md;
+  background-color: rgba(5, 7, 8, 0.94);
+  border-block: 1px solid $color-interface-border;
   box-shadow: $shadow-sm;
   backdrop-filter: blur(0.25rem);
 }

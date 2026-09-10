@@ -11,6 +11,7 @@ function WorkflowPanel({
 
   return (
     <section
+      id={id}
       className={`workflow-panel ${
         isExpanded ? "workflow-panel--expanded" : "workflow-panel--collapsed"
       } ${!isAvailable ? "workflow-panel--unavailable" : ""}`}
