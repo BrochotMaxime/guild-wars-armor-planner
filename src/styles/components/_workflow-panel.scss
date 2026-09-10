@@ -2,7 +2,27 @@
 
 .workflow {
   display: grid;
-  gap: $spacing-sm;
+  gap: 0;
+}
+
+.workflow > * {
+  position: relative;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.workflow > * + * {
+  margin-top: -1px;
+}
+
+.workflow > :first-child {
+  border-top-left-radius: $border-radius-md;
+  border-top-right-radius: $border-radius-md;
+}
+
+.workflow > :last-child {
+  border-bottom-right-radius: $border-radius-md;
+  border-bottom-left-radius: $border-radius-md;
 }
 
 .workflow-panel {
@@ -13,14 +33,12 @@
   color: #ffffff;
   background-color: rgba($color-interface-dark, 0.96);
   border-color: $color-interface-border;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
 .workflow-panel--expanded {
+  z-index: 1;
   border-color: rgba($color-accent-gold, 0.7);
-  box-shadow: $shadow-selection;
 }
 
 .workflow-panel__heading {
