@@ -198,7 +198,7 @@ function ArmorPlanner({
   }
 
   return (
-    <section className="armor-planner">
+    <section id="armor-planner" className="armor-planner">
       <h3>Armor planner</h3>
 
       <div className="armor-planner__table-wrapper">
