@@ -215,27 +215,27 @@ function App() {
               onSelectArmor={handleArmorSelect}
             />
           </WorkflowPanel>
-        </div>
 
-        {selectedArmor && (
-          <ArmorDetails
-            armor={selectedArmor}
-            materials={allMaterials}
-            materialStatus={materialStatus}
-            selectedMaterial={selectedMaterial}
-            onMaterialClick={setSelectedMaterial}
-            craftingRequirements={craftingRequirements}
-            craftingRecipes={craftingRecipes}
-            craftingSelections={craftingSelections}
-            actualMaterialNeeds={actualMaterialNeeds}
-            acquisitionMethods={acquisitionMethods}
-            isCheckingMaterials={isCheckingMaterials}
-            inventory={inventory}
-            onPlanArmor={() => setIsCheckingMaterials(true)}
-            onCraftingToggle={handleCraftingToggle}
-            onInventoryChange={handleInventoryChange}
-          />
-        )}
+          {selectedArmor && (
+            <ArmorDetails
+              armor={selectedArmor}
+              materials={allMaterials}
+              materialStatus={materialStatus}
+              selectedMaterial={selectedMaterial}
+              onMaterialClick={setSelectedMaterial}
+              craftingRequirements={craftingRequirements}
+              craftingRecipes={craftingRecipes}
+              craftingSelections={craftingSelections}
+              actualMaterialNeeds={actualMaterialNeeds}
+              acquisitionMethods={acquisitionMethods}
+              isCheckingMaterials={isCheckingMaterials}
+              inventory={inventory}
+              onPlanArmor={() => setIsCheckingMaterials(true)}
+              onCraftingToggle={handleCraftingToggle}
+              onInventoryChange={handleInventoryChange}
+            />
+          )}
+        </div>
       </main>
     </>
   );
