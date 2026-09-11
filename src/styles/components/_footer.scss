@@ -1,0 +1,85 @@
+@use "../abstracts/variables" as *;
+
+.app-footer {
+  margin-top: auto;
+  color: rgba(255, 255, 255, 0.72);
+  background-color: rgba(#050606, 0.98);
+  border-top: 1px solid rgba($color-accent-gold, 0.45);
+}
+
+.app-footer__content {
+  display: grid;
+  gap: $spacing-md;
+  width: min(100%, 75rem);
+  margin: 0 auto;
+  padding: $spacing-md $spacing-sm;
+}
+
+.app-footer p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.app-footer__project {
+  display: grid;
+  gap: 0.25rem;
+
+  strong {
+    color: #ffffff;
+  }
+
+  p:last-child {
+    font-size: 0.875rem;
+  }
+}
+
+.app-footer__legal {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.app-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-xs $spacing-sm;
+
+  a {
+    width: fit-content;
+    color: $color-accent-gold;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 0.1875rem solid $color-accent-gold;
+      outline-offset: 0.1875rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .app-footer__content {
+    grid-template-columns: minmax(12rem, auto) minmax(18rem, 1fr);
+    align-items: start;
+    padding: $spacing-lg;
+  }
+
+  .app-footer__legal {
+    justify-self: end;
+    max-width: 38rem;
+    text-align: right;
+  }
+
+  .app-footer__links {
+    grid-column: 1 / -1;
+    justify-content: center;
+    padding-top: $spacing-sm;
+    border-top: 1px solid rgba($color-interface-border, 0.65);
+  }
+}
