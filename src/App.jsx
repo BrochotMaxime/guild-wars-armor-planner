@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import AppHeader from "./components/AppHeader/AppHeader";
+import AppFooter from "./components/AppFooter/AppFooter";
 import ArmorDetails from "./components/ArmorDetails/ArmorDetails";
 import ArmorList from "./components/ArmorList/ArmorList";
 import Breadcrumb from "./components/Breadcrumb/Breadcrumb";
@@ -322,6 +323,8 @@ function App() {
           )}
         </div>
       </main>
+
+      <AppFooter />
     </>
   );
 }
