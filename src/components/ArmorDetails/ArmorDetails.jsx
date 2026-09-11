@@ -1,3 +1,4 @@
+import ArmorPreviewGallery from "../ArmorPreviewGallery/ArmorPreviewGallery";
 import ArmorRequirements from "../ArmorRequirements/ArmorRequirements";
 import MaterialDetails from "../MaterialDetails/MaterialDetails";
 import ArmorPlanner from "../ArmorPlanner/ArmorPlanner";
@@ -44,34 +45,7 @@ function ArmorDetails({
       </header>
 
       <div className="armor-details__overview">
-        <div className="armor-previews">
-          <figure className="armor-preview">
-            <div className="armor-preview__image">
-              {armor.images.male ? (
-                <img src={armor.images.male} alt={`${armor.name} male armor`} />
-              ) : (
-                <p>Image not available yet.</p>
-              )}
-            </div>
-
-            <figcaption>Male</figcaption>
-          </figure>
-
-          <figure className="armor-preview">
-            <div className="armor-preview__image">
-              {armor.images.female ? (
-                <img
-                  src={armor.images.female}
-                  alt={`${armor.name} female armor`}
-                />
-              ) : (
-                <p>Image not available yet.</p>
-              )}
-            </div>
-
-            <figcaption>Female</figcaption>
-          </figure>
-        </div>
+        <ArmorPreviewGallery armor={armor} />
 
         <ArmorRequirements
           armor={armor}
@@ -84,7 +58,9 @@ function ArmorDetails({
       {selectedMaterial && (
         <MaterialDetails
           material={selectedMaterial}
+          materials={materials}
           acquisitionMethods={acquisitionMethods}
+          craftingRecipes={craftingRecipes}
           onClose={() => onMaterialClick(null)}
         />
       )}
