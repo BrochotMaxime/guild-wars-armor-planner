@@ -14,16 +14,33 @@ function ArmorRequirements({ armor, materials, onMaterialClick, onPlanArmor }) {
   function renderMaterial({ materialId, quantity }) {
     const material = getMaterialById(materialId);
 
+    if (!material) {
+      return null;
+    }
+
     return (
-      <button
-        key={materialId}
-        type="button"
-        className="material-chip"
-        onClick={() => onMaterialClick(material)}
-      >
-        <span>{material.name}</span>
-        <strong>× {quantity}</strong>
-      </button>
+      <div key={materialId} className="material-item">
+        <img
+          className="material-item__icon"
+          src={material.icon}
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+
+        <span className="material-item__name">{material.name}</span>
+
+        <strong className="material-item__quantity">× {quantity}</strong>
+
+        <button
+          type="button"
+          className="button-secondary material-item__details"
+          onClick={() => onMaterialClick(material)}
+          aria-label={`View details for ${material.name}`}
+        >
+          Details
+        </button>
+      </div>
     );
   }
 
@@ -35,19 +52,31 @@ function ArmorRequirements({ armor, materials, onMaterialClick, onPlanArmor }) {
         Gold: <strong>{armor.cost.gold}</strong>
       </p>
 
-      <div className="armor-requirements__group">
-        <h4>Common materials</h4>
-        <div className="material-list">
-          {commonMaterials.map(renderMaterial)}
+      {commonMaterials.length > 0 && (
+        <div className="armor-requirements__group">
+          <h4>Common materials</h4>
+
+          <div className="material-list">
+            {commonMaterials.map(renderMaterial)}
+          </div>
         </div>
-      </div>
+      )}
 
-      <div className="armor-requirements__group">
-        <h4>Rare materials</h4>
-        <div className="material-list">{rareMaterials.map(renderMaterial)}</div>
-      </div>
+      {rareMaterials.length > 0 && (
+        <div className="armor-requirements__group">
+          <h4>Rare materials</h4>
 
-      <button type="button" className="plan-armor-button" onClick={onPlanArmor}>
+          <div className="material-list">
+            {rareMaterials.map(renderMaterial)}
+          </div>
+        </div>
+      )}
+
+      <button
+        type="button"
+        className="button-primary plan-armor-button"
+        onClick={onPlanArmor}
+      >
         Plan this armor
       </button>
     </section>
