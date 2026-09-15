@@ -1,3 +1,5 @@
+import CurrencyAmount from "../CurrencyAmount/CurrencyAmount";
+
 function ArmorPlanner({
   materialStatus,
   actualMaterialNeeds,
@@ -42,7 +44,13 @@ function ArmorPlanner({
     const craftQuantity = getCraftQuantity(materialId);
 
     if (armorQuantity > 0 && craftQuantity > 0) {
-      return `${armorQuantity} + ${craftQuantity} = ${totalRequired}`;
+      return (
+        <>
+          {armorQuantity} + <br className="armor-planner__need-break" />
+          {craftQuantity} = <br className="armor-planner__need-break" />
+          {totalRequired}
+        </>
+      );
     }
 
     if (craftQuantity > 0) {
@@ -241,7 +249,9 @@ function ArmorPlanner({
       {additionalCraftingGold > 0 && (
         <p className="armor-planner__crafting-cost">
           Additional crafting cost:{" "}
-          <strong>{additionalCraftingGold} Gold</strong>
+          <strong>
+            <CurrencyAmount goldAmount={additionalCraftingGold} />
+          </strong>
         </p>
       )}
     </section>
