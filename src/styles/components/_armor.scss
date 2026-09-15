@@ -90,12 +90,33 @@ section ul {
   gap: $spacing-xs;
 
   @media (min-width: $breakpoint-tablet) {
-    grid-template-columns: 1fr;
-    gap: $spacing-lg;
+    grid-template-columns: minmax(18rem, 2fr) minmax(18rem, 3fr);
+    gap: $spacing-sm;
+
+    .armor-preview-gallery {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .armor-preview__image {
+      height: 18rem;
+      min-height: 0;
+      aspect-ratio: auto;
+    }
   }
 
   @media (min-width: $breakpoint-desktop) {
     grid-template-columns: minmax(0, 24rem) minmax(20rem, 1fr);
+    gap: $spacing-lg;
+
+    .armor-preview-gallery {
+      max-width: 24rem;
+    }
+
+    .armor-preview__image {
+      height: 24rem;
+    }
   }
 }
 
@@ -170,14 +191,17 @@ section ul {
 .armor-preview__image {
   display: grid;
   place-items: center;
-  aspect-ratio: 2 / 5;
+  aspect-ratio: 1 / 2;
+  min-height: 0;
   overflow: hidden;
   background-color: #ffffff;
 
   img {
     display: block;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: 100%;
+    min-height: 0;
     object-fit: contain;
     object-position: center bottom;
   }
@@ -219,7 +243,18 @@ section ul {
   }
 
   .armor-preview__image {
-    aspect-ratio: 2 / 5;
+    height: 24rem;
+    min-height: 0;
+    aspect-ratio: auto;
+
+    img {
+      width: auto;
+      max-width: 100%;
+      height: 100%;
+      min-height: 0;
+      object-fit: contain;
+      object-position: center bottom;
+    }
   }
 
   .armor-preview figcaption {
@@ -520,6 +555,11 @@ img {
   }
 }
 
+.armor-list__groups {
+  display: grid;
+  gap: $spacing-sm;
+}
+
 .armor-list__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -639,6 +679,7 @@ img {
 .armor-planner {
   padding: $spacing-sm;
   gap: $spacing-md;
+  min-width: 0;
   width: 100%;
   color: #ffffff;
   background-color: #050606;
@@ -666,7 +707,10 @@ img {
 }
 
 .armor-planner__table-wrapper {
+  min-width: 0;
+  max-width: 100%;
   overflow-x: auto;
+  overscroll-behavior-x: contain;
   border: 1px solid $color-interface-border;
   border-radius: $border-radius-sm;
 }
@@ -777,6 +821,10 @@ img {
   }
 }
 
+.armor-planner__need-break {
+  display: none;
+}
+
 .armor-planner__crafted-status {
   color: $color-accent-gold;
   font-style: italic;
@@ -791,6 +839,58 @@ img {
 
   strong {
     color: $color-accent-gold;
+  }
+}
+
+@media (max-width: 767px) {
+  .armor-planner {
+    font-size: 0.75rem;
+  }
+
+  .armor-planner th,
+  .armor-planner td {
+    padding: 0.375rem 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  .armor-planner thead th,
+  .armor-planner__group-title th {
+    font-size: 0.625rem;
+  }
+
+  .armor-planner__craft-option,
+  .armor-planner__crafted-status {
+    font-size: 0.6875rem;
+  }
+
+  .armor-planner__need-break {
+    display: initial;
+  }
+
+  .armor-planner__crafted-status {
+    display: inline-block;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .armor-planner th:nth-child(1),
+  .armor-planner td:nth-child(1) {
+    width: 40%;
+  }
+
+  .armor-planner th:nth-child(2),
+  .armor-planner td:nth-child(2) {
+    width: 16%;
+  }
+
+  .armor-planner th:nth-child(3),
+  .armor-planner td:nth-child(3) {
+    width: 20%;
+  }
+
+  .armor-planner th:nth-child(4),
+  .armor-planner td:nth-child(4) {
+    width: 24%;
   }
 }
 
@@ -813,6 +913,10 @@ img {
   h4 {
     font-size: 0.875rem;
   }
+}
+
+.armor-requirements__gold strong {
+  color: $color-accent-gold;
 }
 
 .armor-requirements__group {
@@ -884,8 +988,9 @@ img {
 
   .armor-preview-gallery {
     gap: $spacing-xs;
-    max-width: 24rem;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
   .armor-preview-gallery__controls {
@@ -926,6 +1031,14 @@ img {
   }
 }
 
+@media (max-width: 48rem) {
+  .armor-planner table {
+    display: table;
+    overflow-x: visible;
+    white-space: normal;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .armor-card {
     transition: none;
@@ -933,5 +1046,28 @@ img {
 
   .armor-card:hover {
     transform: none;
+  }
+}
+
+.currency-amount,
+.currency-amount__unit {
+  display: inline-flex;
+  align-items: center;
+}
+
+.currency-amount {
+  gap: 0.375rem;
+}
+
+.currency-amount__unit {
+  gap: 0.2rem;
+  white-space: nowrap;
+
+  img {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
+    border-radius: 0;
   }
 }

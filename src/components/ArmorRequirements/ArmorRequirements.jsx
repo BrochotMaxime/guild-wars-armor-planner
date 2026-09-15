@@ -1,3 +1,5 @@
+import CurrencyAmount from "../CurrencyAmount/CurrencyAmount";
+
 function ArmorRequirements({ armor, materials, onMaterialClick, onPlanArmor }) {
   function getMaterialById(materialId) {
     return materials.find((material) => material.id === materialId);
@@ -49,7 +51,10 @@ function ArmorRequirements({ armor, materials, onMaterialClick, onPlanArmor }) {
       <h3>Requirements</h3>
 
       <p className="armor-requirements__gold">
-        Gold: <strong>{armor.cost.gold}</strong>
+        Cost:{" "}
+        <strong>
+          <CurrencyAmount goldAmount={armor.cost.gold} />
+        </strong>
       </p>
 
       {commonMaterials.length > 0 && (

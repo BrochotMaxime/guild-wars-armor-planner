@@ -143,7 +143,7 @@ const materials = {
       id: "elonian-leather-square",
       name: "Elonian Leather Square",
       type: "rare",
-      icon: "/images/materials/rare/Elonian_leather_square.png",
+      icon: "/images/materials/rare/Elonian_Leather_Square.png",
       wikiUrl: "https://wiki.guildwars.com/wiki/Elonian_Leather_Square",
       acquisitionMethodIds: ["salvage", "material-trader", "artisan"],
     },

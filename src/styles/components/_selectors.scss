@@ -10,32 +10,53 @@
   }
 }
 
-.selector-grid--campaigns {
-  grid-template-columns: 1fr;
+.selector-grid--professions {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: $spacing-xs;
 
-  @media (min-width: $breakpoint-tablet) {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-
-    .campaign-card {
-      grid-column: span 2;
-    }
-
-    .campaign-card:last-child {
-      grid-column: 2 / span 2;
-    }
+  .profession-card {
+    grid-column: span 4;
   }
 
-  @media (min-width: $breakpoint-desktop) {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+  .profession-card:nth-child(7),
+  .profession-card:nth-child(9) {
+    grid-column: 3 / span 4;
+  }
 
-    .campaign-card,
-    .campaign-card:last-child {
-      grid-column: span 2;
-    }
+  .profession-card:nth-child(8),
+  .profession-card:nth-child(10) {
+    grid-column: 7 / span 4;
+  }
 
-    .campaign-card:nth-child(4) {
-      grid-column: 2 / span 2;
+  @media (min-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: $spacing-sm;
+
+    .profession-card,
+    .profession-card:nth-child(n + 7) {
+      grid-column: auto;
     }
+  }
+}
+
+.selector-grid--campaigns {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: $spacing-xs;
+
+  .campaign-card {
+    grid-column: span 4;
+  }
+
+  .campaign-card:nth-child(4) {
+    grid-column: 3 / span 4;
+  }
+
+  .campaign-card:nth-child(5) {
+    grid-column: 7 / span 4;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    gap: $spacing-sm;
   }
 }
 
