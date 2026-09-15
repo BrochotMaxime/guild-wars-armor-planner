@@ -964,7 +964,7 @@ const mesmerArmors = [
       female: "/images/armors/mesmer/core/Mesmer_Obsidian_armor_f.webp",
     },
     cost: {
-      gold: 750000,
+      gold: 75000,
       materials: [
         {
           materialId: "bolt-of-cloth",

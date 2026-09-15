@@ -555,6 +555,11 @@ img {
   }
 }
 
+.armor-list__groups {
+  display: grid;
+  gap: $spacing-sm;
+}
+
 .armor-list__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
