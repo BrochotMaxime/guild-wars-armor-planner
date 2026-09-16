@@ -19,6 +19,8 @@ import craftingRecipes from "./data/craftingRecipes";
 import materials from "./data/materials";
 import professions from "./data/professions";
 
+import useWorkflowNavigation from "./hooks/useWorkflowNavigation";
+
 import aggregateMaterials from "./utils/aggregateMaterials";
 import calculateCraftingRequirements from "./utils/calculateCraftingRequirements";
 import calculateMissingMaterials from "./utils/calculateMissingMaterials";
@@ -33,7 +35,13 @@ const WORKFLOW_STEPS = {
 };
 
 function App() {
-  const [activeStep, setActiveStep] = useState(WORKFLOW_STEPS.profession);
+  const {
+    activeStep,
+    scrollToElement,
+    scrollToWorkflowStep,
+    toggleWorkflowStep,
+    returnToWorkflowStart,
+  } = useWorkflowNavigation(WORKFLOW_STEPS.profession);
   const [selectedProfession, setSelectedProfession] = useState(null);
   const [selectedCampaign, setSelectedCampaign] = useState(null);
   const [selectedArmor, setSelectedArmor] = useState(null);
@@ -95,30 +103,9 @@ function App() {
     scrollToElement("armor-details", null);
   }
 
-  function handleHomeBreadcrumbClick() {
-    setSelectedProfession(null);
-    resetCampaignState();
-    setActiveStep(WORKFLOW_STEPS.profession);
-
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    window.scrollTo({
-      top: 0,
-      behavior: prefersReducedMotion ? "auto" : "smooth",
-    });
-  }
-
   function handlePlanArmor() {
     setIsCheckingMaterials(true);
     scrollToElement("armor-planner");
-  }
-
-  function handleStepToggle(step) {
-    const nextActiveStep = activeStep === step ? null : step;
-
-    scrollToWorkflowStep(step, nextActiveStep);
   }
 
   function handleCraftingToggle(materialId) {
@@ -137,74 +124,10 @@ function App() {
     }));
   }
 
-  function scrollToElement(targetId, nextActiveStep = activeStep) {
-    const shouldWaitForTransition = activeStep !== nextActiveStep;
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    setActiveStep(nextActiveStep);
-
-    window.requestAnimationFrame(() => {
-      const target = document.getElementById(targetId);
-
-      if (!target) {
-        return;
-      }
-
-      function scrollToTarget() {
-        const breadcrumb = document.querySelector(".breadcrumb");
-        const breadcrumbHeight = breadcrumb?.offsetHeight ?? 0;
-        const spacingBelowBreadcrumb = 16;
-
-        const targetPosition =
-          target.getBoundingClientRect().top +
-          window.scrollY -
-          breadcrumbHeight -
-          spacingBelowBreadcrumb;
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: prefersReducedMotion ? "auto" : "smooth",
-        });
-      }
-
-      if (!shouldWaitForTransition || prefersReducedMotion) {
-        scrollToTarget();
-        return;
-      }
-
-      const workflow = target.closest(".workflow");
-
-      if (!workflow) {
-        scrollToTarget();
-        return;
-      }
-
-      let fallbackTimeout;
-
-      function handleTransitionEnd(event) {
-        if (event.propertyName !== "grid-template-rows") {
-          return;
-        }
-
-        workflow.removeEventListener("transitionend", handleTransitionEnd);
-        window.clearTimeout(fallbackTimeout);
-
-        window.requestAnimationFrame(scrollToTarget);
-      }
-
-      workflow.addEventListener("transitionend", handleTransitionEnd);
-
-      fallbackTimeout = window.setTimeout(() => {
-        workflow.removeEventListener("transitionend", handleTransitionEnd);
-        scrollToTarget();
-      }, 400);
-    });
-  }
-
-  function scrollToWorkflowStep(step, nextActiveStep = step) {
-    scrollToElement(`${step}-step`, nextActiveStep);
+  function handleHomeBreadcrumbClick() {
+    setSelectedProfession(null);
+    resetCampaignState();
+    returnToWorkflowStart();
   }
 
   function handleProfessionBreadcrumbClick() {
@@ -266,7 +189,7 @@ function App() {
             title="Profession"
             summary={selectedProfession?.name}
             isExpanded={activeStep === WORKFLOW_STEPS.profession}
-            onToggle={() => handleStepToggle(WORKFLOW_STEPS.profession)}
+            onToggle={() => toggleWorkflowStep(WORKFLOW_STEPS.profession)}
           >
             <ProfessionSelector
               professions={professions}
@@ -281,7 +204,7 @@ function App() {
             summary={selectedCampaign?.name}
             isExpanded={activeStep === WORKFLOW_STEPS.campaign}
             isAvailable={Boolean(selectedProfession)}
-            onToggle={() => handleStepToggle(WORKFLOW_STEPS.campaign)}
+            onToggle={() => toggleWorkflowStep(WORKFLOW_STEPS.campaign)}
           >
             <CampaignSelector
               campaigns={campaigns}
@@ -296,7 +219,7 @@ function App() {
             summary={selectedArmor?.name}
             isExpanded={activeStep === WORKFLOW_STEPS.armor}
             isAvailable={Boolean(selectedCampaign)}
-            onToggle={() => handleStepToggle(WORKFLOW_STEPS.armor)}
+            onToggle={() => toggleWorkflowStep(WORKFLOW_STEPS.armor)}
           >
             <ArmorList
               armors={filteredArmors}
