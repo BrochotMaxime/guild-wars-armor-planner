@@ -1,0 +1,236 @@
+@use "../../abstracts/variables" as *;
+
+.armor-planner {
+  gap: $spacing-md;
+  width: 100%;
+  min-width: 0;
+  padding: $spacing-sm;
+  color: #ffffff;
+  font-size: 0.75rem;
+  background-color: #050606;
+  border-color: $color-interface-border;
+  box-shadow: none;
+
+  > h3 {
+    margin: 0;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    min-width: 0;
+    padding: 0.375rem 0.25rem;
+    color: $color-text;
+    font-size: 0.75rem;
+    background-color: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-sm;
+  }
+
+  input[type="checkbox"] {
+    accent-color: $color-accent-gold;
+  }
+}
+
+.armor-planner__table-wrapper {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border: 1px solid $color-interface-border;
+  border-radius: $border-radius-sm;
+}
+
+.armor-planner table {
+  width: 100%;
+  min-width: 0;
+  color: #ffffff;
+  background-color: transparent;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.armor-planner table,
+.armor-planner thead,
+.armor-planner tbody,
+.armor-planner tr,
+.armor-planner th,
+.armor-planner td {
+  border: 0;
+}
+
+.armor-planner th,
+.armor-planner td {
+  padding: 0.375rem 0.25rem;
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  text-align: left;
+  overflow-wrap: anywhere;
+  border-right: 1px solid $color-interface-border;
+  border-bottom: 1px solid $color-interface-border;
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.armor-planner thead th {
+  color: $color-accent-gold;
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background-color: $color-interface-dark;
+}
+
+.armor-planner tbody:last-child tr:last-child td {
+  border-bottom: 0;
+}
+
+.armor-planner th:nth-child(1),
+.armor-planner td:nth-child(1) {
+  width: 40%;
+}
+
+.armor-planner th:nth-child(2),
+.armor-planner td:nth-child(2) {
+  width: 16%;
+}
+
+.armor-planner th:nth-child(3),
+.armor-planner td:nth-child(3) {
+  width: 20%;
+}
+
+.armor-planner th:nth-child(4),
+.armor-planner td:nth-child(4) {
+  width: 24%;
+}
+
+.armor-planner__group-title th {
+  width: auto;
+  padding-block: $spacing-xs;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.armor-planner__group + .armor-planner__group {
+  border-top: 2px solid $color-interface-border;
+}
+
+.armor-planner__material {
+  display: grid;
+  gap: $spacing-xs;
+  padding-left: calc(var(--material-depth, 0) * $spacing-md);
+}
+
+.armor-planner__material[style*="--material-depth: 1"] {
+  padding-left: $spacing-sm;
+  border-left: 2px solid $color-accent-gold;
+}
+
+.armor-planner__craft-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.25rem;
+  width: fit-content;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.6875rem;
+  line-height: 1.2;
+
+  input {
+    flex: 0 0 auto;
+  }
+}
+
+.armor-planner__need-break {
+  display: initial;
+}
+
+.armor-planner__crafted-status {
+  display: inline-block;
+  max-width: 100%;
+  color: $color-accent-gold;
+  font-size: 0.6875rem;
+  font-style: italic;
+  font-weight: 600;
+  white-space: normal;
+}
+
+.armor-planner__crafting-cost {
+  margin-top: $spacing-xs;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+
+  strong {
+    color: $color-accent-gold;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .armor-planner {
+    padding: $spacing-lg;
+  }
+
+  .armor-planner table {
+    min-width: 38rem;
+  }
+
+  .armor-planner th,
+  .armor-planner td {
+    padding: 0.75rem;
+    font-size: 1rem;
+    overflow-wrap: normal;
+  }
+
+  .armor-planner thead th {
+    font-size: 0.75rem;
+  }
+
+  .armor-planner th:nth-child(1),
+  .armor-planner td:nth-child(1) {
+    width: 32%;
+  }
+
+  .armor-planner th:nth-child(2),
+  .armor-planner td:nth-child(2) {
+    width: 28%;
+  }
+
+  .armor-planner th:nth-child(3),
+  .armor-planner td:nth-child(3) {
+    width: 20%;
+  }
+
+  .armor-planner th:nth-child(4),
+  .armor-planner td:nth-child(4) {
+    width: 20%;
+  }
+
+  .armor-planner input[type="number"] {
+    width: 6rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .armor-planner__craft-option {
+    gap: $spacing-xs;
+    font-size: 0.875rem;
+  }
+
+  .armor-planner__need-break {
+    display: none;
+  }
+}
+
+@media (max-width: 48rem) {
+  .armor-planner table {
+    display: table;
+    overflow-x: visible;
+    white-space: normal;
+  }
+}

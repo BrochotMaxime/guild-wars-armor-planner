@@ -1,0 +1,100 @@
+@use "../../abstracts/variables" as *;
+
+.armor-details {
+  gap: $spacing-lg;
+  padding: $spacing-sm;
+  color: #ffffff;
+  background-color: $color-interface-dark;
+  border-color: $color-interface-border;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: $spacing-lg;
+  }
+}
+
+.armor-details__header {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  h2 {
+    margin: 0;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.armor-details__prestige {
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: $color-accent-gold;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.armor-details__location {
+  display: grid;
+  gap: 0.125rem;
+
+  > span {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  > strong {
+    max-width: 26rem;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    justify-items: end;
+    text-align: right;
+  }
+}
+
+.armor-details__overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  align-items: start;
+  gap: $spacing-xs;
+
+  @media (min-width: $breakpoint-tablet) {
+    grid-template-columns: minmax(18rem, 2fr) minmax(18rem, 3fr);
+    gap: $spacing-sm;
+
+    .armor-preview-gallery {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .armor-preview__image {
+      height: 18rem;
+      min-height: 0;
+      aspect-ratio: auto;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    grid-template-columns: minmax(0, 24rem) minmax(20rem, 1fr);
+    gap: $spacing-lg;
+
+    .armor-preview-gallery {
+      max-width: 24rem;
+    }
+
+    .armor-preview__image {
+      height: 24rem;
+    }
+  }
+}
