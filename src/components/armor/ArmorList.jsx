@@ -1,4 +1,4 @@
-import ArmorCard from "../ArmorCard/ArmorCard";
+import ArmorCard from "../armor/ArmorCard";
 
 function ArmorList({ armors, selectedArmor, onSelectArmor }) {
   const standardArmors = armors.filter((armor) => !armor.prestige);

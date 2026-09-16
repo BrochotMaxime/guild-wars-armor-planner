@@ -1,4 +1,4 @@
-import CurrencyAmount from "../CurrencyAmount/CurrencyAmount";
+import CurrencyAmount from "../ui/CurrencyAmount";
 
 function ArmorRequirements({ armor, materials, onMaterialClick, onPlanArmor }) {
   function getMaterialById(materialId) {

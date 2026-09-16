@@ -1,13 +1,16 @@
 import { useState } from "react";
 
-import AppHeader from "./components/AppHeader/AppHeader";
-import AppFooter from "./components/AppFooter/AppFooter";
-import ArmorDetails from "./components/ArmorDetails/ArmorDetails";
-import ArmorList from "./components/ArmorList/ArmorList";
-import Breadcrumb from "./components/Breadcrumb/Breadcrumb";
-import CampaignSelector from "./components/CampaignSelector/CampaignSelector";
-import ProfessionSelector from "./components/ProfessionSelector/ProfessionSelector";
-import WorkflowPanel from "./components/WorkflowPanel/WorkflowPanel";
+import AppHeader from "./components/layout/AppHeader";
+import AppFooter from "./components/layout/AppFooter";
+import Breadcrumb from "./components/layout/Breadcrumb";
+
+import ArmorDetails from "./components/armor/ArmorDetails";
+import ArmorList from "./components/armor/ArmorList";
+
+import CampaignSelector from "./components/selectors/CampaignSelector";
+import ProfessionSelector from "./components/selectors/ProfessionSelector";
+
+import WorkflowPanel from "./components/workflow/WorkflowPanel";
 
 import acquisitionMethods from "./data/acquisitionMethods";
 import armors from "./data/armors/armors";

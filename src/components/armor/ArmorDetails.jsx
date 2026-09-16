@@ -1,7 +1,7 @@
-import ArmorPreviewGallery from "../ArmorPreviewGallery/ArmorPreviewGallery";
-import ArmorRequirements from "../ArmorRequirements/ArmorRequirements";
-import MaterialDetails from "../MaterialDetails/MaterialDetails";
-import ArmorPlanner from "../ArmorPlanner/ArmorPlanner";
+import ArmorPreviewGallery from "./ArmorPreviewGallery";
+import ArmorRequirements from "./ArmorRequirements";
+import MaterialDetails from "../materials/MaterialDetails";
+import ArmorPlanner from "./ArmorPlanner";
 
 function ArmorDetails({
   armor,
