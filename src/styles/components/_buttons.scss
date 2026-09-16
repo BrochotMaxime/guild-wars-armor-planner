@@ -1,5 +1,21 @@
 @use "../abstracts/variables" as *;
 
+button {
+  padding: 0.75rem 1rem;
+  color: $color-text;
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    border-color: $color-primary;
+  }
+}
+
 .button-primary,
 .button-secondary {
   display: inline-flex;
@@ -12,8 +28,7 @@
   transition:
     color 0.2s ease,
     background-color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
+    border-color 0.2s ease;
 }
 
 .button-primary {
@@ -21,6 +36,11 @@
   color: #111417;
   background-color: $color-accent-gold;
   border: 1px solid $color-accent-gold;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 
   &:hover {
     color: #050606;
