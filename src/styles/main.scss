@@ -8,11 +8,11 @@
 @use "./components/breadcrumb";
 @use "./components/workflow-panel";
 @use "./components/selectors";
+@use "./components/material-details";
 @use "./components/currency-amount";
 
 @use "./components/armor/armor-card";
 @use "./components/armor/armor-details";
 @use "./components/armor/armor-preview";
 @use "./components/armor/armor-requirements";
-@use "./components/armor/material-details";
 @use "./components/armor/armor-planner";

@@ -42,18 +42,30 @@ function App() {
   const [inventory, setInventory] = useState({});
   const [isCheckingMaterials, setIsCheckingMaterials] = useState(false);
 
+  function resetPlannerState() {
+    setSelectedMaterial(null);
+    setCraftingSelections({});
+    setInventory({});
+    setIsCheckingMaterials(false);
+  }
+
+  function resetArmorState() {
+    setSelectedArmor(null);
+    resetPlannerState();
+  }
+
+  function resetCampaignState() {
+    setSelectedCampaign(null);
+    resetArmorState();
+  }
+
   function handleProfessionSelect(profession) {
     const hasProfessionChanged = selectedProfession?.id !== profession.id;
 
     setSelectedProfession(profession);
 
     if (hasProfessionChanged) {
-      setSelectedCampaign(null);
-      setSelectedArmor(null);
-      setSelectedMaterial(null);
-      setCraftingSelections({});
-      setInventory({});
-      setIsCheckingMaterials(false);
+      resetCampaignState();
     }
 
     scrollToWorkflowStep(WORKFLOW_STEPS.campaign);
@@ -65,11 +77,7 @@ function App() {
     setSelectedCampaign(campaign);
 
     if (hasCampaignChanged) {
-      setSelectedArmor(null);
-      setSelectedMaterial(null);
-      setCraftingSelections({});
-      setInventory({});
-      setIsCheckingMaterials(false);
+      resetArmorState();
     }
 
     scrollToWorkflowStep(WORKFLOW_STEPS.armor);
@@ -81,13 +89,25 @@ function App() {
     setSelectedArmor(armor);
 
     if (hasArmorChanged) {
-      setSelectedMaterial(null);
-      setCraftingSelections({});
-      setInventory({});
-      setIsCheckingMaterials(false);
+      resetPlannerState();
     }
 
     scrollToElement("armor-details", null);
+  }
+
+  function handleHomeBreadcrumbClick() {
+    setSelectedProfession(null);
+    resetCampaignState();
+    setActiveStep(WORKFLOW_STEPS.profession);
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
   }
 
   function handlePlanArmor() {
@@ -185,26 +205,6 @@ function App() {
 
   function scrollToWorkflowStep(step, nextActiveStep = step) {
     scrollToElement(`${step}-step`, nextActiveStep);
-  }
-
-  function handleHomeBreadcrumbClick() {
-    setSelectedProfession(null);
-    setSelectedCampaign(null);
-    setSelectedArmor(null);
-    setSelectedMaterial(null);
-    setCraftingSelections({});
-    setInventory({});
-    setIsCheckingMaterials(false);
-    setActiveStep(WORKFLOW_STEPS.profession);
-
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    window.scrollTo({
-      top: 0,
-      behavior: prefersReducedMotion ? "auto" : "smooth",
-    });
   }
 
   function handleProfessionBreadcrumbClick() {
