@@ -26,11 +26,12 @@
 }
 
 .workflow-panel {
-  scroll-margin-top: 5rem;
   display: grid;
+  grid-template-rows: auto;
   gap: 0;
   padding: 0;
   overflow: hidden;
+  scroll-margin-top: 5rem;
   color: #ffffff;
   background-color: rgba($color-interface-dark, 0.96);
   border-color: $color-interface-border;

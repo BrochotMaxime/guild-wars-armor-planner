@@ -2,10 +2,18 @@
 @use "./base/base";
 
 @use "./components/buttons";
+
 @use "./components/header";
 @use "./components/footer";
 @use "./components/breadcrumb";
 @use "./components/workflow-panel";
 @use "./components/selectors";
-@use "./components/armor";
-@use "./components/tables";
+@use "./components/material-details";
+@use "./components/material-item";
+@use "./components/currency-amount";
+
+@use "./components/armor/armor-card";
+@use "./components/armor/armor-details";
+@use "./components/armor/armor-preview";
+@use "./components/armor/armor-requirements";
+@use "./components/armor/armor-planner";

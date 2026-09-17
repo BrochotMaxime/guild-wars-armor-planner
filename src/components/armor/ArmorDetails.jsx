@@ -1,25 +1,42 @@
-import ArmorPreviewGallery from "../ArmorPreviewGallery/ArmorPreviewGallery";
-import ArmorRequirements from "../ArmorRequirements/ArmorRequirements";
-import MaterialDetails from "../MaterialDetails/MaterialDetails";
-import ArmorPlanner from "../ArmorPlanner/ArmorPlanner";
+import { useState } from "react";
+
+import useArmorPlanning from "../../hooks/useArmorPlanning";
+
+import MaterialDetails from "../materials/MaterialDetails";
+import ArmorPlanner from "./ArmorPlanner";
+import ArmorPreviewGallery from "./ArmorPreviewGallery";
+import ArmorRequirements from "./ArmorRequirements";
 
 function ArmorDetails({
   armor,
   materials,
-  materialStatus,
-  selectedMaterial,
-  craftingRequirements,
   craftingRecipes,
-  craftingSelections,
-  actualMaterialNeeds,
   acquisitionMethods,
-  isCheckingMaterials,
-  inventory,
-  onMaterialClick,
   onPlanArmor,
-  onCraftingToggle,
-  onInventoryChange,
 }) {
+  const [selectedMaterial, setSelectedMaterial] = useState(null);
+
+  const {
+    materialStatus,
+    actualMaterialNeeds,
+    craftingRequirements,
+    craftingSelections,
+    inventory,
+    isCheckingMaterials,
+    startPlanning,
+    toggleCrafting,
+    updateInventory,
+  } = useArmorPlanning(armor, materials, craftingRecipes);
+
+  function handlePlanArmor() {
+    startPlanning();
+    onPlanArmor();
+  }
+
+  const craftingLocationNames = armor.craftingLocations
+    .map((location) => location.name)
+    .join(" • ");
+
   return (
     <section id="armor-details" className="armor-details">
       <header className="armor-details__header">
@@ -34,13 +51,7 @@ function ArmorDetails({
         <p className="armor-details__location">
           <span>Location</span>
 
-          <strong>
-            {armor.craftingLocations.length > 0
-              ? armor.craftingLocations
-                  .map((location) => location.name)
-                  .join(" • ")
-              : "Unknown location"}
-          </strong>
+          <strong>{craftingLocationNames || "Unknown location"}</strong>
         </p>
       </header>
 
@@ -50,8 +61,8 @@ function ArmorDetails({
         <ArmorRequirements
           armor={armor}
           materials={materials}
-          onMaterialClick={onMaterialClick}
-          onPlanArmor={onPlanArmor}
+          onMaterialClick={setSelectedMaterial}
+          onPlanArmor={handlePlanArmor}
         />
       </div>
 
@@ -61,7 +72,7 @@ function ArmorDetails({
           materials={materials}
           acquisitionMethods={acquisitionMethods}
           craftingRecipes={craftingRecipes}
-          onClose={() => onMaterialClick(null)}
+          onClose={() => setSelectedMaterial(null)}
         />
       )}
 
@@ -74,8 +85,8 @@ function ArmorDetails({
           craftingSelections={craftingSelections}
           craftingRequirements={craftingRequirements}
           inventory={inventory}
-          onInventoryChange={onInventoryChange}
-          onCraftingToggle={onCraftingToggle}
+          onInventoryChange={updateInventory}
+          onCraftingToggle={toggleCrafting}
         />
       )}
     </section>

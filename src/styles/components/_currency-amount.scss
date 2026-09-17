@@ -1,0 +1,22 @@
+.currency-amount,
+.currency-amount__unit {
+  display: inline-flex;
+  align-items: center;
+}
+
+.currency-amount {
+  gap: 0.375rem;
+}
+
+.currency-amount__unit {
+  gap: 0.2rem;
+  white-space: nowrap;
+
+  img {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
+    border-radius: 0;
+  }
+}

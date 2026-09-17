@@ -1,0 +1,57 @@
+@use "../../abstracts/variables" as *;
+
+.armor-requirements {
+  align-content: start;
+  gap: $spacing-sm;
+  min-width: 0;
+  height: fit-content;
+  padding: $spacing-xs;
+  color: #ffffff;
+  background-color: #050606;
+  border-color: $color-interface-border;
+  box-shadow: none;
+
+  h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 0.875rem;
+  }
+}
+
+.armor-requirements__gold strong {
+  color: $color-accent-gold;
+}
+
+.armor-requirements__group {
+  display: grid;
+  gap: $spacing-xs;
+}
+
+.plan-armor-button {
+  justify-self: start;
+  width: 100%;
+  margin-top: $spacing-xs;
+  padding-inline: 0.5rem;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .armor-requirements {
+    gap: $spacing-sm;
+    padding: $spacing-lg;
+
+    h3 {
+      font-size: inherit;
+    }
+
+    h4 {
+      font-size: inherit;
+    }
+  }
+
+  .plan-armor-button {
+    width: fit-content;
+  }
+}

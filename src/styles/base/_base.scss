@@ -31,15 +31,48 @@ main {
   padding-block: $spacing-sm $spacing-lg;
 }
 
-@media (min-width: $breakpoint-tablet) {
-  main {
-    width: min(100% - 2rem, 75rem);
-  }
-}
-
 h1,
 h2,
 h3,
 h4 {
   line-height: 1.2;
+}
+
+section {
+  display: grid;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+}
+
+section > h2,
+section > h3 {
+  margin-bottom: $spacing-sm;
+}
+
+section h3,
+section h4 {
+  margin-bottom: $spacing-xs;
+}
+
+section ul {
+  display: grid;
+  gap: $spacing-xs;
+}
+
+img {
+  border-radius: $border-radius-sm;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  main {
+    width: min(100% - 2rem, 75rem);
+  }
+
+  section {
+    padding: $spacing-lg;
+  }
 }

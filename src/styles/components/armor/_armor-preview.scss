@@ -1,0 +1,134 @@
+@use "../../abstracts/variables" as *;
+
+.armor-preview-gallery {
+  display: grid;
+  gap: 0;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.armor-preview-gallery__controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  width: 100%;
+  padding: 0.125rem;
+  background-color: #050606;
+  border: 1px solid $color-interface-border;
+  border-bottom: 0;
+  border-radius: $border-radius-sm $border-radius-sm 0 0;
+}
+
+.armor-preview-gallery__control {
+  min-width: 0;
+  padding: 0.5rem 0.125rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+
+  &:hover {
+    color: $color-accent-gold;
+    border-color: transparent;
+  }
+
+  &:focus-visible {
+    outline: 0.125rem solid $color-accent-gold;
+    outline-offset: -0.125rem;
+  }
+}
+
+.armor-preview-gallery__control--selected {
+  color: #ffffff;
+  background-color: rgba($color-accent-gold, 0.16);
+}
+
+.armor-previews {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
+}
+
+.armor-preview {
+  display: none;
+  grid-template-rows: minmax(0, 1fr);
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: $color-interface-dark;
+  border: 1px solid $color-interface-border;
+  border-radius: 0 0 $border-radius-sm $border-radius-sm;
+}
+
+.armor-preview--selected {
+  display: grid;
+}
+
+.armor-preview__image {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 2;
+  min-height: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+
+  img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center bottom;
+    border-radius: 0;
+  }
+}
+
+.armor-preview figcaption {
+  display: none;
+  padding: 0.5rem;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $color-interface-dark;
+  border-top: 1px solid $color-interface-border;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .armor-preview-gallery {
+    gap: $spacing-xs;
+    max-width: 24rem;
+  }
+
+  .armor-preview-gallery__controls {
+    display: none;
+  }
+
+  .armor-previews {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $spacing-sm;
+  }
+
+  .armor-preview {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    border: 1px solid $color-interface-border;
+    border-radius: $border-radius-sm;
+  }
+
+  .armor-preview__image {
+    height: 24rem;
+    aspect-ratio: auto;
+  }
+
+  .armor-preview figcaption {
+    display: block;
+  }
+}

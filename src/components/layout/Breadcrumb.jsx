@@ -73,7 +73,7 @@ function Breadcrumb({
               aria-current={!selectedArmor ? "page" : undefined}
               onClick={onCampaignClick}
             >
-              {selectedCampaign.name}
+              <span>{selectedCampaign.name}</span>
             </button>
           </li>
         )}
@@ -86,7 +86,7 @@ function Breadcrumb({
               aria-current="page"
               onClick={onArmorClick}
             >
-              {selectedArmor.name}
+              <span>{selectedArmor.name}</span>
             </button>
           </li>
         )}

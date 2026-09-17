@@ -1,4 +1,5 @@
-import CurrencyAmount from "../CurrencyAmount/CurrencyAmount";
+import MaterialItem from "../materials/MaterialItem";
+import CurrencyAmount from "../ui/CurrencyAmount";
 
 function ArmorRequirements({ armor, materials, onMaterialClick, onPlanArmor }) {
   function getMaterialById(materialId) {
@@ -21,28 +22,12 @@ function ArmorRequirements({ armor, materials, onMaterialClick, onPlanArmor }) {
     }
 
     return (
-      <div key={materialId} className="material-item">
-        <img
-          className="material-item__icon"
-          src={material.icon}
-          alt=""
-          loading="lazy"
-          decoding="async"
-        />
-
-        <span className="material-item__name">{material.name}</span>
-
-        <strong className="material-item__quantity">× {quantity}</strong>
-
-        <button
-          type="button"
-          className="button-secondary material-item__details"
-          onClick={() => onMaterialClick(material)}
-          aria-label={`View details for ${material.name}`}
-        >
-          Details
-        </button>
-      </div>
+      <MaterialItem
+        key={materialId}
+        material={material}
+        quantity={quantity}
+        onDetailsClick={() => onMaterialClick(material)}
+      />
     );
   }
 

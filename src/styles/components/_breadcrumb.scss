@@ -32,9 +32,6 @@ $breadcrumb-profession-colors: (
   flex-wrap: wrap;
   align-items: center;
   gap: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .breadcrumb__item {
@@ -80,8 +77,6 @@ $breadcrumb-profession-colors: (
 }
 
 button.breadcrumb__control {
-  cursor: pointer;
-
   &:hover {
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.08);
