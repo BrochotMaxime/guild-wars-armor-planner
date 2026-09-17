@@ -21,10 +21,6 @@ import professions from "./data/professions";
 
 import useWorkflowNavigation from "./hooks/useWorkflowNavigation";
 
-import aggregateMaterials from "./utils/aggregateMaterials";
-import calculateCraftingRequirements from "./utils/calculateCraftingRequirements";
-import calculateMissingMaterials from "./utils/calculateMissingMaterials";
-
 const allArmors = Object.values(armors).flat();
 const allMaterials = Object.values(materials).flat();
 
@@ -45,21 +41,9 @@ function App() {
   const [selectedProfession, setSelectedProfession] = useState(null);
   const [selectedCampaign, setSelectedCampaign] = useState(null);
   const [selectedArmor, setSelectedArmor] = useState(null);
-  const [selectedMaterial, setSelectedMaterial] = useState(null);
-  const [craftingSelections, setCraftingSelections] = useState({});
-  const [inventory, setInventory] = useState({});
-  const [isCheckingMaterials, setIsCheckingMaterials] = useState(false);
-
-  function resetPlannerState() {
-    setSelectedMaterial(null);
-    setCraftingSelections({});
-    setInventory({});
-    setIsCheckingMaterials(false);
-  }
 
   function resetArmorState() {
     setSelectedArmor(null);
-    resetPlannerState();
   }
 
   function resetCampaignState() {
@@ -92,36 +76,8 @@ function App() {
   }
 
   function handleArmorSelect(armor) {
-    const hasArmorChanged = selectedArmor?.id !== armor.id;
-
     setSelectedArmor(armor);
-
-    if (hasArmorChanged) {
-      resetPlannerState();
-    }
-
     scrollToElement("armor-details", null);
-  }
-
-  function handlePlanArmor() {
-    setIsCheckingMaterials(true);
-    scrollToElement("armor-planner");
-  }
-
-  function handleCraftingToggle(materialId) {
-    setCraftingSelections((currentSelections) => ({
-      ...currentSelections,
-      [materialId]: !currentSelections[materialId],
-    }));
-  }
-
-  function handleInventoryChange(materialId, value) {
-    const quantity = value === "" ? 0 : Math.max(0, Math.floor(Number(value)));
-
-    setInventory((currentInventory) => ({
-      ...currentInventory,
-      [materialId]: quantity,
-    }));
   }
 
   function handleHomeBreadcrumbClick() {
@@ -147,27 +103,6 @@ function App() {
       armor.professionId === selectedProfession?.id &&
       armor.campaignId === selectedCampaign?.id,
   );
-
-  const materialStatus = selectedArmor
-    ? calculateMissingMaterials(selectedArmor.cost.materials, inventory)
-    : [];
-
-  const craftingRequirements = calculateCraftingRequirements(
-    materialStatus,
-    allMaterials,
-    craftingRecipes,
-    craftingSelections,
-    inventory,
-  );
-
-  const actualMaterialNeeds = selectedArmor
-    ? aggregateMaterials(
-        materialStatus,
-        craftingRequirements,
-        inventory,
-        allMaterials,
-      )
-    : [];
 
   return (
     <>
@@ -230,21 +165,12 @@ function App() {
 
           {selectedArmor && (
             <ArmorDetails
+              key={selectedArmor.id}
               armor={selectedArmor}
               materials={allMaterials}
-              materialStatus={materialStatus}
-              selectedMaterial={selectedMaterial}
-              onMaterialClick={setSelectedMaterial}
-              craftingRequirements={craftingRequirements}
               craftingRecipes={craftingRecipes}
-              craftingSelections={craftingSelections}
-              actualMaterialNeeds={actualMaterialNeeds}
               acquisitionMethods={acquisitionMethods}
-              isCheckingMaterials={isCheckingMaterials}
-              inventory={inventory}
-              onPlanArmor={handlePlanArmor}
-              onCraftingToggle={handleCraftingToggle}
-              onInventoryChange={handleInventoryChange}
+              onPlanArmor={() => scrollToElement("armor-planner")}
             />
           )}
         </div>
