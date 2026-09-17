@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 
+import MaterialCraftingRecipe from "./MaterialCraftingRecipe";
+
 function MaterialDetails({
   material,
   materials,
@@ -32,10 +34,6 @@ function MaterialDetails({
     return acquisitionMethods.find((method) => method.id === methodId);
   }
 
-  function getMaterialById(materialId) {
-    return materials.find((item) => item.id === materialId);
-  }
-
   function handleClose() {
     if (dialogRef.current?.open) {
       dialogRef.current.close();
@@ -53,49 +51,6 @@ function MaterialDetails({
   function handleCancel(event) {
     event.preventDefault();
     handleClose();
-  }
-
-  function renderCraftingRecipe() {
-    if (!craftingRecipe) {
-      return null;
-    }
-
-    return (
-      <div className="material-details__recipe">
-        <span className="material-details__recipe-label">Recipe</span>
-
-        <div className="material-details__ingredients">
-          {craftingRecipe.ingredients.map(({ materialId, quantity }) => {
-            const ingredient = getMaterialById(materialId);
-
-            if (!ingredient) {
-              return null;
-            }
-
-            return (
-              <span
-                key={materialId}
-                className="material-details__ingredient"
-                title={`${quantity} ${ingredient.name}`}
-              >
-                <strong>{quantity}</strong>
-
-                <img src={ingredient.icon} alt={ingredient.name} />
-              </span>
-            );
-          })}
-
-          <span
-            className="material-details__recipe-gold"
-            title={`${craftingRecipe.gold} Gold`}
-          >
-            <strong>{craftingRecipe.gold}</strong>
-
-            <img src="/images/materials/Gold.png" alt="Gold" />
-          </span>
-        </div>
-      </div>
-    );
   }
 
   const titleId = `material-details-${material.id}-title`;
@@ -154,7 +109,12 @@ function MaterialDetails({
                     </span>
                   )}
 
-                  {methodId === "artisan" && renderCraftingRecipe()}
+                  {methodId === "artisan" && craftingRecipe && (
+                    <MaterialCraftingRecipe
+                      recipe={craftingRecipe}
+                      materials={materials}
+                    />
+                  )}
                 </li>
               );
             })}
