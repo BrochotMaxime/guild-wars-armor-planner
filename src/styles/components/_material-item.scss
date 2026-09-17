@@ -1,0 +1,84 @@
+@use "../abstracts/variables" as *;
+
+.material-list {
+  display: grid;
+  overflow: hidden;
+  background-color: $color-surface;
+  border: 1px solid rgba($color-interface-border, 0.7);
+  border-radius: $border-radius-sm;
+}
+
+.material-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 0.375rem;
+  min-width: 0;
+  padding: 0.375rem;
+  color: $color-text;
+  background-color: $color-surface;
+  border: 0;
+  border-bottom: 1px solid rgba($color-interface-border, 0.3);
+  border-radius: 0;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.material-item__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.material-item__name {
+  min-width: 0;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.material-item__quantity {
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.material-item__details {
+  min-height: 1.75rem;
+  padding: 0.3125rem 0.375rem;
+  color: $color-interface-dark;
+  font-size: 0.6875rem;
+  background-color: transparent;
+  border-color: rgba($color-interface-border, 0.85);
+
+  &:hover {
+    color: #050606;
+    background-color: rgba($color-accent-gold, 0.35);
+    border-color: $color-accent-gold;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .material-item {
+    gap: $spacing-xs;
+    padding: 0.5rem;
+  }
+
+  .material-item__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .material-item__name,
+  .material-item__quantity {
+    font-size: 0.875rem;
+  }
+
+  .material-item__details {
+    min-height: 2rem;
+    padding: 0.375rem 0.625rem;
+    font-size: 0.75rem;
+  }
+}
